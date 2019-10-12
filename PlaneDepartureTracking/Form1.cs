@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlaneDepartureTracking.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace PlaneDepartureTracking
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SplayTreeDemo.Test();
         }
     }
 }

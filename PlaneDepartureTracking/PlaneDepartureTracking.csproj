@@ -53,7 +53,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Plane.cs" />
+    <Compile Include="Utils\SplayTree.cs" />
     <Compile Include="Model\Track.cs" />
+    <Compile Include="Utils\ITree.cs" />
+    <Compile Include="Utils\SplayTreeDemo.cs" />
+    <Compile Include="Utils\TreeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

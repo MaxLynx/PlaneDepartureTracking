@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model
 {
-    class Plane
+    class Plane : IComparable<Plane>
     {
         private String producerName;
         private String planeType;
@@ -109,6 +109,11 @@ namespace PlaneDepartureTracking.Model
         public void SetPriority(int priority)
         {
             this.priority = priority;
+        }
+
+        public int CompareTo(Plane other)
+        {
+            throw new NotImplementedException();
         }
     }
 }
