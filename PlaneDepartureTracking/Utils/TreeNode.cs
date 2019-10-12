@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Utils
 {
-    class TreeNode<T>: IComparable<T>
+    public class TreeNode<T>: IComparable<T>
         where T : IComparable<T>
     {
         public T Data { set; get; }

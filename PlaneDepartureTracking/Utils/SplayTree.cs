@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Utils
 {
-    class SplayTree<T> : ITree<T>
+    public class SplayTree<T> : ITree<T>
           where T : IComparable<T>
     {
         public TreeNode<T> Root { set; get; }
@@ -19,17 +19,20 @@ namespace PlaneDepartureTracking.Utils
                 Root.Data = el;
             }
             else {
-                TreeNode<T> root = Root;
-                while (root != null)
+                TreeNode<T> parent = Root;
+                TreeNode<T> child = Root;
+                while (child != null)
                 {
-                    if (root.CompareTo(el) < 0)
+                    if (child.CompareTo(el) < 0)
                     {
-                        root = root.Left;
+                        parent = child;
+                        child = child.Left;
                     }
                     else
-                    if (root.CompareTo(el) > 0)
+                    if (child.CompareTo(el) > 0)
                     {
-                        root = root.Right;
+                        parent = child;
+                        child = child.Right;
                     }
                     else
                     {
@@ -37,8 +40,16 @@ namespace PlaneDepartureTracking.Utils
                     }
 
                 }
-                root = new TreeNode<T>();
-                root.Data = el;
+                if (parent.CompareTo(el) < 0)
+                {
+                    parent.Left = new TreeNode<T>();
+                    parent.Left.Data = el;
+                }
+                else
+                {
+                    parent.Right = new TreeNode<T>();
+                    parent.Right.Data = el;
+                }
             }
         }
 
@@ -87,6 +98,13 @@ namespace PlaneDepartureTracking.Utils
                 }
                 return null;
             
+        }
+
+        public bool Contains(T el)
+        {
+            if (Find(el) != null)
+                return true;
+            return false;
         }
 
         

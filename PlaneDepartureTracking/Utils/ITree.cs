@@ -15,5 +15,7 @@ namespace PlaneDepartureTracking.Utils
         void Delete(T el);
 
         TreeNode<T> Find(T el);
+
+        bool Contains(T el);
     }
 }
