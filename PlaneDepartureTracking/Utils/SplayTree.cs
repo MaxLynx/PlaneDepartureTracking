@@ -11,7 +11,7 @@ namespace PlaneDepartureTracking.Utils
     {
         public TreeNode<T> Root { set; get; }
 
-        public int ObservedLevelCount { set; get; }
+        public byte ObservedLevelCount { set; get; }
 
         public void Add(T el)
         {

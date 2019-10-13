@@ -30,12 +30,36 @@ namespace PlaneDepartureTrackingMSTest
                 tree.Add(number);
             }
 
-            //Assert.IsTrue(tree.ObservedLevelCount < 500);
-
             foreach (int number in numbers)
             {
                 Assert.IsTrue(tree.Contains(number));
             }
+        }
+
+        [TestMethod]
+        public void TestAddOnTreeStructure()
+        {
+            List<int> numbers = new List<int>(10000);
+
+            Random random = new Random();
+
+            for (int i = 0; i < 10000; i++)
+            {
+                int number = random.Next(0, 1500000);
+                if (!numbers.Contains(number))
+                    numbers.Add(number);
+            }
+
+            SplayTree<int> tree = new SplayTree<int>();
+
+            foreach (int number in numbers)
+            {
+                tree.Add(number);
+            }
+
+            Assert.IsTrue(tree.ObservedLevelCount <= 1.5 * Math.Log2(numbers.Count));
+
+            
         }
 
         [TestMethod]
