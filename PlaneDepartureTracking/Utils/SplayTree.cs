@@ -11,18 +11,23 @@ namespace PlaneDepartureTracking.Utils
     {
         public TreeNode<T> Root { set; get; }
 
+        public int ObservedLevelCount { set; get; }
+
         public void Add(T el)
         {
+            ObservedLevelCount = 0;
             if (Root == null)
             {
                 Root = new TreeNode<T>();
                 Root.Data = el;
             }
-            else {
+            else
+            {
                 TreeNode<T> parent = Root;
                 TreeNode<T> child = Root;
                 while (child != null)
                 {
+                    ObservedLevelCount++;
                     if (child.CompareTo(el) < 0)
                     {
                         parent = child;
@@ -55,49 +60,58 @@ namespace PlaneDepartureTracking.Utils
 
         public void Delete(T el)
         {
-            if(Root != null)
+            ObservedLevelCount = 0;
+            if (Root.CompareTo(el) == 0)
             {
-                TreeNode<T> root = Root;
-                while(root != null)
+                FindMin(Root.Right);
+            }
+            TreeNode<T> root = Root;
+            while (root != null)
+            {
+                ObservedLevelCount++;
+                if (root.CompareTo(el) < 0)
                 {
-                    if (root.CompareTo(el) < 0)
+                    if (root.Left != null && root.Left.CompareTo(el) == 0)
                     {
                         root = root.Left;
                     }
-                    else
-                    if (root.CompareTo(el) > 0)
-                    {
-                        root = root.Right;
-                    }
-                    else
-                    {
-                        root = null;
-                    }
+                }
+                else
+                if (root.CompareTo(el) > 0)
+                {
+                    root = root.Right;
+                }
+                else
+                {
+                    root = null;
                 }
             }
+
         }
 
         public TreeNode<T> Find(T el)
         {
-                TreeNode<T> root = Root;
-                while (root != null)
+            ObservedLevelCount = 0;
+            TreeNode<T> root = Root;
+            while (root != null)
+            {
+                ObservedLevelCount++;
+                if (root.CompareTo(el) < 0)
                 {
-                    if (root.CompareTo(el) < 0)
-                    {
-                        root = root.Left;
-                    }
-                    else
-                    if (root.CompareTo(el) > 0)
-                    {
-                        root = root.Right;
-                    }
-                    else
-                    {
-                        return root;
-                    }
+                    root = root.Left;
                 }
-                return null;
-            
+                else
+                if (root.CompareTo(el) > 0)
+                {
+                    root = root.Right;
+                }
+                else
+                {
+                    return root;
+                }
+            }
+            return null;
+
         }
 
         public bool Contains(T el)
@@ -107,6 +121,26 @@ namespace PlaneDepartureTracking.Utils
             return false;
         }
 
-        
+
+        public T FindMin()
+        {
+            return FindMin(Root).Data;
+        }
+
+        TreeNode<T> FindMin(TreeNode<T> root)
+        {
+            ObservedLevelCount = 0;
+            if (root == null)
+            {
+                return null;
+            }
+            while (root.Left != null)
+            {
+                ObservedLevelCount++;
+                root = root.Left;
+            }
+            return root;
+        }
+
     }
 }
