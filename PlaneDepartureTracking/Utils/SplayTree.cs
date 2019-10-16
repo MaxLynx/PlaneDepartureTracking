@@ -28,13 +28,13 @@ namespace PlaneDepartureTracking.Utils
                 while (child != null)
                 {
                     ObservedLevelCount++;
-                    if (child.CompareTo(el) < 0)
+                    if (child.CompareTo(el) > 0)
                     {
                         parent = child;
                         child = child.Left;
                     }
                     else
-                    if (child.CompareTo(el) > 0)
+                    if (child.CompareTo(el) < 0)
                     {
                         parent = child;
                         child = child.Right;
@@ -45,7 +45,7 @@ namespace PlaneDepartureTracking.Utils
                     }
 
                 }
-                if (parent.CompareTo(el) < 0)
+                if (parent.CompareTo(el) > 0)
                 {
                     parent.Left = new TreeNode<T>();
                     parent.Left.Data = el;
@@ -62,17 +62,17 @@ namespace PlaneDepartureTracking.Utils
             }
         }
 
-        public void Delete(T el) //Implement ROOT deletion
+        public void Delete(T el) 
         {
             TreeNode<T> currentNode = Root;
             while (currentNode != null)
             {
-                if (currentNode.CompareTo(el) < 0)
+                if (currentNode.CompareTo(el) > 0)
                 {
                     currentNode = currentNode.Left;
                 }
                 else
-                if (currentNode.CompareTo(el) > 0)
+                if (currentNode.CompareTo(el) < 0)
                 {
                     currentNode = currentNode.Right;
                 }
@@ -88,7 +88,27 @@ namespace PlaneDepartureTracking.Utils
                     else
                         if (currentNode.Left != null && currentNode.Right != null)
                     {
-                        //TODO
+                        TreeNode<T> successor = FindMin(currentNode.Right);
+                        currentNode.Data = successor.Data;
+                        if(successor.Right == null)
+                        {
+                            successor = null;
+                        }
+                        else
+                        {
+                            if (successor.Parent.Left.Equals(successor))
+                            {
+                                successor.Parent.Left = successor.Right;
+                                successor.Right.Parent = successor.Parent;
+                            }
+                            else
+                            {
+                                successor.Parent.Right = successor.Right;
+                                successor.Right.Parent = successor.Parent;
+                            }
+                            successor = null;
+                        }
+                        Splay(parent); //Is it okay?
                     }
                     else
                         if(currentNode.Left != null)
@@ -135,12 +155,12 @@ namespace PlaneDepartureTracking.Utils
             {
                 savedNode = currentNode;
                 ObservedLevelCount++;
-                if (currentNode.CompareTo(el) < 0)
+                if (currentNode.CompareTo(el) > 0)
                 {
                     currentNode = currentNode.Left;
                 }
                 else
-                if (currentNode.CompareTo(el) > 0)
+                if (currentNode.CompareTo(el) < 0)
                 {
                     currentNode = currentNode.Right;
                 }
@@ -186,6 +206,30 @@ namespace PlaneDepartureTracking.Utils
         private void Splay(TreeNode<T> node)
         {
             //TODO
+        }
+
+        public String TraverseInorder()
+        {
+            String result = "";
+            Stack<TreeNode<T>> stack = new Stack<TreeNode<T>>();
+            TreeNode<T> currentNode = Root;
+
+            while(currentNode != null || stack.Count > 0)
+            {
+                while(currentNode != null)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+
+                currentNode = stack.Pop();
+
+                result += currentNode.Data + " < ";
+
+                currentNode = currentNode.Right;
+            }
+
+            return result;
         }
 
     }

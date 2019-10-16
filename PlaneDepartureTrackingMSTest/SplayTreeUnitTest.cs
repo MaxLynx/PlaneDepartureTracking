@@ -3,6 +3,7 @@ using System;
 using PlaneDepartureTracking;
 using PlaneDepartureTracking.Utils;
 using System.Collections.Generic;
+using System.IO;
 
 namespace PlaneDepartureTrackingMSTest
 {
@@ -59,7 +60,9 @@ namespace PlaneDepartureTrackingMSTest
 
             Assert.IsTrue(tree.ObservedLevelCount <= 2 * Math.Log2(numbers.Count));
 
-            
+            String nodesAsText = tree.TraverseInorder();
+
+            File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\splaytree.txt", nodesAsText);
         }
 
         [TestMethod]
@@ -84,12 +87,13 @@ namespace PlaneDepartureTrackingMSTest
             }
 
             numbers.Sort();
-            Assert.AreEqual(tree.FindMin(), numbers[numbers.Count - 1]);
+            Assert.AreEqual(tree.FindMin(), numbers[0]);
 
         }
 
+
         [TestMethod]
-        public void TestFind()
+        public void TestFindAndDelete()
         {
             List<int> numbers = new List<int>(10000);
 
@@ -109,12 +113,20 @@ namespace PlaneDepartureTrackingMSTest
                 tree.Add(number);
                 TreeNode<int> node = tree.Find(number);
                 Assert.IsTrue(node.Data.Equals(number));
-                //tree.Delete(number);
-                //Assert.IsNull(tree.Find(number));
+            }
+
+            
+            for (int i = 0; i < 10000; i++)
+            {
+                int number = random.Next(0, 1500000);
+                if (numbers.Contains(number)) //not calling tree method to not invoke Splay 
+                {
+                    tree.Delete(number);
+                    Assert.IsNull(tree.Find(number));
+                }
             }
 
 
         }
-
     }
 }
