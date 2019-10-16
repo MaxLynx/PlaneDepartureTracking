@@ -49,41 +49,78 @@ namespace PlaneDepartureTracking.Utils
                 {
                     parent.Left = new TreeNode<T>();
                     parent.Left.Data = el;
+                    parent.Left.Parent = parent;
+                    Splay(parent.Left);
                 }
                 else
                 {
                     parent.Right = new TreeNode<T>();
                     parent.Right.Data = el;
+                    parent.Right.Parent = parent;
+                    Splay(parent.Right);
                 }
             }
         }
 
-        public void Delete(T el)
+        public void Delete(T el) //Implement ROOT deletion
         {
-            ObservedLevelCount = 0;
-            if (Root.CompareTo(el) == 0)
+            TreeNode<T> currentNode = Root;
+            while (currentNode != null)
             {
-                FindMin(Root.Right);
-            }
-            TreeNode<T> root = Root;
-            while (root != null)
-            {
-                ObservedLevelCount++;
-                if (root.CompareTo(el) < 0)
+                if (currentNode.CompareTo(el) < 0)
                 {
-                    if (root.Left != null && root.Left.CompareTo(el) == 0)
+                    currentNode = currentNode.Left;
+                }
+                else
+                if (currentNode.CompareTo(el) > 0)
+                {
+                    currentNode = currentNode.Right;
+                }
+                else
+                {
+                    TreeNode<T> parent = currentNode.Parent;
+                    if(currentNode.Left == null && currentNode.Right == null)
                     {
-                        root = root.Left;
+
+                        currentNode = null;
+                        Splay(parent);
                     }
-                }
-                else
-                if (root.CompareTo(el) > 0)
-                {
-                    root = root.Right;
-                }
-                else
-                {
-                    root = null;
+                    else
+                        if (currentNode.Left != null && currentNode.Right != null)
+                    {
+                        //TODO
+                    }
+                    else
+                        if(currentNode.Left != null)
+                    {
+                        if (parent.Left.Equals(currentNode))
+                        {
+                            parent.Left = currentNode.Left;
+                            currentNode.Left.Parent = parent;
+                        }
+                        else
+                        {
+                            parent.Right = currentNode.Left;
+                            currentNode.Left.Parent = parent;
+                        }
+                        currentNode = null;
+                        Splay(parent);
+                    }
+                    else // currentNode.Right != null
+                    {
+                        if (parent.Left.Equals(currentNode))
+                        {
+                            parent.Left = currentNode.Right;
+                            currentNode.Right.Parent = parent;
+                        }
+                        else
+                        {
+                            parent.Right = currentNode.Right;
+                            currentNode.Right.Parent = parent;
+                        }
+                        currentNode = null;
+                        Splay(parent);
+                    }
                 }
             }
 
@@ -92,24 +129,28 @@ namespace PlaneDepartureTracking.Utils
         public TreeNode<T> Find(T el)
         {
             ObservedLevelCount = 0;
-            TreeNode<T> root = Root;
-            while (root != null)
+            TreeNode<T> currentNode = Root;
+            TreeNode<T> savedNode = Root;
+            while (currentNode != null)
             {
+                savedNode = currentNode;
                 ObservedLevelCount++;
-                if (root.CompareTo(el) < 0)
+                if (currentNode.CompareTo(el) < 0)
                 {
-                    root = root.Left;
+                    currentNode = currentNode.Left;
                 }
                 else
-                if (root.CompareTo(el) > 0)
+                if (currentNode.CompareTo(el) > 0)
                 {
-                    root = root.Right;
+                    currentNode = currentNode.Right;
                 }
                 else
                 {
-                    return root;
+                    Splay(currentNode);
+                    return currentNode;
                 }
             }
+            Splay(savedNode);
             return null;
 
         }
@@ -140,6 +181,11 @@ namespace PlaneDepartureTracking.Utils
                 root = root.Left;
             }
             return root;
+        }
+
+        private void Splay(TreeNode<T> node)
+        {
+            //TODO
         }
 
     }

@@ -57,7 +57,7 @@ namespace PlaneDepartureTrackingMSTest
                 tree.Add(number);
             }
 
-            Assert.IsTrue(tree.ObservedLevelCount <= 1.5 * Math.Log2(numbers.Count));
+            Assert.IsTrue(tree.ObservedLevelCount <= 2 * Math.Log2(numbers.Count));
 
             
         }

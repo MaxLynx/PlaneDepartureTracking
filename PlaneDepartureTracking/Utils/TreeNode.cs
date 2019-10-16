@@ -13,6 +13,8 @@ namespace PlaneDepartureTracking.Utils
         public TreeNode<T> Left { set; get; }
         public TreeNode<T> Right { set; get; }
 
+        public TreeNode<T> Parent { set; get; }
+
         public int CompareTo(T other)
         {
             return Data.CompareTo(other);
