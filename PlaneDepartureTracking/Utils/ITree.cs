@@ -10,7 +10,7 @@ namespace PlaneDepartureTracking.Utils
     where T : IComparable<T>
 
     {
-        void Add(T el);
+        bool Add(T el);
 
         void Delete(T el);
 

@@ -11,15 +11,14 @@ namespace PlaneDepartureTracking.Utils
     {
         public TreeNode<T> Root { set; get; }
 
-        public byte ObservedLevelCount { set; get; }
-
-        public void Add(T el)
+        public bool Add(T el)
         {
-            ObservedLevelCount = 0;
+            
             if (Root == null)
             {
                 Root = new TreeNode<T>();
                 Root.Data = el;
+                return true;
             }
             else
             {
@@ -27,7 +26,6 @@ namespace PlaneDepartureTracking.Utils
                 TreeNode<T> child = Root;
                 while (child != null)
                 {
-                    ObservedLevelCount++;
                     if (child.CompareTo(el) > 0)
                     {
                         parent = child;
@@ -41,10 +39,11 @@ namespace PlaneDepartureTracking.Utils
                     }
                     else
                     {
-                        throw new ArgumentException("Duplicate entries are not allowed");
+                        return false;
                     }
 
                 }
+                // empty place for insertion found
                 if (parent.CompareTo(el) > 0)
                 {
                     parent.Left = new TreeNode<T>();
@@ -59,6 +58,7 @@ namespace PlaneDepartureTracking.Utils
                     parent.Right.Parent = parent;
                     Splay(parent.Right);
                 }
+                return true;
             }
         }
 
@@ -81,9 +81,23 @@ namespace PlaneDepartureTracking.Utils
                     TreeNode<T> parent = currentNode.Parent;
                     if(currentNode.Left == null && currentNode.Right == null)
                     {
-
-                        currentNode = null;
-                        Splay(parent);
+                        if (parent != null)
+                        {
+                            if (parent.Left != null && parent.Left.Equals(currentNode))
+                            {
+                                parent.Left = null;
+                            }
+                            else
+                            {
+                                parent.Right = null;
+                            }
+                            currentNode.Parent = null;
+                            Splay(parent);
+                        }
+                        else
+                        {
+                            Root = null;
+                        }
                     }
                     else
                         if (currentNode.Left != null && currentNode.Right != null)
@@ -92,11 +106,19 @@ namespace PlaneDepartureTracking.Utils
                         currentNode.Data = successor.Data;
                         if(successor.Right == null)
                         {
-                            successor = null;
+                            if (successor.Parent.Left != null && successor.Parent.Left.Equals(successor))
+                            {
+                                successor.Parent.Left = null;
+                            }
+                            else // ONLY IF currentNode.Right IS MINIMAL ITSELF
+                            {
+                                successor.Parent.Right = null;
+                            }
+                            successor.Parent = null;
                         }
                         else
                         {
-                            if (successor.Parent.Left.Equals(successor))
+                            if (successor.Parent.Left != null && successor.Parent.Left.Equals(successor))
                             {
                                 successor.Parent.Left = successor.Right;
                                 successor.Right.Parent = successor.Parent;
@@ -106,40 +128,56 @@ namespace PlaneDepartureTracking.Utils
                                 successor.Parent.Right = successor.Right;
                                 successor.Right.Parent = successor.Parent;
                             }
-                            successor = null;
+                            successor.Parent = null;
                         }
-                        Splay(parent); //Is it okay?
+                        Splay(parent);
                     }
                     else
-                        if(currentNode.Left != null)
+                        if (currentNode.Left != null)
                     {
-                        if (parent.Left.Equals(currentNode))
+                        if (parent != null)
                         {
-                            parent.Left = currentNode.Left;
-                            currentNode.Left.Parent = parent;
+                            if (parent.Left != null && parent.Left.Equals(currentNode))
+                            {
+                                parent.Left = currentNode.Left;
+                                currentNode.Left.Parent = parent;
+                            }
+                            else
+                            {
+                                parent.Right = currentNode.Left;
+                                currentNode.Left.Parent = parent;
+                            }
+                            currentNode.Parent = null;
+                            Splay(parent);
                         }
                         else
                         {
-                            parent.Right = currentNode.Left;
-                            currentNode.Left.Parent = parent;
+                            currentNode.Left.Parent = null;
+                            Root = currentNode.Left;
                         }
-                        currentNode = null;
-                        Splay(parent);
                     }
                     else // currentNode.Right != null
                     {
-                        if (parent.Left.Equals(currentNode))
+                        if (parent != null)
                         {
-                            parent.Left = currentNode.Right;
-                            currentNode.Right.Parent = parent;
+                            if (parent.Left != null && parent.Left.Equals(currentNode))
+                            {
+                                parent.Left = currentNode.Right;
+                                currentNode.Right.Parent = parent;
+                            }
+                            else
+                            {
+                                parent.Right = currentNode.Right;
+                                currentNode.Right.Parent = parent;
+                            }
+                            currentNode.Parent = null;
+                            Splay(parent);
                         }
                         else
                         {
-                            parent.Right = currentNode.Right;
-                            currentNode.Right.Parent = parent;
+                            currentNode.Right.Parent = null;
+                            Root = currentNode.Right;
                         }
-                        currentNode = null;
-                        Splay(parent);
                     }
                 }
             }
@@ -148,13 +186,11 @@ namespace PlaneDepartureTracking.Utils
 
         public TreeNode<T> Find(T el)
         {
-            ObservedLevelCount = 0;
             TreeNode<T> currentNode = Root;
             TreeNode<T> savedNode = Root;
             while (currentNode != null)
             {
                 savedNode = currentNode;
-                ObservedLevelCount++;
                 if (currentNode.CompareTo(el) > 0)
                 {
                     currentNode = currentNode.Left;
@@ -188,17 +224,33 @@ namespace PlaneDepartureTracking.Utils
             return FindMin(Root).Data;
         }
 
+        public T FindMax()
+        {
+            return FindMax(Root).Data;
+        }
+
         TreeNode<T> FindMin(TreeNode<T> root)
         {
-            ObservedLevelCount = 0;
             if (root == null)
             {
                 return null;
             }
             while (root.Left != null)
             {
-                ObservedLevelCount++;
                 root = root.Left;
+            }
+            return root;
+        }
+
+        TreeNode<T> FindMax(TreeNode<T> root)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+            while (root.Right != null)
+            {
+                root = root.Right;
             }
             return root;
         }
@@ -208,7 +260,7 @@ namespace PlaneDepartureTracking.Utils
             //TODO
         }
 
-        public String TraverseInorder()
+        public String TraverseInOrder()
         {
             String result = "";
             Stack<TreeNode<T>> stack = new Stack<TreeNode<T>>();
@@ -231,6 +283,81 @@ namespace PlaneDepartureTracking.Utils
 
             return result;
         }
+                
+        public String TraverseLevelOrder()
+        {
+            String result = "";
+            Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
+            TreeNode<T> currentNode = Root;
+
+            int currentLevelNodesCount = 1;
+            int nextLevelNodesCount = 0;
+
+            queue.Enqueue(Root);
+            while (queue.Count > 0)
+            {
+                for (int i = 0; i < currentLevelNodesCount; i++)
+                {
+                    currentNode = queue.Dequeue();
+                    result += currentNode.Data + " ";
+                    if (currentNode.Left != null && currentNode.Right != null)
+                    {
+                        nextLevelNodesCount += 2;
+                        queue.Enqueue(currentNode.Left);
+                        queue.Enqueue(currentNode.Right);
+                    }
+                    else
+                        if (currentNode.Left != null)
+                    {
+                        nextLevelNodesCount += 1;
+                        queue.Enqueue(currentNode.Left);
+                    }
+                    else
+                        if (currentNode.Right != null)
+                    {
+                        nextLevelNodesCount += 1;
+                        queue.Enqueue(currentNode.Right);
+                    }
+
+
+                }
+
+                result += "\r\n";
+                currentLevelNodesCount = nextLevelNodesCount;
+                nextLevelNodesCount = 0;
+            }
+
+            return result;
+        }
+
+        public bool CheckTreeStructure()
+        {
+            List<T> list = new List<T>();
+            Stack<TreeNode<T>> stack = new Stack<TreeNode<T>>();
+            TreeNode<T> currentNode = Root;
+
+            while (currentNode != null || stack.Count > 0)
+            {
+                while (currentNode != null)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+
+                currentNode = stack.Pop();
+                list.Append(currentNode.Data);
+                currentNode = currentNode.Right;
+            }
+
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                if (list[i].CompareTo(list[i + 1]) >= 0)
+                    return false;
+            }
+
+            return true;
+        }
+
 
     }
 }
