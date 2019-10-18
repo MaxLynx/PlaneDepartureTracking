@@ -258,11 +258,74 @@ namespace PlaneDepartureTracking.Utils
             return root;
         }
 
-        private void Splay(TreeNode<T> node)
+        public void Splay(TreeNode<T> node)
         {
-            if (!SplayDisabled)
+            if (!SplayDisabled && node != null)
             {
-                //
+                while (!node.Equals(Root))
+                {
+                    Rotate(node);
+                }
+            }
+        }
+
+        private void Rotate(TreeNode<T> node)
+        {
+            TreeNode<T> parent = node.Parent;
+            TreeNode<T> grandparent = parent.Parent; // NULL IF PARENT IS ROOT
+
+            if (parent.Left != null && parent.Left.Equals(node)) // RIGHT ROTATION
+            {
+                TreeNode<T> exchangedChild = node.Right;
+                node.Right = parent;
+                if (Root.Equals(parent))
+                {
+                    node.Parent = null;
+                    Root = node;
+                }
+                else
+                {
+                    node.Parent = grandparent;
+                    if (grandparent.Left != null && grandparent.Left.Equals(parent))
+                    {
+                        grandparent.Left = node;
+                    }
+                    else
+                    {
+                        grandparent.Right = node;
+                    }
+                }
+                parent.Parent = node;
+                parent.Left = exchangedChild;
+                if (exchangedChild != null)
+                    exchangedChild.Parent = parent;
+            }
+            else // LEFT ROTATION
+            {
+                TreeNode<T> exchangedChild = node.Left;
+
+                node.Left = parent;
+                if (Root.Equals(parent))
+                {
+                    node.Parent = null;
+                    Root = node;
+                }
+                else
+                {
+                    node.Parent = grandparent;
+                    if (grandparent.Left != null && grandparent.Left.Equals(parent))
+                    {
+                        grandparent.Left = node;
+                    }
+                    else
+                    {
+                        grandparent.Right = node;
+                    }
+                }
+                parent.Parent = node;
+                parent.Right = exchangedChild;
+                if (exchangedChild != null)
+                    exchangedChild.Parent = parent;
             }
         }
 
