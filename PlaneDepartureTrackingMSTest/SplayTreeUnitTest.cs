@@ -13,7 +13,7 @@ namespace PlaneDepartureTrackingMSTest
         [TestMethod]
         public void TestAllOperations()
         {
-            int count = 1000; //MIN IS 100
+            int count = 1000000; //MIN IS 100
             List<int> numbers = new List<int>(count);
             List<int> removed = new List<int>(count);
             SplayTree<int> tree = new SplayTree<int>();
@@ -101,5 +101,6 @@ namespace PlaneDepartureTrackingMSTest
             File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\testStats.txt",
                 checkInfo);
         }
+
     }
 }

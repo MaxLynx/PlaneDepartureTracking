@@ -11,6 +11,8 @@ namespace PlaneDepartureTracking.Utils
     {
         public TreeNode<T> Root { set; get; }
 
+        public Boolean SplayDisabled { set; get; }
+                
         public bool Add(T el)
         {
             
@@ -179,6 +181,7 @@ namespace PlaneDepartureTracking.Utils
                             Root = currentNode.Right;
                         }
                     }
+                    break;
                 }
             }
 
@@ -257,7 +260,10 @@ namespace PlaneDepartureTracking.Utils
 
         private void Splay(TreeNode<T> node)
         {
-            //TODO
+            if (!SplayDisabled)
+            {
+                //
+            }
         }
 
         public String TraverseInOrder()
