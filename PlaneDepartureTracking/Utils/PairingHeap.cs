@@ -61,10 +61,9 @@ namespace PlaneDepartureTracking.Utils
                 }
                 else
                 {
-                    currentNode = currentNode.Right;
                     if (currentNode.Data.Equals(el))
                     {
-                        if(el.GetPriority().CompareTo(newPriority) < 0)
+                        if (el.GetPriority().CompareTo(newPriority) < 0)
                         {
                             currentNode.Parent = null;
                             Root = Pair(currentNode, Root);
@@ -83,6 +82,11 @@ namespace PlaneDepartureTracking.Utils
                                 parent.Right = newSubtreeRoot;
                             }
                         }
+                        return true;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.Right;
                     }
                 }
             }
