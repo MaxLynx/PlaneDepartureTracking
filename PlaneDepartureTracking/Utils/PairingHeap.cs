@@ -29,7 +29,10 @@ namespace PlaneDepartureTracking.Utils
             if(heap1Root.Data.GetPriority().CompareTo(heap2Root.Data.GetPriority()) < 0)
             {
                 heap1Root.Right = heap2Root.Left;
-                heap2Root.Left.Parent = heap1Root.Right;
+                if (heap2Root.Left != null)
+                {
+                    heap2Root.Left.Parent = heap1Root.Right;
+                }
                 heap2Root.Left = heap1Root;
                 heap1Root.Parent = heap2Root;
                 return heap2Root;
@@ -37,7 +40,10 @@ namespace PlaneDepartureTracking.Utils
             else
             {
                 heap2Root.Right = heap1Root.Left;
-                heap1Root.Left.Parent = heap2Root.Right;
+                if (heap2Root.Left != null)
+                {
+                    heap1Root.Left.Parent = heap2Root.Right;
+                }
                 heap1Root.Left = heap2Root;
                 heap2Root.Parent = heap1Root;
                 return heap1Root;
@@ -73,7 +79,7 @@ namespace PlaneDepartureTracking.Utils
                             TreeNode<V> parent = currentNode.Parent;
                             TreeNode<V> newSubtreeRoot = Pair(Pair(currentNode, currentNode.Left), currentNode.Right);
                             newSubtreeRoot.Parent = parent;
-                            if (parent.Left.Equals(currentNode))
+                            if (parent.Left != null && parent.Left.Equals(currentNode))
                             {
                                 parent.Left = newSubtreeRoot;
                             }
