@@ -99,10 +99,10 @@ namespace PlaneDepartureTrackingMSTest
                 "\r\nFIND checks: " + findCount + "\r\nSuccessfully found elements: " + succFindCount +
                 "\r\nDELETE checks: " + deleteCount + "\r\nSuccessfully deleted elements: " + succDeleteCount +
                 "\r\nTree-List comparisons: " + compareCheck;
-            File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\testStats.txt",
+            File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\splaytreeTestStats.txt",
                 checkInfo);
         }
-
+        
         [TestMethod]
         public void TestBSTOnRandomNumbers()
         {
@@ -195,7 +195,7 @@ namespace PlaneDepartureTrackingMSTest
             File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\bstTestStats.txt",
                 checkInfo);
         }
-
+        
         [TestMethod]
         public void TestSplayOperation()
         {

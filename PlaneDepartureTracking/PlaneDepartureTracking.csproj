@@ -53,6 +53,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Plane.cs" />
+    <Compile Include="Utils\IPriority.cs" />
+    <Compile Include="Utils\PairingHeap.cs" />
     <Compile Include="Utils\SplayTree.cs" />
     <Compile Include="Model\Track.cs" />
     <Compile Include="Utils\ITree.cs" />

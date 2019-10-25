@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlaneDepartureTracking.Model
+namespace PlaneDepartureTracking.Model 
 {
-    class Plane : IComparable<Plane>
+    public class Plane : IComparable<Plane>, Utils.IPriority<int>
     {
         private String producerName;
         private String planeType;
@@ -109,6 +109,11 @@ namespace PlaneDepartureTracking.Model
         public void SetPriority(int priority)
         {
             this.priority = priority;
+        }
+
+        public int GetMaxPriority()
+        {
+            return Int32.MinValue;
         }
 
         public int CompareTo(Plane other)

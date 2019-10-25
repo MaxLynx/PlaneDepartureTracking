@@ -1,7 +1,7 @@
-ADD checks: 33289
-Successfully added elements: 33288
-FIND checks: 33248
-Successfully found elements: 33027
-DELETE checks: 33463
-Successfully deleted elements: 33199
-Tree-List comparisons: 108
+ADD checks: 33412
+Successfully added elements: 33409
+FIND checks: 33352
+Successfully found elements: 33162
+DELETE checks: 33236
+Successfully deleted elements: 33039
+Tree-List comparisons: 100

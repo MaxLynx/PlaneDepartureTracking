@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model
 {
-    class Track
+    public class Track
     {
         private String name;
         private double length;

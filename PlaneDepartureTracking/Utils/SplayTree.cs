@@ -9,7 +9,7 @@ namespace PlaneDepartureTracking.Utils
     public class SplayTree<T> : ITree<T>
           where T : IComparable<T>
     {
-        public TreeNode<T> Root { set; get; }
+        private TreeNode<T> Root { set; get; }
 
         public Boolean SplayDisabled { set; get; }
                 
