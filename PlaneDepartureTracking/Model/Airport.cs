@@ -9,6 +9,7 @@ namespace PlaneDepartureTracking.Model
 {
     public class Airport
     {
+        public DateTime SystemTime { get; set; }
         SplayTree<Plane> Planes { get; set; }
         SplayTree<String> TrackAllocations { get; set; }
 
@@ -27,6 +28,7 @@ namespace PlaneDepartureTracking.Model
          */
         public Airport()
         {
+            SystemTime = DateTime.Now;
             Planes = new SplayTree<Plane>();
             TrackAllocations = new SplayTree<String>();
             ArrivedPlanes = new SplayTree<Plane>();
@@ -72,7 +74,7 @@ namespace PlaneDepartureTracking.Model
 
         public void AddNewPlane(String producerName, String type, String internationalID, double minimalTrackLength)
         {
-            Plane plane = new Plane(producerName, type, internationalID, minimalTrackLength, DateTime.Now, 0);
+            Plane plane = new Plane(producerName, type, internationalID, minimalTrackLength, SystemTime, 0);
             Planes.Add(plane);
             ArrivedPlanes.Add(plane);
             PlaneArrivals.Add("plane " + plane.GetInternationalID() + " arrived " + plane.GetArrivalTime());
@@ -84,7 +86,7 @@ namespace PlaneDepartureTracking.Model
             TreeNode<Plane> planeFound = ArrivedPlanes.Find(planeToSearch);
             if (planeFound != null)
             {
-                planeFound.Data.SetTrackRequirementTime(DateTime.Now);
+                planeFound.Data.SetTrackRequirementTime(SystemTime);
                 ArrivedPlanes.Delete(planeFound.Data);
                 planeFound.Data.SetPriority(priority);
                 WaitingPlanes.Add(planeFound.Data);

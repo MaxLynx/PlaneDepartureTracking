@@ -79,6 +79,12 @@
     <Compile Include="NotifyTrackRequirementIDForm.Designer.cs">
       <DependentUpon>NotifyTrackRequirementIDForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimeMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeMachineForm.Designer.cs">
+      <DependentUpon>TimeMachineForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\IPriority.cs" />
     <Compile Include="Utils\PairingHeap.cs" />
     <Compile Include="Utils\SplayTree.cs" />
@@ -111,6 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TimeMachineForm.resx">
+      <DependentUpon>TimeMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
