@@ -14,11 +14,10 @@ namespace PlaneDepartureTracking.Model
 
         public Track() { }
 
-        public Track(String name, TrackType lengthType, Plane plane)
+        public Track(String name, TrackType lengthType)
         {
             this.name = name;
             this.lengthType = lengthType;
-            this.plane = plane;
         }
 
         public String GetName()

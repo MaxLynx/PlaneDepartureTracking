@@ -11,7 +11,7 @@ namespace PlaneDepartureTracking.Model
     {
         public double Length { get; set; }
 
-        public SplayTree<Track> Tracks { get; set; }
+        public List<Track> Tracks { get; set; }
 
         public PairingHeap<Plane, int> WaitingPlanes { get; set; }
 
@@ -20,7 +20,7 @@ namespace PlaneDepartureTracking.Model
         public TrackType(double length)
         {
             Length = length;
-            Tracks = new SplayTree<Track>();
+            Tracks = new List<Track>();
             WaitingPlanes = new PairingHeap<Plane, int>();
             WaitingPlanesForSearch = new SplayTree<Plane>();
         }

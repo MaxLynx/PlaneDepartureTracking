@@ -17,6 +17,8 @@ namespace PlaneDepartureTracking.Model
         private DateTime departureTime;
         private int priority;
 
+        public Track Track { set; get; }
+
         public Plane() { }
         public Plane(String internationalID)
         {
@@ -126,8 +128,16 @@ namespace PlaneDepartureTracking.Model
 
         public override String ToString()
         {
-            return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
-                "," + trackRequirementTime + "," + priority;
+            if (Track == null)
+            {
+                return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
+                    "," + trackRequirementTime + "," + priority + ",";
+            }
+            else
+            {
+                return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
+                    "," + trackRequirementTime + "," + priority + "," + Track.GetName();
+            }
         }
     }
 }

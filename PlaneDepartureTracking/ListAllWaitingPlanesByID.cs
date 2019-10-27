@@ -24,7 +24,7 @@ namespace PlaneDepartureTracking
         {
             List<String> output = model.OutputWaitingPlanes();
             dataGridView1.Rows.Clear();
-            dataGridView1.ColumnCount = 7;
+            dataGridView1.ColumnCount = 8;
             /*
             dataGridView1.Columns[1].Width = dataGridView1.Columns[1].Width + 80;
             dataGridView1.Columns[3].Width = dataGridView1.Columns[3].Width + 200;
@@ -36,12 +36,18 @@ namespace PlaneDepartureTracking
             dataGridView1.Columns[4].Name = "ARRIVAL TIME";
             dataGridView1.Columns[5].Name = "TRACK REQUIREMENT TIME";
             dataGridView1.Columns[6].Name = "PRIORITY";
-                foreach (String line in output)
+            dataGridView1.Columns[7].Name = "TRACK";
+            foreach (String line in output)
                 {
                     String[] row = line.Split(',');
                     
                     dataGridView1.Rows.Add(row);
                 }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

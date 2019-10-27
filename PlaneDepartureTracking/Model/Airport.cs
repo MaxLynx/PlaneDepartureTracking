@@ -35,9 +35,19 @@ namespace PlaneDepartureTracking.Model
             TrackTypes = new SplayTree<TrackType>();
             WaitingPlanes = new SplayTree<Plane>();
 
-            TrackTypes.Add(new TrackType(1500));
-            TrackTypes.Add(new TrackType(2000));
-            TrackTypes.Add(new TrackType(2500));
+
+            TrackType type1 = new TrackType(1500);
+            type1.Tracks.Add(new Track("track 1", type1));
+            type1.Tracks.Add(new Track("track 2", type1));
+            TrackType type2 = new TrackType(2000);
+            type2.Tracks.Add(new Track("track 3", type2));
+            type2.Tracks.Add(new Track("track 4", type2));
+            TrackType type3 = new TrackType(2500);
+            type3.Tracks.Add(new Track("track 5", type3));
+
+            TrackTypes.Add(type1);
+            TrackTypes.Add(type2);
+            TrackTypes.Add(type3);
         }
 
 
@@ -87,8 +97,21 @@ namespace PlaneDepartureTracking.Model
                 }
                 else
                 {
-                    typeFound.Data.WaitingPlanes.Add(planeFound.Data);
-                    typeFound.Data.WaitingPlanesForSearch.Add(planeFound.Data);
+                    foreach(Track track in typeFound.Data.Tracks)
+                    {
+                        if (track.GetPlane() == null)
+                        {
+                            planeFound.Data.Track = track;
+                            track.SetPlane(planeFound.Data);
+                            TrackAllocations.Add("plane ID" + planeFound.Data.GetInternationalID() + " to the track " + track.GetName());
+                            break;
+                        }
+                    }
+                    if (planeFound.Data.Track == null)
+                    {
+                        typeFound.Data.WaitingPlanes.Add(planeFound.Data);
+                        typeFound.Data.WaitingPlanesForSearch.Add(planeFound.Data);
+                    }
                 }
                 return true;
             }
