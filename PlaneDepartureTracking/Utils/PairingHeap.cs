@@ -26,12 +26,12 @@ namespace PlaneDepartureTracking.Utils
                 return heap1Root;
             }
             else
-            if(heap1Root.Data.GetPriority().CompareTo(heap2Root.Data.GetPriority()) < 0)
+            if(heap1Root.Data.GetPriority().CompareTo(heap2Root.Data.GetPriority()) > 0)
             {
                 heap1Root.Right = heap2Root.Left;
                 if (heap2Root.Left != null)
                 {
-                    heap2Root.Left.Parent = heap1Root.Right;
+                    heap2Root.Left.Parent = heap1Root;
                 }
                 heap2Root.Left = heap1Root;
                 heap1Root.Parent = heap2Root;
@@ -40,9 +40,9 @@ namespace PlaneDepartureTracking.Utils
             else
             {
                 heap2Root.Right = heap1Root.Left;
-                if (heap2Root.Left != null)
+                if (heap1Root.Left != null)
                 {
-                    heap1Root.Left.Parent = heap2Root.Right;
+                    heap1Root.Left.Parent = heap2Root;
                 }
                 heap1Root.Left = heap2Root;
                 heap2Root.Parent = heap1Root;
@@ -51,53 +51,94 @@ namespace PlaneDepartureTracking.Utils
         }
         public bool ChangePriority(V el, T newPriority)
         {
+
             if (el.GetPriority().CompareTo(newPriority) == 0)
                 return true;
-            TreeNode<V> currentNode = Root;
-            while (currentNode != null)
+            
+            TreeNode<V> currentNode = Find(el);
+            if (currentNode != null)
             {
-                if (currentNode.Data.GetPriority().CompareTo(el.GetPriority()) < 0)
+                if(el.GetPriority().CompareTo(newPriority) > 0)
                 {
-                    currentNode = currentNode.Left;
-                }
-                else
-                if (currentNode.Data.GetPriority().CompareTo(el.GetPriority()) > 0)
-                {
-                    currentNode = currentNode.Right;
+                    IncreasePriority(currentNode, newPriority);
                 }
                 else
                 {
-                    if (currentNode.Data.Equals(el))
+                    DecreasePriority(currentNode, newPriority);
+                }
+                return true;
+                
+            }
+                
+            return false;
+        }
+
+        private void IncreasePriority(TreeNode<V> currentNode, T newPriority)
+        {
+            TreeNode<V> oldCurrentNode = currentNode;
+            currentNode.Data.SetPriority(newPriority);
+
+            if (currentNode.Parent != null && currentNode.Parent.Data.GetPriority().CompareTo(newPriority) > 0)
+            {
+                TreeNode<V> rightChild = currentNode.Right;
+
+                    if (currentNode.Parent.Left != null && currentNode.Parent.Left.Equals(oldCurrentNode))
                     {
-                        if (el.GetPriority().CompareTo(newPriority) < 0)
-                        {
-                            currentNode.Parent = null;
-                            Root = Pair(currentNode, Root);
-                        }
-                        else
-                        {
-                            TreeNode<V> parent = currentNode.Parent;
-                            TreeNode<V> newSubtreeRoot = Pair(Pair(currentNode, currentNode.Left), currentNode.Right);
-                            newSubtreeRoot.Parent = parent;
-                            if (parent.Left != null && parent.Left.Equals(currentNode))
-                            {
-                                parent.Left = newSubtreeRoot;
-                            }
-                            else
-                            {
-                                parent.Right = newSubtreeRoot;
-                            }
-                        }
-                        return true;
+                        currentNode.Parent.Left = rightChild;
                     }
                     else
                     {
-                        currentNode = currentNode.Right;
+                        currentNode.Parent.Right = rightChild;
                     }
+
+                if (rightChild != null)
+                {
+                    rightChild.Parent = currentNode.Parent;
+                }
+                currentNode.Parent = null;
+                currentNode.Right = null;
+                
+                Root = Pair(currentNode, Root);
+                
+            }
+        }
+
+        private void DecreasePriority(TreeNode<V> currentNode, T newPriority)
+        {
+            T oldPriority = currentNode.Data.GetPriority();
+            TreeNode<V> oldCurrentNode = currentNode;
+            currentNode.Data.SetPriority(newPriority);
+
+            if (currentNode.Left != null && currentNode.Left.Data.GetPriority().CompareTo(newPriority) < 0)
+            {
+                TreeNode<V> parent = currentNode.Parent;
+                TreeNode<V> leftChild = currentNode.Left;
+                currentNode.Left = null;
+                leftChild.Parent = null;
+                TreeNode<V> rightChild = currentNode.Right;
+                currentNode.Right = null;
+                if (rightChild != null)
+                {
+                    rightChild.Parent = null;
+                }
+                TreeNode<V> newSubtreeRoot = Pair(Pair(currentNode, leftChild), rightChild);
+                newSubtreeRoot.Parent = parent;
+                if (parent == null)
+                {
+                    Root = newSubtreeRoot;
+                }
+                else
+                if (parent.Left != null && parent.Left.Equals(oldCurrentNode))
+                {
+                    parent.Left = newSubtreeRoot;
+                }
+                else
+                {
+                    parent.Right = newSubtreeRoot;
                 }
             }
-            return false;
         }
+
         public bool Add(V el)
         {
             TreeNode<V> newNode = new TreeNode<V>();
@@ -107,35 +148,114 @@ namespace PlaneDepartureTracking.Utils
 
         }
 
-        /*
-         * Not implemented
-         */
+       /*
+        * Too slow
+        */
         public bool Contains(V el)
         {
-            throw new NotImplementedException();
+            if(Find(el) != null)
+            {
+                return true;
+            }
+            return false;
         }
 
-        public void Delete(V el)
+        public V Delete(V el)
         {
-            ChangePriority(el, el.GetMaxPriority());
-            DeleteMin();
+            if (ChangePriority(el, el.GetMaxPriority()))
+            {
+                return DeleteMin();
+            }
+            else
+            {
+                return default;
+            }
         }
 
         public V DeleteMin()
         {
+            if(Root == null)
+            {
+                return default;  // default for V if V could not be null
+            }
             V rootData = Root.Data;
-            Root.Left.Parent = null;
-            Root.Right.Parent = null;
+            Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
             Root = Pair(Root.Left, Root.Right);
+            TreeNode<V> currentNode = Root;
+            if (currentNode != null)
+            {
+                while (currentNode != null)
+                {
+                    currentNode.Parent = null;
+                    TreeNode<V> nextNode = currentNode.Right;
+                    currentNode.Right = null;
+                    queue.Enqueue(currentNode);
+                    currentNode = nextNode;
+                }
+                while (queue.Count > 1)
+                {
+                    queue.Enqueue(Pair(queue.Dequeue(), queue.Dequeue()));
+                }
+                Root = queue.Dequeue();
+            }
+            else
+            {
+                Root = null;
+            }
+
             return rootData;
         }
 
         /*
-         * Not implemented
+         * Very slow method
          */
         public TreeNode<V> Find(V el)
         {
-            throw new NotImplementedException();
+            if (Root != null)
+            {
+                Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
+                TreeNode<V> currentNode = Root;
+
+                int currentLevelNodesCount = 1;
+                int nextLevelNodesCount = 0;
+
+                queue.Enqueue(Root);
+                while (queue.Count > 0)
+                {
+                    for (int i = 0; i < currentLevelNodesCount; i++)
+                    {
+                        currentNode = queue.Dequeue();
+                        if (currentNode.Data.Equals(el))
+                        {
+                            return currentNode;
+                        }
+                        if (currentNode.Left != null && currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 2;
+                            queue.Enqueue(currentNode.Left);
+                            queue.Enqueue(currentNode.Right);
+                        }
+                        else
+                            if (currentNode.Left != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Left);
+                        }
+                        else
+                            if (currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Right);
+                        }
+
+
+                    }
+
+                    currentLevelNodesCount = nextLevelNodesCount;
+                    nextLevelNodesCount = 0;
+                }
+            }
+            return null;
         }
 
         public String TraverseInOrder()
@@ -154,7 +274,7 @@ namespace PlaneDepartureTracking.Utils
 
                 currentNode = stack.Pop();
 
-                result += currentNode.Data + " < ";
+                result += currentNode.Data.GetPriority() + " < ";
 
                 currentNode = currentNode.Right;
             }
@@ -165,46 +285,48 @@ namespace PlaneDepartureTracking.Utils
         public String TraverseLevelOrder()
         {
             String result = "";
-            Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
-            TreeNode<V> currentNode = Root;
-
-            int currentLevelNodesCount = 1;
-            int nextLevelNodesCount = 0;
-
-            queue.Enqueue(Root);
-            while (queue.Count > 0)
+            if (Root != null)
             {
-                for (int i = 0; i < currentLevelNodesCount; i++)
+                Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
+                TreeNode<V> currentNode = Root;
+
+                int currentLevelNodesCount = 1;
+                int nextLevelNodesCount = 0;
+
+                queue.Enqueue(Root);
+                while (queue.Count > 0)
                 {
-                    currentNode = queue.Dequeue();
-                    result += currentNode.Data + " ";
-                    if (currentNode.Left != null && currentNode.Right != null)
+                    for (int i = 0; i < currentLevelNodesCount; i++)
                     {
-                        nextLevelNodesCount += 2;
-                        queue.Enqueue(currentNode.Left);
-                        queue.Enqueue(currentNode.Right);
-                    }
-                    else
-                        if (currentNode.Left != null)
-                    {
-                        nextLevelNodesCount += 1;
-                        queue.Enqueue(currentNode.Left);
-                    }
-                    else
-                        if (currentNode.Right != null)
-                    {
-                        nextLevelNodesCount += 1;
-                        queue.Enqueue(currentNode.Right);
-                    }
+                        currentNode = queue.Dequeue();
+                        result += currentNode.Data.GetPriority() + " ";
+                        if (currentNode.Left != null && currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 2;
+                            queue.Enqueue(currentNode.Left);
+                            queue.Enqueue(currentNode.Right);
+                        }
+                        else
+                            if (currentNode.Left != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Left);
+                        }
+                        else
+                            if (currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Right);
+                        }
 
 
+                    }
+
+                    result += "\r\n";
+                    currentLevelNodesCount = nextLevelNodesCount;
+                    nextLevelNodesCount = 0;
                 }
-
-                result += "\r\n";
-                currentLevelNodesCount = nextLevelNodesCount;
-                nextLevelNodesCount = 0;
             }
-
             return result;
         }
     }

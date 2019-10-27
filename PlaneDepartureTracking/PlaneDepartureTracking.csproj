@@ -53,6 +53,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Plane.cs" />
+    <Compile Include="NotifyPlaneArrivalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyPlaneArrivalForm.Designer.cs">
+      <DependentUpon>NotifyPlaneArrivalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\IPriority.cs" />
     <Compile Include="Utils\PairingHeap.cs" />
     <Compile Include="Utils\SplayTree.cs" />
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyPlaneArrivalForm.resx">
+      <DependentUpon>NotifyPlaneArrivalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,3 +7,4 @@ D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDe
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.csproj.GenerateResource.cache
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.exe
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.pdb
+D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.NotifyPlaneArrivalForm.resources

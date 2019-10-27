@@ -1,0 +1,7 @@
+ADD checks: 579
+Successfully added elements: 579
+CHANGE PRIORITY checks: 81
+Successfully changed priorities: 39
+DELETE checks: 0
+Successfully deleted elements: 0
+Queue-List comparisons: 81
