@@ -352,7 +352,31 @@ namespace PlaneDepartureTracking.Utils
 
             return result;
         }
-                
+
+        public List<String> TraverseInOrderAsStringList()
+        {
+            List<String> result = new List<String>();
+            Stack<TreeNode<T>> stack = new Stack<TreeNode<T>>();
+            TreeNode<T> currentNode = Root;
+
+            while (currentNode != null || stack.Count > 0)
+            {
+                while (currentNode != null)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+
+                currentNode = stack.Pop();
+
+                result.Add(currentNode.Data.ToString());
+
+                currentNode = currentNode.Right;
+            }
+
+            return result;
+        }
+
         public String TraverseLevelOrder()
         {
             String result = "";

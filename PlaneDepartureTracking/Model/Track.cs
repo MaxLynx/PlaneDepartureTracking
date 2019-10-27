@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model
 {
-    public class Track
+    public class Track : IComparable<Track>
     {
         private String name;
-        private double length;
+        private TrackType lengthType;
         private Plane plane;
 
         public Track() { }
 
-        public Track(String name, double length, Plane plane)
+        public Track(String name, TrackType lengthType, Plane plane)
         {
             this.name = name;
-            this.length = length;
+            this.lengthType = lengthType;
             this.plane = plane;
         }
 
@@ -31,14 +31,14 @@ namespace PlaneDepartureTracking.Model
             this.name = name;
         }
 
-        public double GetLength()
+        public TrackType GetLengthType()
         {
-            return length;
+            return lengthType;
         }
 
-        public void SetLength(double length)
+        public void SetLengthType(TrackType lengthType)
         {
-            this.length = length;
+            this.lengthType = lengthType;
         }
 
         public Plane GetPlane()
@@ -49,6 +49,11 @@ namespace PlaneDepartureTracking.Model
         public void SetPlane(Plane plane)
         {
             this.plane = plane;
+        }
+
+        public int CompareTo(Track other)
+        {            
+            return this.GetName().CompareTo(other.GetName());
         }
     }
 }

@@ -8,3 +8,6 @@ D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDe
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.exe
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.pdb
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.NotifyPlaneArrivalForm.resources
+D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.ListAllWaitingPlanesByID.resources
+D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.NotifyPlaneArrivalIDForm.resources
+D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.NotifyTrackRequirementIDForm.resources

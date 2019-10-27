@@ -18,16 +18,19 @@ namespace PlaneDepartureTracking.Model
         private int priority;
 
         public Plane() { }
+        public Plane(String internationalID)
+        {
+            this.internationalID = internationalID;
+        }
 
         public Plane(String producerName, String type, String internationalID, double minimalTrackLength,
-                     DateTime arrivalTime, DateTime trackRequirementTime, int priority)
+                     DateTime arrivalTime, int priority)
         {
             this.producerName = producerName;
             this.planeType = type;
             this.internationalID = internationalID;
             this.minimalTrackLength = minimalTrackLength;
             this.arrivalTime = arrivalTime;
-            this.trackRequirementTime = trackRequirementTime;
             this.priority = priority;
         }
 
@@ -118,7 +121,13 @@ namespace PlaneDepartureTracking.Model
 
         public int CompareTo(Plane other)
         {
-            throw new NotImplementedException();
+            return this.GetInternationalID().CompareTo(other.GetInternationalID());
+        }
+
+        public override String ToString()
+        {
+            return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
+                "," + trackRequirementTime + "," + priority;
         }
     }
 }

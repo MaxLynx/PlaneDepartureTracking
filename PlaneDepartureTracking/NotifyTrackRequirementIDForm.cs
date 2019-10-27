@@ -11,28 +11,25 @@ using System.Windows.Forms;
 
 namespace PlaneDepartureTracking
 {
-    public partial class NotifyPlaneArrivalForm : Form
+    public partial class NotifyTrackRequirementIDForm : Form
     {
         Airport model;
-        public NotifyPlaneArrivalForm(Airport model)
+        public NotifyTrackRequirementIDForm(Airport model)
         {
             this.model = model;
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            model.AddNewPlane(textBox2.Text, textBox3.Text, textBox1.Text, Double.Parse(textBox4.Text));
+            if (model.NotifyTrackRequirement(textBox4.Text))
+            {
+                MessageBox.Show("Successfull notification!");
+            }
+            else
+            {
+                MessageBox.Show("Plane with this ID has not arrived yet");
+            }
         }
     }
 }

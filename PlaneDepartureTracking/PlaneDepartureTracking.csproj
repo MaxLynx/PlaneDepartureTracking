@@ -52,12 +52,32 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListAllWaitingPlanesByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAllWaitingPlanesByID.Designer.cs">
+      <DependentUpon>ListAllWaitingPlanesByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Airport.cs" />
     <Compile Include="Model\Plane.cs" />
+    <Compile Include="Model\TrackType.cs" />
     <Compile Include="NotifyPlaneArrivalForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NotifyPlaneArrivalForm.Designer.cs">
       <DependentUpon>NotifyPlaneArrivalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifyPlaneArrivalIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyPlaneArrivalIDForm.Designer.cs">
+      <DependentUpon>NotifyPlaneArrivalIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifyTrackRequirementIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyTrackRequirementIDForm.Designer.cs">
+      <DependentUpon>NotifyTrackRequirementIDForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\IPriority.cs" />
     <Compile Include="Utils\PairingHeap.cs" />
@@ -70,8 +90,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListAllWaitingPlanesByID.resx">
+      <DependentUpon>ListAllWaitingPlanesByID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotifyPlaneArrivalForm.resx">
       <DependentUpon>NotifyPlaneArrivalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyPlaneArrivalIDForm.resx">
+      <DependentUpon>NotifyPlaneArrivalIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyTrackRequirementIDForm.resx">
+      <DependentUpon>NotifyTrackRequirementIDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
