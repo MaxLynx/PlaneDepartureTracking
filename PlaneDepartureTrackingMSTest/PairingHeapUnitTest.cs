@@ -23,6 +23,7 @@ namespace PlaneDepartureTrackingMSTest
                 deleteCount = 0, succDeleteCount = 0,
                 compareCheck = 0;
             String history = "";
+            int deleteFileNumber = 1;
 
 
             for (int i = 0; i < count; i++)
@@ -48,13 +49,14 @@ namespace PlaneDepartureTrackingMSTest
                 else
                     if (number % 5 == 1 || number % 5 == 2)
                 {
-                    /*
+                    
                     deleteCount++;
                     if (planes.Count > 0)
                     {
                         Plane toDelete = queue.DeleteMin();
                         if (toDelete != null)
                         {
+                            history += "" + toDelete.GetInternationalID() + "\r\n";
                             succDeleteCount++;
                             planes.Remove(toDelete);
                             removed.Add(toDelete);
@@ -89,9 +91,9 @@ namespace PlaneDepartureTrackingMSTest
                             }
                         }
                         
-                    }*/
+                    }
                 }
-                if (count >= 100 && number % (count / 100) == 0)
+                if (count >= 100 && number % 100 == 0)
                 {
                     
                     changePriorityCount++;
@@ -100,7 +102,7 @@ namespace PlaneDepartureTrackingMSTest
                     {
                         int newPriority = random.Next(11);
                         int randomIndex = random.Next(0, planes.Count);
-                        if (newPriority < planes[randomIndex].GetPriority())
+                        if (newPriority != planes[randomIndex].GetPriority())
                         {
                             Assert.IsTrue(queue.ChangePriority(planes[randomIndex],
                                 newPriority));
@@ -120,31 +122,33 @@ namespace PlaneDepartureTrackingMSTest
                         }
                             
                     }
-                    /*
-                    Plane toDelete = queue.Delete(planes[random.Next(0, planes.Count)]);
-                    if (toDelete != null)
+                    
+                    if (planes.Count > 0)
                     {
-                        history += "DELETED: " + toDelete.GetInternationalID()
-                            + " with priority " + toDelete.GetPriority() + "\r\n";
-                        if (queue.Root != null)
-                        {
-                            history += "ROOT: " + queue.Root.Data.GetInternationalID() + " with priority "
-                            + queue.Root.Data.GetPriority() + "\r\n";
-                        }
-                        else
-                        {
-                            history += "EMPTY HEAP\r\n";
-                        }
-                        planes.Remove(toDelete);
-                        removed.Add(toDelete);
+                        int randomIndex = random.Next(0, planes.Count);
+
+                        
+                        Plane randomDelete = queue.Delete(planes[randomIndex]);
+                        
+                        if (randomDelete != null)
+                            {
+                            
+                           
+                                planes.RemoveAt(randomIndex);
+                                removed.Add(randomDelete);
+                            }
+                        deleteFileNumber++;
+
                     }
-                    */
-                    
-                 
+
+
+
                     compareCheck++;
-                    
+                    File.WriteAllText("D:\\.NET Projects\\PlaneDepartureTracking\\PlaneDepartureTrackingMSTest\\pairingheapTestHistory.txt",
+                history);
                     foreach (Plane plane in planes)
                     {
+                        
                         Assert.IsTrue(queue.Contains(plane));
                     }
                     foreach (Plane plane in removed)

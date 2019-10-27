@@ -28,37 +28,67 @@ namespace PlaneDepartureTracking.Utils
             else
             if(heap1Root.Data.GetPriority().CompareTo(heap2Root.Data.GetPriority()) > 0)
             {
-                heap1Root.Right = heap2Root.Left;
+                TreeNode<V> rightChild = heap1Root.Right;
                 if (heap2Root.Left != null)
                 {
                     heap2Root.Left.Parent = heap1Root;
+                    heap1Root.Right = heap2Root.Left;
+                    
+                    if (rightChild != null)
+                    {
+                        TreeNode<V> iterNode = heap1Root.Right;
+                        while (iterNode.Right != null)
+                        {
+                            iterNode = iterNode.Right;
+                        }
+                        iterNode.Right = rightChild;
+                        rightChild.Parent = iterNode;
+                    }
                 }
                 heap2Root.Left = heap1Root;
                 heap1Root.Parent = heap2Root;
+                
                 return heap2Root;
             }
             else
             {
-                heap2Root.Right = heap1Root.Left;
+                TreeNode<V> rightChild = heap2Root.Right;
                 if (heap1Root.Left != null)
                 {
+                    heap2Root.Right = heap1Root.Left;
                     heap1Root.Left.Parent = heap2Root;
+                    
+                    if (rightChild != null)
+                    {
+                        TreeNode<V> iterNode = heap2Root.Right;
+                        while (iterNode.Right != null)
+                        {
+                            iterNode = iterNode.Right;
+                        }
+                        iterNode.Right = rightChild;
+                        rightChild.Parent = iterNode;
+                    }
                 }
                 heap1Root.Left = heap2Root;
                 heap2Root.Parent = heap1Root;
+                
                 return heap1Root;
             }
         }
         public bool ChangePriority(V el, T newPriority)
         {
 
-            if (el.GetPriority().CompareTo(newPriority) == 0)
-                return true;
+            
             
             TreeNode<V> currentNode = Find(el);
             if (currentNode != null)
             {
-                if(el.GetPriority().CompareTo(newPriority) > 0)
+                if (el.GetPriority().CompareTo(newPriority) == 0)
+                {
+                    return true;
+                }
+                else
+                if (el.GetPriority().CompareTo(newPriority) > 0)
                 {
                     IncreasePriority(currentNode, newPriority);
                 }
@@ -105,7 +135,6 @@ namespace PlaneDepartureTracking.Utils
 
         private void DecreasePriority(TreeNode<V> currentNode, T newPriority)
         {
-            T oldPriority = currentNode.Data.GetPriority();
             TreeNode<V> oldCurrentNode = currentNode;
             currentNode.Data.SetPriority(newPriority);
 
@@ -180,8 +209,7 @@ namespace PlaneDepartureTracking.Utils
             }
             V rootData = Root.Data;
             Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
-            Root = Pair(Root.Left, Root.Right);
-            TreeNode<V> currentNode = Root;
+            TreeNode<V> currentNode = Pair(Root.Left, Root.Right);
             if (currentNode != null)
             {
                 while (currentNode != null)

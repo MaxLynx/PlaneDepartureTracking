@@ -1,1158 +1,2426 @@
-ADDED: id1 with priority 2
-ROOT: id1 with priority 2
-ADDED: id2 with priority 0
-ROOT: id2 with priority 0
-ADDED: id3 with priority 6
-ROOT: id2 with priority 0
-ADDED: id4 with priority 2
-ROOT: id2 with priority 0
-ADDED: id5 with priority 5
-ROOT: id2 with priority 0
-ADDED: id6 with priority 1
-ROOT: id2 with priority 0
-ADDED: id7 with priority 10
-ROOT: id2 with priority 0
-ADDED: id8 with priority 10
-ROOT: id2 with priority 0
+ADDED: id1 with priority 5
+ROOT: id1 with priority 5
+ADDED: id2 with priority 4
+ROOT: id2 with priority 4
+ADDED: id3 with priority 1
+ROOT: id3 with priority 1
+id3
+DELETED: id3 with priority 1
+ROOT: id2 with priority 4
+id2
+DELETED: id2 with priority 4
+ROOT: id1 with priority 5
+id1
+DELETED: id1 with priority 5
+EMPTY HEAP
+ADDED: id4 with priority 7
+ROOT: id4 with priority 7
+ADDED: id5 with priority 1
+ROOT: id5 with priority 1
+ADDED: id6 with priority 5
+ROOT: id5 with priority 1
+ADDED: id7 with priority 2
+ROOT: id5 with priority 1
+id5
+DELETED: id5 with priority 1
+ROOT: id7 with priority 2
+ADDED: id8 with priority 9
+ROOT: id7 with priority 2
 ADDED: id9 with priority 1
-ROOT: id2 with priority 0
+ROOT: id9 with priority 1
 ADDED: id10 with priority 8
-ROOT: id2 with priority 0
-ADDED: id11 with priority 10
-ROOT: id2 with priority 0
-ADDED: id12 with priority 9
-ROOT: id2 with priority 0
-ADDED: id13 with priority 0
-ROOT: id13 with priority 0
-ADDED: id14 with priority 7
-ROOT: id13 with priority 0
+ROOT: id9 with priority 1
+ADDED: id11 with priority 4
+ROOT: id9 with priority 1
+ADDED: id12 with priority 10
+ROOT: id9 with priority 1
+ADDED: id13 with priority 9
+ROOT: id9 with priority 1
+ADDED: id14 with priority 9
+ROOT: id9 with priority 1
 ADDED: id15 with priority 6
-ROOT: id13 with priority 0
-ADDED: id16 with priority 9
-ROOT: id13 with priority 0
-ADDED: id17 with priority 4
-ROOT: id13 with priority 0
-ADDED: id18 with priority 3
-ROOT: id13 with priority 0
-ADDED: id19 with priority 5
-ROOT: id13 with priority 0
-ADDED: id20 with priority 10
-ROOT: id13 with priority 0
+ROOT: id9 with priority 1
+ADDED: id16 with priority 3
+ROOT: id9 with priority 1
+id9
+DELETED: id9 with priority 1
+ROOT: id7 with priority 2
+id7
+DELETED: id7 with priority 2
+ROOT: id16 with priority 3
+ADDED: id17 with priority 5
+ROOT: id16 with priority 3
+ADDED: id18 with priority 1
+ROOT: id18 with priority 1
+ADDED: id19 with priority 1
+ROOT: id19 with priority 1
+ADDED: id20 with priority 0
+ROOT: id20 with priority 0
+id20
+DELETED: id20 with priority 0
+ROOT: id19 with priority 1
+id19
+DELETED: id19 with priority 1
+ROOT: id18 with priority 1
+id18
+DELETED: id18 with priority 1
+ROOT: id16 with priority 3
 ADDED: id21 with priority 0
 ROOT: id21 with priority 0
-ADDED: id22 with priority 6
+ADDED: id22 with priority 8
 ROOT: id21 with priority 0
-ADDED: id23 with priority 4
+ADDED: id23 with priority 0
+ROOT: id23 with priority 0
+id23
+DELETED: id23 with priority 0
 ROOT: id21 with priority 0
 ADDED: id24 with priority 10
 ROOT: id21 with priority 0
-ADDED: id25 with priority 4
-ROOT: id21 with priority 0
-ADDED: id26 with priority 10
-ROOT: id21 with priority 0
-ADDED: id27 with priority 1
-ROOT: id21 with priority 0
-ADDED: id28 with priority 3
-ROOT: id21 with priority 0
-ADDED: id29 with priority 1
-ROOT: id21 with priority 0
-ADDED: id30 with priority 2
-ROOT: id21 with priority 0
-ADDED: id31 with priority 0
-ROOT: id31 with priority 0
-ADDED: id32 with priority 0
-ROOT: id32 with priority 0
-ADDED: id33 with priority 3
-ROOT: id32 with priority 0
-ADDED: id34 with priority 1
-ROOT: id32 with priority 0
-ADDED: id35 with priority 8
-ROOT: id15 with priority 0
-ADDED: id36 with priority 8
-ROOT: id15 with priority 0
-ADDED: id37 with priority 8
-ROOT: id15 with priority 0
-ADDED: id38 with priority 9
-ROOT: id15 with priority 0
-ADDED: id39 with priority 4
-ROOT: id15 with priority 0
-ADDED: id40 with priority 2
-ROOT: id15 with priority 0
-ADDED: id41 with priority 3
-ROOT: id15 with priority 0
-ADDED: id42 with priority 9
-ROOT: id15 with priority 0
-ADDED: id43 with priority 4
-ROOT: id15 with priority 0
-ADDED: id44 with priority 5
-ROOT: id15 with priority 0
-ADDED: id45 with priority 10
-ROOT: id15 with priority 0
-ADDED: id46 with priority 10
-ROOT: id15 with priority 0
-ADDED: id47 with priority 5
-ROOT: id15 with priority 0
+id21
+DELETED: id21 with priority 0
+ROOT: id16 with priority 3
+id16
+DELETED: id16 with priority 3
+ROOT: id11 with priority 4
+ADDED: id25 with priority 0
+ROOT: id25 with priority 0
+id25
+DELETED: id25 with priority 0
+ROOT: id11 with priority 4
+id11
+DELETED: id11 with priority 4
+ROOT: id17 with priority 5
+ADDED: id26 with priority 2
+ROOT: id26 with priority 2
+ADDED: id27 with priority 2
+ROOT: id27 with priority 2
+id27
+DELETED: id27 with priority 2
+ROOT: id26 with priority 2
+id26
+DELETED: id26 with priority 2
+ROOT: id17 with priority 5
+id17
+DELETED: id17 with priority 5
+ROOT: id6 with priority 5
+id6
+DELETED: id6 with priority 5
+ROOT: id15 with priority 6
+ADDED: id28 with priority 6
+ROOT: id28 with priority 6
+ADDED: id29 with priority 5
+ROOT: id29 with priority 5
+id29
+DELETED: id29 with priority 5
+ROOT: id28 with priority 6
+ADDED: id30 with priority 8
+ROOT: id28 with priority 6
+ADDED: id31 with priority 9
+ROOT: id28 with priority 6
+ADDED: id32 with priority 1
+ROOT: id32 with priority 1
+id32
+DELETED: id32 with priority 1
+ROOT: id28 with priority 6
+id28
+DELETED: id28 with priority 6
+ROOT: id15 with priority 6
+ADDED: id33 with priority 0
+ROOT: id33 with priority 0
+ADDED: id34 with priority 8
+ROOT: id33 with priority 0
+ADDED: id35 with priority 10
+ROOT: id33 with priority 0
+ADDED: id36 with priority 6
+ROOT: id33 with priority 0
+id33
+DELETED: id33 with priority 0
+ROOT: id15 with priority 6
+ADDED: id37 with priority 7
+ROOT: id15 with priority 6
+id15
+DELETED: id15 with priority 6
+ROOT: id36 with priority 6
+ADDED: id38 with priority 0
+ROOT: id38 with priority 0
+id38
+DELETED: id38 with priority 0
+ROOT: id36 with priority 6
+id36
+DELETED: id36 with priority 6
+ROOT: id4 with priority 7
+id4
+DELETED: id4 with priority 7
+ROOT: id37 with priority 7
+ADDED: id39 with priority 0
+ROOT: id39 with priority 0
+id39
+DELETED: id39 with priority 0
+ROOT: id37 with priority 7
+ADDED: id40 with priority 4
+ROOT: id40 with priority 4
+ADDED: id41 with priority 6
+ROOT: id40 with priority 4
+ADDED: id42 with priority 4
+ROOT: id42 with priority 4
+ADDED: id43 with priority 9
+ROOT: id42 with priority 4
+id42
+DELETED: id42 with priority 4
+ROOT: id40 with priority 4
+ADDED: id44 with priority 10
+ROOT: id40 with priority 4
+ADDED: id45 with priority 7
+ROOT: id40 with priority 4
+id40
+DELETED: id40 with priority 4
+ROOT: id41 with priority 6
+id41
+DELETED: id41 with priority 6
+ROOT: id37 with priority 7
+ADDED: id46 with priority 6
+ROOT: id46 with priority 6
+id46
+DELETED: id46 with priority 6
+ROOT: id37 with priority 7
+id37
+DELETED: id37 with priority 7
+ROOT: id45 with priority 7
+id45
+DELETED: id45 with priority 7
+ROOT: id30 with priority 8
+id30
+DELETED: id30 with priority 8
+ROOT: id22 with priority 8
+id22
+DELETED: id22 with priority 8
+ROOT: id10 with priority 8
+ADDED: id47 with priority 2
+ROOT: id47 with priority 2
+id47
+DELETED: id47 with priority 2
+ROOT: id10 with priority 8
+id10
+DELETED: id10 with priority 8
+ROOT: id8 with priority 9
 ADDED: id48 with priority 6
-ROOT: id15 with priority 0
-ADDED: id49 with priority 9
-ROOT: id15 with priority 0
-ADDED: id50 with priority 6
-ROOT: id15 with priority 0
-ADDED: id51 with priority 8
-ROOT: id15 with priority 0
-ADDED: id52 with priority 0
-ROOT: id52 with priority 0
-ADDED: id53 with priority 7
-ROOT: id52 with priority 0
-ADDED: id54 with priority 6
-ROOT: id52 with priority 0
-ADDED: id55 with priority 1
-ROOT: id52 with priority 0
-ADDED: id56 with priority 3
-ROOT: id52 with priority 0
-ADDED: id57 with priority 9
-ROOT: id52 with priority 0
-ADDED: id58 with priority 6
-ROOT: id52 with priority 0
-ADDED: id59 with priority 8
-ROOT: id52 with priority 0
+ROOT: id48 with priority 6
+ADDED: id49 with priority 6
+ROOT: id49 with priority 6
+ADDED: id50 with priority 7
+ROOT: id49 with priority 6
+ADDED: id51 with priority 4
+ROOT: id51 with priority 4
+id51
+DELETED: id51 with priority 4
+ROOT: id49 with priority 6
+id49
+DELETED: id49 with priority 6
+ROOT: id48 with priority 6
+ADDED: id52 with priority 5
+ROOT: id52 with priority 5
+id52
+DELETED: id52 with priority 5
+ROOT: id48 with priority 6
+ADDED: id53 with priority 10
+ROOT: id48 with priority 6
+ADDED: id54 with priority 5
+ROOT: id54 with priority 5
+id54
+DELETED: id54 with priority 5
+ROOT: id48 with priority 6
+id48
+DELETED: id48 with priority 6
+ROOT: id50 with priority 7
+id50
+DELETED: id50 with priority 7
+ROOT: id8 with priority 9
+ADDED: id55 with priority 9
+ROOT: id55 with priority 9
+id55
+DELETED: id55 with priority 9
+ROOT: id8 with priority 9
+id8
+DELETED: id8 with priority 9
+ROOT: id14 with priority 9
+ADDED: id56 with priority 2
+ROOT: id56 with priority 2
+id56
+DELETED: id56 with priority 2
+ROOT: id14 with priority 9
+ADDED: id57 with priority 4
+ROOT: id57 with priority 4
+id57
+DELETED: id57 with priority 4
+ROOT: id14 with priority 9
+ADDED: id58 with priority 0
+ROOT: id58 with priority 0
+ADDED: id59 with priority 10
+ROOT: id58 with priority 0
 ADDED: id60 with priority 0
 ROOT: id60 with priority 0
-ADDED: id61 with priority 6
-ROOT: id60 with priority 0
-ADDED: id62 with priority 4
-ROOT: id60 with priority 0
-ADDED: id63 with priority 7
-ROOT: id60 with priority 0
-ADDED: id64 with priority 8
-ROOT: id60 with priority 0
-ADDED: id65 with priority 0
-ROOT: id65 with priority 0
-ADDED: id66 with priority 2
-ROOT: id65 with priority 0
-ADDED: id67 with priority 2
-ROOT: id65 with priority 0
-ADDED: id68 with priority 1
-ROOT: id65 with priority 0
-ADDED: id69 with priority 6
-ROOT: id65 with priority 0
-ADDED: id70 with priority 10
-ROOT: id65 with priority 0
-ADDED: id71 with priority 7
-ROOT: id65 with priority 0
-ADDED: id72 with priority 4
-ROOT: id65 with priority 0
-ADDED: id73 with priority 6
-ROOT: id65 with priority 0
+id60
+DELETED: id60 with priority 0
+ROOT: id58 with priority 0
+ADDED: id61 with priority 7
+ROOT: id58 with priority 0
+ADDED: id62 with priority 9
+ROOT: id58 with priority 0
+id58
+DELETED: id58 with priority 0
+ROOT: id61 with priority 7
+ADDED: id63 with priority 10
+ROOT: id61 with priority 7
+ADDED: id64 with priority 2
+ROOT: id64 with priority 2
+id64
+DELETED: id64 with priority 2
+ROOT: id61 with priority 7
+id61
+DELETED: id61 with priority 7
+ROOT: id62 with priority 9
+id62
+DELETED: id62 with priority 9
+ROOT: id14 with priority 9
+id14
+DELETED: id14 with priority 9
+ROOT: id24 with priority 9
+ADDED: id65 with priority 3
+ROOT: id65 with priority 3
+id65
+DELETED: id65 with priority 3
+ROOT: id24 with priority 9
+ADDED: id66 with priority 0
+ROOT: id66 with priority 0
+id66
+DELETED: id66 with priority 0
+ROOT: id24 with priority 9
+id24
+DELETED: id24 with priority 9
+ROOT: id31 with priority 9
+id31
+DELETED: id31 with priority 9
+ROOT: id43 with priority 9
+ADDED: id67 with priority 9
+ROOT: id67 with priority 9
+ADDED: id68 with priority 7
+ROOT: id68 with priority 7
+ADDED: id69 with priority 10
+ROOT: id68 with priority 7
+id68
+DELETED: id68 with priority 7
+ROOT: id67 with priority 9
+ADDED: id70 with priority 4
+ROOT: id70 with priority 4
+id70
+DELETED: id70 with priority 4
+ROOT: id67 with priority 9
+ADDED: id71 with priority 8
+ROOT: id71 with priority 8
+id71
+DELETED: id71 with priority 8
+ROOT: id67 with priority 9
+id67
+DELETED: id67 with priority 9
+ROOT: id43 with priority 9
+id43
+DELETED: id43 with priority 9
+ROOT: id35 with priority 9
+ADDED: id72 with priority 5
+ROOT: id72 with priority 5
+ADDED: id73 with priority 1
+ROOT: id73 with priority 1
 ADDED: id74 with priority 9
-ROOT: id65 with priority 0
-ADDED: id75 with priority 10
-ROOT: id65 with priority 0
-ADDED: id76 with priority 8
-ROOT: id65 with priority 0
-ADDED: id77 with priority 0
-ROOT: id77 with priority 0
-ADDED: id78 with priority 9
-ROOT: id77 with priority 0
-ADDED: id79 with priority 2
-ROOT: id77 with priority 0
-ADDED: id80 with priority 2
-ROOT: id77 with priority 0
-ADDED: id81 with priority 2
-ROOT: id77 with priority 0
-ADDED: id82 with priority 9
-ROOT: id77 with priority 0
-ADDED: id83 with priority 10
-ROOT: id77 with priority 0
-ADDED: id84 with priority 3
-ROOT: id77 with priority 0
-ADDED: id85 with priority 1
-ROOT: id77 with priority 0
-ADDED: id86 with priority 4
-ROOT: id77 with priority 0
-ADDED: id87 with priority 8
-ROOT: id77 with priority 0
-ADDED: id88 with priority 5
-ROOT: id77 with priority 0
-ADDED: id89 with priority 7
-ROOT: id77 with priority 0
-ADDED: id90 with priority 2
-ROOT: id77 with priority 0
-ADDED: id91 with priority 6
-ROOT: id77 with priority 0
-ADDED: id92 with priority 0
-ROOT: id92 with priority 0
+ROOT: id73 with priority 1
+ADDED: id75 with priority 5
+ROOT: id73 with priority 1
+id73
+DELETED: id73 with priority 1
+ROOT: id75 with priority 5
+ADDED: id76 with priority 1
+ROOT: id76 with priority 1
+ADDED: id77 with priority 9
+ROOT: id76 with priority 1
+ADDED: id78 with priority 6
+ROOT: id76 with priority 1
+ADDED: id79 with priority 9
+ROOT: id76 with priority 1
+id76
+DELETED: id76 with priority 1
+ROOT: id75 with priority 5
+ADDED: id80 with priority 9
+ROOT: id75 with priority 5
+ADDED: id81 with priority 4
+ROOT: id81 with priority 4
+id81
+DELETED: id81 with priority 4
+ROOT: id75 with priority 5
+ADDED: id82 with priority 7
+ROOT: id75 with priority 5
+id75
+DELETED: id75 with priority 5
+ROOT: id72 with priority 6
+ADDED: id83 with priority 3
+ROOT: id83 with priority 3
+ADDED: id84 with priority 0
+ROOT: id84 with priority 0
+ADDED: id85 with priority 10
+ROOT: id84 with priority 0
+ADDED: id86 with priority 6
+ROOT: id84 with priority 0
+id84
+DELETED: id84 with priority 0
+ROOT: id83 with priority 3
+id83
+DELETED: id83 with priority 3
+ROOT: id86 with priority 6
+id86
+DELETED: id86 with priority 6
+ROOT: id72 with priority 6
+id72
+DELETED: id72 with priority 6
+ROOT: id78 with priority 6
+ADDED: id87 with priority 7
+ROOT: id78 with priority 6
+ADDED: id88 with priority 10
+ROOT: id78 with priority 6
+id78
+DELETED: id78 with priority 6
+ROOT: id87 with priority 7
+ADDED: id89 with priority 8
+ROOT: id87 with priority 7
+id87
+DELETED: id87 with priority 7
+ROOT: id82 with priority 7
+ADDED: id90 with priority 3
+ROOT: id90 with priority 3
+ADDED: id91 with priority 8
+ROOT: id90 with priority 3
+ADDED: id92 with priority 6
+ROOT: id90 with priority 3
 ADDED: id93 with priority 4
-ROOT: id92 with priority 0
-ADDED: id94 with priority 7
-ROOT: id92 with priority 0
+ROOT: id90 with priority 3
+ADDED: id94 with priority 5
+ROOT: id90 with priority 3
 ADDED: id95 with priority 10
-ROOT: id92 with priority 0
-ADDED: id96 with priority 2
-ROOT: id92 with priority 0
-ADDED: id97 with priority 4
-ROOT: id92 with priority 0
-ADDED: id98 with priority 4
-ROOT: id92 with priority 0
-ADDED: id99 with priority 3
-ROOT: id92 with priority 0
-ADDED: id100 with priority 1
-ROOT: id92 with priority 0
-ADDED: id101 with priority 10
-ROOT: id92 with priority 0
+ROOT: id90 with priority 3
+id90
+DELETED: id90 with priority 3
+ROOT: id93 with priority 4
+id93
+DELETED: id93 with priority 4
+ROOT: id94 with priority 5
+id94
+DELETED: id94 with priority 5
+ROOT: id92 with priority 6
+ADDED: id96 with priority 8
+ROOT: id92 with priority 6
+ADDED: id97 with priority 10
+ROOT: id92 with priority 6
+id92
+DELETED: id92 with priority 6
+ROOT: id82 with priority 7
+ADDED: id98 with priority 3
+ROOT: id98 with priority 3
+ADDED: id99 with priority 10
+ROOT: id98 with priority 3
+ADDED: id100 with priority 2
+ROOT: id100 with priority 2
+ADDED: id101 with priority 2
+ROOT: id101 with priority 2
 ADDED: id102 with priority 8
-ROOT: id92 with priority 0
-ADDED: id103 with priority 9
-ROOT: id92 with priority 0
-ADDED: id104 with priority 2
-ROOT: id92 with priority 0
-ADDED: id105 with priority 7
-ROOT: id92 with priority 0
-ADDED: id106 with priority 3
-ROOT: id92 with priority 0
-ADDED: id107 with priority 2
-ROOT: id92 with priority 0
-ADDED: id108 with priority 3
-ROOT: id92 with priority 0
-ADDED: id109 with priority 4
-ROOT: id92 with priority 0
-ADDED: id110 with priority 6
-ROOT: id92 with priority 0
-ADDED: id111 with priority 5
-ROOT: id92 with priority 0
+ROOT: id101 with priority 2
+id101
+DELETED: id101 with priority 2
+ROOT: id100 with priority 2
+id100
+DELETED: id100 with priority 2
+ROOT: id98 with priority 3
+ADDED: id103 with priority 2
+ROOT: id103 with priority 2
+id103
+DELETED: id103 with priority 2
+ROOT: id98 with priority 3
+ADDED: id104 with priority 4
+ROOT: id98 with priority 3
+ADDED: id105 with priority 1
+ROOT: id105 with priority 1
+id105
+DELETED: id105 with priority 1
+ROOT: id98 with priority 3
+ADDED: id106 with priority 8
+ROOT: id98 with priority 3
+ADDED: id107 with priority 9
+ROOT: id98 with priority 3
+id98
+DELETED: id98 with priority 3
+ROOT: id104 with priority 4
+ADDED: id108 with priority 1
+ROOT: id108 with priority 1
+ADDED: id109 with priority 6
+ROOT: id108 with priority 1
+id108
+DELETED: id108 with priority 1
+ROOT: id104 with priority 4
+ADDED: id110 with priority 7
+ROOT: id104 with priority 4
+ADDED: id111 with priority 8
+ROOT: id104 with priority 4
 ADDED: id112 with priority 8
-ROOT: id92 with priority 0
-ADDED: id113 with priority 10
-ROOT: id57 with priority 0
-ADDED: id114 with priority 10
-ROOT: id57 with priority 0
-ADDED: id115 with priority 2
-ROOT: id57 with priority 0
-ADDED: id116 with priority 1
-ROOT: id57 with priority 0
-ADDED: id117 with priority 9
-ROOT: id57 with priority 0
-ADDED: id118 with priority 3
-ROOT: id57 with priority 0
-ADDED: id119 with priority 4
-ROOT: id57 with priority 0
+ROOT: id104 with priority 4
+ADDED: id113 with priority 3
+ROOT: id113 with priority 3
+ADDED: id114 with priority 8
+ROOT: id113 with priority 3
+ADDED: id115 with priority 8
+ROOT: id113 with priority 3
+ADDED: id116 with priority 3
+ROOT: id116 with priority 3
+ADDED: id117 with priority 5
+ROOT: id116 with priority 3
+id116
+DELETED: id116 with priority 3
+ROOT: id113 with priority 3
+ADDED: id118 with priority 10
+ROOT: id113 with priority 3
+ADDED: id119 with priority 6
+ROOT: id113 with priority 3
+id113
+DELETED: id113 with priority 3
+ROOT: id104 with priority 4
+id104
+DELETED: id104 with priority 4
+ROOT: id117 with priority 5
 ADDED: id120 with priority 7
-ROOT: id57 with priority 0
+ROOT: id117 with priority 5
+id117
+DELETED: id117 with priority 5
+ROOT: id109 with priority 6
+id109
+DELETED: id109 with priority 6
+ROOT: id119 with priority 6
 ADDED: id121 with priority 1
-ROOT: id57 with priority 0
-ADDED: id122 with priority 5
-ROOT: id57 with priority 0
-ADDED: id123 with priority 8
-ROOT: id57 with priority 0
-ADDED: id124 with priority 2
-ROOT: id57 with priority 0
-ADDED: id125 with priority 0
-ROOT: id125 with priority 0
-ADDED: id126 with priority 2
-ROOT: id125 with priority 0
-ADDED: id127 with priority 1
-ROOT: id125 with priority 0
-ADDED: id128 with priority 9
-ROOT: id125 with priority 0
-ADDED: id129 with priority 0
-ROOT: id129 with priority 0
-ADDED: id130 with priority 1
-ROOT: id129 with priority 0
-ADDED: id131 with priority 5
-ROOT: id129 with priority 0
+ROOT: id121 with priority 1
+id121
+DELETED: id121 with priority 1
+ROOT: id119 with priority 6
+ADDED: id122 with priority 2
+ROOT: id122 with priority 2
+id122
+DELETED: id122 with priority 2
+ROOT: id119 with priority 6
+ADDED: id123 with priority 3
+ROOT: id123 with priority 3
+ADDED: id124 with priority 1
+ROOT: id124 with priority 1
+ADDED: id125 with priority 10
+ROOT: id124 with priority 1
+id124
+DELETED: id124 with priority 1
+ROOT: id123 with priority 3
+ADDED: id126 with priority 4
+ROOT: id123 with priority 3
+ADDED: id127 with priority 7
+ROOT: id123 with priority 3
+ADDED: id128 with priority 7
+ROOT: id123 with priority 3
+ADDED: id129 with priority 8
+ROOT: id123 with priority 3
+ADDED: id130 with priority 10
+ROOT: id123 with priority 3
+ADDED: id131 with priority 4
+ROOT: id123 with priority 3
 ADDED: id132 with priority 8
-ROOT: id129 with priority 0
-ADDED: id133 with priority 0
-ROOT: id133 with priority 0
-ADDED: id134 with priority 3
-ROOT: id133 with priority 0
-ADDED: id135 with priority 8
-ROOT: id133 with priority 0
-ADDED: id136 with priority 9
-ROOT: id133 with priority 0
-ADDED: id137 with priority 9
-ROOT: id133 with priority 0
-ADDED: id138 with priority 4
-ROOT: id133 with priority 0
-ADDED: id139 with priority 1
-ROOT: id133 with priority 0
-ADDED: id140 with priority 9
-ROOT: id133 with priority 0
-ADDED: id141 with priority 2
-ROOT: id133 with priority 0
-ADDED: id142 with priority 2
-ROOT: id133 with priority 0
-ADDED: id143 with priority 4
-ROOT: id133 with priority 0
+ROOT: id123 with priority 3
+ADDED: id133 with priority 1
+ROOT: id133 with priority 1
+ADDED: id134 with priority 0
+ROOT: id134 with priority 0
+id134
+DELETED: id134 with priority 0
+ROOT: id133 with priority 1
+ADDED: id135 with priority 2
+ROOT: id133 with priority 1
+ADDED: id136 with priority 8
+ROOT: id133 with priority 1
+id133
+DELETED: id133 with priority 1
+ROOT: id135 with priority 2
+id135
+DELETED: id135 with priority 2
+ROOT: id123 with priority 3
+id123
+DELETED: id123 with priority 3
+ROOT: id126 with priority 4
+ADDED: id137 with priority 5
+ROOT: id126 with priority 4
+ADDED: id138 with priority 0
+ROOT: id138 with priority 0
+id138
+DELETED: id138 with priority 0
+ROOT: id126 with priority 4
+ADDED: id139 with priority 8
+ROOT: id126 with priority 4
+id126
+DELETED: id126 with priority 4
+ROOT: id131 with priority 4
+ADDED: id140 with priority 0
+ROOT: id140 with priority 0
+ADDED: id141 with priority 8
+ROOT: id140 with priority 0
+ADDED: id142 with priority 5
+ROOT: id140 with priority 0
+ADDED: id143 with priority 10
+ROOT: id140 with priority 0
 ADDED: id144 with priority 7
-ROOT: id133 with priority 0
-ADDED: id145 with priority 0
-ROOT: id145 with priority 0
+ROOT: id140 with priority 0
+ADDED: id145 with priority 6
+ROOT: id140 with priority 0
+id140
+DELETED: id140 with priority 0
+ROOT: id131 with priority 4
 ADDED: id146 with priority 4
-ROOT: id145 with priority 0
-ADDED: id147 with priority 0
-ROOT: id147 with priority 0
-ADDED: id148 with priority 2
-ROOT: id147 with priority 0
-ADDED: id149 with priority 0
-ROOT: id149 with priority 0
-ADDED: id150 with priority 3
-ROOT: id149 with priority 0
-ADDED: id151 with priority 9
-ROOT: id149 with priority 0
-ADDED: id152 with priority 6
-ROOT: id149 with priority 0
-ADDED: id153 with priority 9
-ROOT: id149 with priority 0
-ADDED: id154 with priority 6
-ROOT: id149 with priority 0
-ADDED: id155 with priority 7
-ROOT: id149 with priority 0
-ADDED: id156 with priority 4
-ROOT: id149 with priority 0
-ADDED: id157 with priority 8
-ROOT: id149 with priority 0
-ADDED: id158 with priority 3
-ROOT: id149 with priority 0
-ADDED: id159 with priority 1
-ROOT: id149 with priority 0
-ADDED: id160 with priority 8
-ROOT: id149 with priority 0
-ADDED: id161 with priority 2
-ROOT: id149 with priority 0
-ADDED: id162 with priority 1
-ROOT: id149 with priority 0
-ADDED: id163 with priority 1
-ROOT: id149 with priority 0
-ADDED: id164 with priority 8
-ROOT: id149 with priority 0
-ADDED: id165 with priority 4
-ROOT: id149 with priority 0
-ADDED: id166 with priority 3
-ROOT: id149 with priority 0
-ADDED: id167 with priority 4
-ROOT: id149 with priority 0
-ADDED: id168 with priority 5
-ROOT: id149 with priority 0
-ADDED: id169 with priority 5
-ROOT: id149 with priority 0
-ADDED: id170 with priority 0
-ROOT: id170 with priority 0
-ADDED: id171 with priority 0
-ROOT: id171 with priority 0
-ADDED: id172 with priority 9
-ROOT: id171 with priority 0
-ADDED: id173 with priority 2
-ROOT: id171 with priority 0
-ADDED: id174 with priority 0
-ROOT: id174 with priority 0
-ADDED: id175 with priority 5
-ROOT: id174 with priority 0
-ADDED: id176 with priority 7
-ROOT: id174 with priority 0
+ROOT: id146 with priority 4
+id146
+DELETED: id146 with priority 4
+ROOT: id131 with priority 4
+id131
+DELETED: id131 with priority 4
+ROOT: id142 with priority 5
+ADDED: id147 with priority 7
+ROOT: id142 with priority 5
+ADDED: id148 with priority 7
+ROOT: id142 with priority 5
+id142
+DELETED: id142 with priority 5
+ROOT: id137 with priority 5
+ADDED: id149 with priority 8
+ROOT: id137 with priority 5
+ADDED: id150 with priority 0
+ROOT: id150 with priority 0
+id150
+DELETED: id150 with priority 0
+ROOT: id137 with priority 5
+ADDED: id151 with priority 2
+ROOT: id151 with priority 2
+ADDED: id152 with priority 4
+ROOT: id151 with priority 2
+ADDED: id153 with priority 1
+ROOT: id153 with priority 1
+ADDED: id154 with priority 7
+ROOT: id153 with priority 1
+ADDED: id155 with priority 3
+ROOT: id153 with priority 1
+ADDED: id156 with priority 2
+ROOT: id153 with priority 1
+id153
+DELETED: id153 with priority 1
+ROOT: id156 with priority 2
+ADDED: id157 with priority 10
+ROOT: id156 with priority 2
+ADDED: id158 with priority 6
+ROOT: id156 with priority 2
+id156
+DELETED: id156 with priority 2
+ROOT: id151 with priority 2
+ADDED: id159 with priority 6
+ROOT: id151 with priority 2
+ADDED: id160 with priority 5
+ROOT: id151 with priority 2
+ADDED: id161 with priority 7
+ROOT: id151 with priority 2
+id151
+DELETED: id151 with priority 2
+ROOT: id155 with priority 3
+id155
+DELETED: id155 with priority 3
+ROOT: id152 with priority 4
+id152
+DELETED: id152 with priority 4
+ROOT: id137 with priority 5
+id137
+DELETED: id137 with priority 5
+ROOT: id160 with priority 5
+id160
+DELETED: id160 with priority 5
+ROOT: id145 with priority 6
+ADDED: id162 with priority 0
+ROOT: id162 with priority 0
+ADDED: id163 with priority 5
+ROOT: id162 with priority 0
+ADDED: id164 with priority 9
+ROOT: id162 with priority 0
+ADDED: id165 with priority 0
+ROOT: id165 with priority 0
+ADDED: id166 with priority 8
+ROOT: id165 with priority 0
+ADDED: id167 with priority 1
+ROOT: id165 with priority 0
+id165
+DELETED: id165 with priority 0
+ROOT: id162 with priority 0
+ADDED: id168 with priority 1
+ROOT: id162 with priority 0
+ADDED: id169 with priority 0
+ROOT: id169 with priority 0
+id169
+DELETED: id169 with priority 0
+ROOT: id162 with priority 0
+id162
+DELETED: id162 with priority 0
+ROOT: id168 with priority 1
+ADDED: id170 with priority 2
+ROOT: id168 with priority 1
+ADDED: id171 with priority 7
+ROOT: id168 with priority 1
+id168
+DELETED: id168 with priority 1
+ROOT: id167 with priority 1
+ADDED: id172 with priority 6
+ROOT: id167 with priority 1
+ADDED: id173 with priority 9
+ROOT: id167 with priority 1
+ADDED: id174 with priority 1
+ROOT: id174 with priority 1
+id174
+DELETED: id174 with priority 1
+ROOT: id167 with priority 1
+ADDED: id175 with priority 4
+ROOT: id167 with priority 1
+id167
+DELETED: id167 with priority 1
+ROOT: id170 with priority 2
+ADDED: id176 with priority 5
+ROOT: id170 with priority 2
 ADDED: id177 with priority 3
-ROOT: id174 with priority 0
+ROOT: id170 with priority 2
 ADDED: id178 with priority 8
-ROOT: id174 with priority 0
-ADDED: id179 with priority 7
-ROOT: id174 with priority 0
-ADDED: id180 with priority 8
-ROOT: id174 with priority 0
-ADDED: id181 with priority 5
-ROOT: id55 with priority 0
-ADDED: id182 with priority 6
-ROOT: id55 with priority 0
-ADDED: id183 with priority 9
-ROOT: id55 with priority 0
-ADDED: id184 with priority 7
-ROOT: id55 with priority 0
-ADDED: id185 with priority 1
-ROOT: id55 with priority 0
+ROOT: id170 with priority 2
+ADDED: id179 with priority 8
+ROOT: id170 with priority 2
+ADDED: id180 with priority 1
+ROOT: id180 with priority 1
+id180
+DELETED: id180 with priority 1
+ROOT: id170 with priority 2
+ADDED: id181 with priority 3
+ROOT: id170 with priority 2
+id170
+DELETED: id170 with priority 2
+ROOT: id181 with priority 3
+id181
+DELETED: id181 with priority 3
+ROOT: id177 with priority 3
+id177
+DELETED: id177 with priority 3
+ROOT: id175 with priority 4
+ADDED: id182 with priority 2
+ROOT: id182 with priority 2
+ADDED: id183 with priority 7
+ROOT: id182 with priority 2
+ADDED: id184 with priority 8
+ROOT: id182 with priority 2
+id182
+DELETED: id182 with priority 2
+ROOT: id175 with priority 4
+ADDED: id185 with priority 6
+ROOT: id175 with priority 4
 ADDED: id186 with priority 9
-ROOT: id55 with priority 0
-ADDED: id187 with priority 7
-ROOT: id55 with priority 0
-ADDED: id188 with priority 4
-ROOT: id55 with priority 0
-ADDED: id189 with priority 7
-ROOT: id55 with priority 0
-ADDED: id190 with priority 1
-ROOT: id55 with priority 0
-ADDED: id191 with priority 0
-ROOT: id191 with priority 0
+ROOT: id175 with priority 4
+ADDED: id187 with priority 1
+ROOT: id187 with priority 1
+id187
+DELETED: id187 with priority 1
+ROOT: id175 with priority 4
+id175
+DELETED: id175 with priority 4
+ROOT: id176 with priority 5
+ADDED: id188 with priority 3
+ROOT: id188 with priority 3
+ADDED: id189 with priority 8
+ROOT: id188 with priority 3
+ADDED: id190 with priority 0
+ROOT: id190 with priority 0
+id190
+DELETED: id190 with priority 0
+ROOT: id188 with priority 3
+ADDED: id191 with priority 1
+ROOT: id191 with priority 1
+id191
+DELETED: id191 with priority 1
+ROOT: id188 with priority 3
+id188
+DELETED: id188 with priority 3
+ROOT: id176 with priority 5
 ADDED: id192 with priority 1
-ROOT: id191 with priority 0
-ADDED: id193 with priority 7
-ROOT: id191 with priority 0
-ADDED: id194 with priority 1
-ROOT: id191 with priority 0
-ADDED: id195 with priority 2
-ROOT: id191 with priority 0
-ADDED: id196 with priority 3
-ROOT: id191 with priority 0
-ADDED: id197 with priority 7
-ROOT: id191 with priority 0
+ROOT: id192 with priority 1
+ADDED: id193 with priority 1
+ROOT: id193 with priority 1
+ADDED: id194 with priority 7
+ROOT: id193 with priority 1
+id193
+DELETED: id193 with priority 1
+ROOT: id192 with priority 1
+id192
+DELETED: id192 with priority 1
+ROOT: id176 with priority 5
+id176
+DELETED: id176 with priority 5
+ROOT: id163 with priority 5
+ADDED: id195 with priority 8
+ROOT: id163 with priority 5
+id163
+DELETED: id163 with priority 5
+ROOT: id145 with priority 6
+ADDED: id196 with priority 9
+ROOT: id145 with priority 6
+id145
+DELETED: id145 with priority 6
+ROOT: id119 with priority 6
+ADDED: id197 with priority 10
+ROOT: id119 with priority 6
+id119
+DELETED: id119 with priority 6
+ROOT: id185 with priority 6
 ADDED: id198 with priority 9
-ROOT: id191 with priority 0
-ADDED: id199 with priority 8
-ROOT: id191 with priority 0
-ADDED: id200 with priority 0
-ROOT: id200 with priority 0
-ADDED: id201 with priority 9
-ROOT: id200 with priority 0
-ADDED: id202 with priority 0
-ROOT: id202 with priority 0
-ADDED: id203 with priority 3
-ROOT: id202 with priority 0
-ADDED: id204 with priority 6
-ROOT: id202 with priority 0
-ADDED: id205 with priority 10
-ROOT: id202 with priority 0
-ADDED: id206 with priority 2
-ROOT: id202 with priority 0
-ADDED: id207 with priority 0
-ROOT: id207 with priority 0
+ROOT: id185 with priority 6
+ADDED: id199 with priority 0
+ROOT: id199 with priority 0
+ADDED: id200 with priority 6
+ROOT: id199 with priority 0
+ADDED: id201 with priority 2
+ROOT: id199 with priority 0
+id199
+DELETED: id199 with priority 0
+ROOT: id201 with priority 2
+id201
+DELETED: id201 with priority 2
+ROOT: id185 with priority 6
+ADDED: id202 with priority 3
+ROOT: id202 with priority 3
+id202
+DELETED: id202 with priority 3
+ROOT: id185 with priority 6
+id185
+DELETED: id185 with priority 6
+ROOT: id200 with priority 6
+id200
+DELETED: id200 with priority 6
+ROOT: id159 with priority 6
+ADDED: id203 with priority 0
+ROOT: id203 with priority 0
+id203
+DELETED: id203 with priority 0
+ROOT: id159 with priority 6
+id159
+DELETED: id159 with priority 6
+ROOT: id172 with priority 6
+ADDED: id204 with priority 3
+ROOT: id204 with priority 3
+id204
+DELETED: id204 with priority 3
+ROOT: id172 with priority 6
+ADDED: id205 with priority 0
+ROOT: id205 with priority 0
+id205
+DELETED: id205 with priority 0
+ROOT: id172 with priority 6
+id172
+DELETED: id172 with priority 6
+ROOT: id158 with priority 6
+id158
+DELETED: id158 with priority 6
+ROOT: id161 with priority 7
+ADDED: id206 with priority 4
+ROOT: id206 with priority 4
+id206
+DELETED: id206 with priority 4
+ROOT: id161 with priority 7
+id161
+DELETED: id161 with priority 7
+ROOT: id82 with priority 7
+id82
+DELETED: id82 with priority 7
+ROOT: id148 with priority 7
+id148
+DELETED: id148 with priority 7
+ROOT: id120 with priority 7
+ADDED: id207 with priority 5
+ROOT: id207 with priority 5
+id207
+DELETED: id207 with priority 5
+ROOT: id120 with priority 7
 ADDED: id208 with priority 10
-ROOT: id207 with priority 0
-ADDED: id209 with priority 2
-ROOT: id207 with priority 0
-ADDED: id210 with priority 4
-ROOT: id207 with priority 0
-ADDED: id211 with priority 3
-ROOT: id207 with priority 0
-ADDED: id212 with priority 1
-ROOT: id207 with priority 0
-ADDED: id213 with priority 10
-ROOT: id207 with priority 0
-ADDED: id214 with priority 1
-ROOT: id207 with priority 0
-ADDED: id215 with priority 1
-ROOT: id207 with priority 0
-ADDED: id216 with priority 2
-ROOT: id207 with priority 0
+ROOT: id120 with priority 7
+id120
+DELETED: id120 with priority 7
+ROOT: id110 with priority 7
+ADDED: id209 with priority 5
+ROOT: id209 with priority 5
+ADDED: id210 with priority 6
+ROOT: id209 with priority 5
+id209
+DELETED: id209 with priority 5
+ROOT: id210 with priority 6
+id210
+DELETED: id210 with priority 6
+ROOT: id110 with priority 7
+id110
+DELETED: id110 with priority 7
+ROOT: id128 with priority 7
+ADDED: id211 with priority 8
+ROOT: id128 with priority 7
+id128
+DELETED: id128 with priority 7
+ROOT: id147 with priority 7
+id147
+DELETED: id147 with priority 7
+ROOT: id127 with priority 7
+ADDED: id212 with priority 9
+ROOT: id127 with priority 7
+id127
+DELETED: id127 with priority 7
+ROOT: id194 with priority 7
+ADDED: id213 with priority 4
+ROOT: id213 with priority 4
+ADDED: id214 with priority 7
+ROOT: id213 with priority 4
+ADDED: id215 with priority 9
+ROOT: id213 with priority 4
+id213
+DELETED: id213 with priority 4
+ROOT: id194 with priority 7
+id194
+DELETED: id194 with priority 7
+ROOT: id144 with priority 7
+ADDED: id216 with priority 9
+ROOT: id144 with priority 7
 ADDED: id217 with priority 1
-ROOT: id207 with priority 0
-ADDED: id218 with priority 3
-ROOT: id207 with priority 0
-ADDED: id219 with priority 6
-ROOT: id207 with priority 0
-ADDED: id220 with priority 10
-ROOT: id207 with priority 0
-ADDED: id221 with priority 9
-ROOT: id207 with priority 0
-ADDED: id222 with priority 9
-ROOT: id187 with priority 0
-ADDED: id223 with priority 1
-ROOT: id187 with priority 0
+ROOT: id217 with priority 1
+id217
+DELETED: id217 with priority 1
+ROOT: id144 with priority 7
+id144
+DELETED: id144 with priority 7
+ROOT: id183 with priority 7
+ADDED: id218 with priority 0
+ROOT: id218 with priority 0
+id218
+DELETED: id218 with priority 0
+ROOT: id183 with priority 7
+id183
+DELETED: id183 with priority 7
+ROOT: id171 with priority 7
+ADDED: id219 with priority 9
+ROOT: id171 with priority 7
+id171
+DELETED: id171 with priority 7
+ROOT: id154 with priority 7
+ADDED: id220 with priority 7
+ROOT: id220 with priority 7
+id220
+DELETED: id220 with priority 7
+ROOT: id154 with priority 7
+ADDED: id221 with priority 0
+ROOT: id221 with priority 0
+ADDED: id222 with priority 4
+ROOT: id221 with priority 0
+ADDED: id223 with priority 7
+ROOT: id221 with priority 0
 ADDED: id224 with priority 4
-ROOT: id187 with priority 0
-ADDED: id225 with priority 0
-ROOT: id225 with priority 0
-ADDED: id226 with priority 10
-ROOT: id225 with priority 0
-ADDED: id227 with priority 5
-ROOT: id225 with priority 0
-ADDED: id228 with priority 2
-ROOT: id225 with priority 0
-ADDED: id229 with priority 3
-ROOT: id225 with priority 0
-ADDED: id230 with priority 1
-ROOT: id225 with priority 0
-ADDED: id231 with priority 0
-ROOT: id231 with priority 0
+ROOT: id221 with priority 0
+ADDED: id225 with priority 4
+ROOT: id221 with priority 0
+id221
+DELETED: id221 with priority 0
+ROOT: id222 with priority 4
+ADDED: id226 with priority 3
+ROOT: id226 with priority 3
+ADDED: id227 with priority 0
+ROOT: id227 with priority 0
+ADDED: id228 with priority 8
+ROOT: id227 with priority 0
+ADDED: id229 with priority 8
+ROOT: id227 with priority 0
+ADDED: id230 with priority 8
+ROOT: id227 with priority 0
+id227
+DELETED: id227 with priority 0
+ROOT: id226 with priority 3
+id226
+DELETED: id226 with priority 3
+ROOT: id222 with priority 4
+id222
+DELETED: id222 with priority 4
+ROOT: id225 with priority 4
+ADDED: id231 with priority 4
+ROOT: id231 with priority 4
 ADDED: id232 with priority 9
-ROOT: id231 with priority 0
-ADDED: id233 with priority 1
-ROOT: id231 with priority 0
-ADDED: id234 with priority 7
-ROOT: id231 with priority 0
-ADDED: id235 with priority 9
-ROOT: id231 with priority 0
-ADDED: id236 with priority 5
-ROOT: id231 with priority 0
-ADDED: id237 with priority 10
-ROOT: id231 with priority 0
-ADDED: id238 with priority 0
-ROOT: id238 with priority 0
-ADDED: id239 with priority 5
-ROOT: id238 with priority 0
-ADDED: id240 with priority 3
-ROOT: id238 with priority 0
-ADDED: id241 with priority 7
-ROOT: id238 with priority 0
+ROOT: id231 with priority 4
+id231
+DELETED: id231 with priority 4
+ROOT: id225 with priority 4
+ADDED: id233 with priority 8
+ROOT: id225 with priority 4
+ADDED: id234 with priority 5
+ROOT: id225 with priority 4
+ADDED: id235 with priority 3
+ROOT: id235 with priority 3
+ADDED: id236 with priority 7
+ROOT: id235 with priority 3
+ADDED: id237 with priority 0
+ROOT: id237 with priority 0
+id237
+DELETED: id237 with priority 0
+ROOT: id235 with priority 3
+ADDED: id238 with priority 4
+ROOT: id235 with priority 3
+id235
+DELETED: id235 with priority 3
+ROOT: id225 with priority 4
+ADDED: id239 with priority 6
+ROOT: id225 with priority 4
+id225
+DELETED: id225 with priority 4
+ROOT: id224 with priority 4
+id224
+DELETED: id224 with priority 4
+ROOT: id238 with priority 4
+id238
+DELETED: id238 with priority 4
+ROOT: id234 with priority 5
+id234
+DELETED: id234 with priority 5
+ROOT: id239 with priority 6
+ADDED: id240 with priority 1
+ROOT: id240 with priority 1
+id240
+DELETED: id240 with priority 1
+ROOT: id239 with priority 6
+ADDED: id241 with priority 9
+ROOT: id239 with priority 6
 ADDED: id242 with priority 7
-ROOT: id238 with priority 0
-ADDED: id243 with priority 6
-ROOT: id238 with priority 0
-ADDED: id244 with priority 2
-ROOT: id238 with priority 0
-ADDED: id245 with priority 9
-ROOT: id238 with priority 0
-ADDED: id246 with priority 9
-ROOT: id238 with priority 0
-ADDED: id247 with priority 8
-ROOT: id238 with priority 0
-ADDED: id248 with priority 5
-ROOT: id238 with priority 0
+ROOT: id239 with priority 6
+id239
+DELETED: id239 with priority 6
+ROOT: id154 with priority 7
+id154
+DELETED: id154 with priority 7
+ROOT: id236 with priority 7
+ADDED: id243 with priority 10
+ROOT: id236 with priority 7
+ADDED: id244 with priority 0
+ROOT: id244 with priority 0
+ADDED: id245 with priority 10
+ROOT: id244 with priority 0
+ADDED: id246 with priority 2
+ROOT: id244 with priority 0
+ADDED: id247 with priority 5
+ROOT: id244 with priority 0
+id244
+DELETED: id244 with priority 0
+ROOT: id246 with priority 2
+ADDED: id248 with priority 7
+ROOT: id246 with priority 2
+id246
+DELETED: id246 with priority 2
+ROOT: id247 with priority 5
+id247
+DELETED: id247 with priority 5
+ROOT: id248 with priority 7
 ADDED: id249 with priority 5
-ROOT: id238 with priority 0
-ADDED: id250 with priority 0
-ROOT: id250 with priority 0
-ADDED: id251 with priority 9
-ROOT: id250 with priority 0
-ADDED: id252 with priority 7
-ROOT: id250 with priority 0
-ADDED: id253 with priority 10
-ROOT: id250 with priority 0
-ADDED: id254 with priority 5
-ROOT: id250 with priority 0
-ADDED: id255 with priority 3
-ROOT: id250 with priority 0
-ADDED: id256 with priority 9
-ROOT: id250 with priority 0
-ADDED: id257 with priority 6
-ROOT: id250 with priority 0
-ADDED: id258 with priority 7
-ROOT: id250 with priority 0
-ADDED: id259 with priority 5
-ROOT: id250 with priority 0
-ADDED: id260 with priority 4
-ROOT: id250 with priority 0
-ADDED: id261 with priority 2
-ROOT: id250 with priority 0
-ADDED: id262 with priority 8
-ROOT: id250 with priority 0
-ADDED: id263 with priority 7
-ROOT: id250 with priority 0
-ADDED: id264 with priority 9
-ROOT: id250 with priority 0
-ADDED: id265 with priority 4
-ROOT: id250 with priority 0
-ADDED: id266 with priority 5
-ROOT: id250 with priority 0
-ADDED: id267 with priority 8
-ROOT: id250 with priority 0
-ADDED: id268 with priority 5
-ROOT: id250 with priority 0
-ADDED: id269 with priority 9
-ROOT: id250 with priority 0
-ADDED: id270 with priority 5
-ROOT: id250 with priority 0
-ADDED: id271 with priority 6
-ROOT: id250 with priority 0
-ADDED: id272 with priority 0
-ROOT: id272 with priority 0
-ADDED: id273 with priority 2
-ROOT: id272 with priority 0
+ROOT: id249 with priority 5
+id249
+DELETED: id249 with priority 5
+ROOT: id248 with priority 7
+ADDED: id250 with priority 8
+ROOT: id248 with priority 7
+ADDED: id251 with priority 5
+ROOT: id251 with priority 5
+ADDED: id252 with priority 9
+ROOT: id251 with priority 5
+id251
+DELETED: id251 with priority 5
+ROOT: id248 with priority 7
+ADDED: id253 with priority 8
+ROOT: id248 with priority 7
+ADDED: id254 with priority 3
+ROOT: id254 with priority 3
+ADDED: id255 with priority 5
+ROOT: id254 with priority 3
+id254
+DELETED: id254 with priority 3
+ROOT: id255 with priority 5
+id255
+DELETED: id255 with priority 5
+ROOT: id248 with priority 7
+id248
+DELETED: id248 with priority 7
+ROOT: id236 with priority 7
+ADDED: id256 with priority 3
+ROOT: id256 with priority 3
+ADDED: id257 with priority 1
+ROOT: id257 with priority 1
+id257
+DELETED: id257 with priority 1
+ROOT: id256 with priority 3
+ADDED: id258 with priority 0
+ROOT: id258 with priority 0
+ADDED: id259 with priority 4
+ROOT: id258 with priority 0
+id258
+DELETED: id258 with priority 0
+ROOT: id256 with priority 3
+ADDED: id260 with priority 0
+ROOT: id260 with priority 0
+ADDED: id261 with priority 0
+ROOT: id261 with priority 0
+id261
+DELETED: id261 with priority 0
+ROOT: id260 with priority 0
+id260
+DELETED: id260 with priority 0
+ROOT: id256 with priority 3
+id256
+DELETED: id256 with priority 3
+ROOT: id259 with priority 4
+ADDED: id262 with priority 0
+ROOT: id262 with priority 0
+id262
+DELETED: id262 with priority 0
+ROOT: id259 with priority 4
+ADDED: id263 with priority 9
+ROOT: id259 with priority 4
+id259
+DELETED: id259 with priority 4
+ROOT: id236 with priority 7
+ADDED: id264 with priority 5
+ROOT: id264 with priority 5
+ADDED: id265 with priority 7
+ROOT: id264 with priority 5
+ADDED: id266 with priority 2
+ROOT: id266 with priority 2
+ADDED: id267 with priority 9
+ROOT: id266 with priority 2
+id266
+DELETED: id266 with priority 2
+ROOT: id264 with priority 5
+ADDED: id268 with priority 0
+ROOT: id268 with priority 0
+ADDED: id269 with priority 3
+ROOT: id268 with priority 0
+ADDED: id270 with priority 0
+ROOT: id270 with priority 0
+id270
+DELETED: id270 with priority 0
+ROOT: id268 with priority 0
+id268
+DELETED: id268 with priority 0
+ROOT: id269 with priority 3
+id269
+DELETED: id269 with priority 3
+ROOT: id264 with priority 5
+ADDED: id271 with priority 2
+ROOT: id271 with priority 2
+id271
+DELETED: id271 with priority 2
+ROOT: id264 with priority 5
+ADDED: id272 with priority 3
+ROOT: id272 with priority 3
+ADDED: id273 with priority 1
+ROOT: id273 with priority 1
+id273
+DELETED: id273 with priority 1
+ROOT: id272 with priority 3
 ADDED: id274 with priority 6
-ROOT: id272 with priority 0
-ADDED: id275 with priority 3
-ROOT: id272 with priority 0
-ADDED: id276 with priority 2
-ROOT: id272 with priority 0
-ADDED: id277 with priority 0
-ROOT: id277 with priority 0
-ADDED: id278 with priority 1
-ROOT: id277 with priority 0
-ADDED: id279 with priority 2
-ROOT: id277 with priority 0
-ADDED: id280 with priority 5
-ROOT: id277 with priority 0
-ADDED: id281 with priority 8
-ROOT: id277 with priority 0
-ADDED: id282 with priority 2
-ROOT: id277 with priority 0
-ADDED: id283 with priority 2
-ROOT: id277 with priority 0
+ROOT: id272 with priority 3
+id272
+DELETED: id272 with priority 3
+ROOT: id264 with priority 5
+id264
+DELETED: id264 with priority 5
+ROOT: id274 with priority 6
+id274
+DELETED: id274 with priority 6
+ROOT: id265 with priority 7
+ADDED: id275 with priority 2
+ROOT: id275 with priority 2
+id275
+DELETED: id275 with priority 2
+ROOT: id265 with priority 7
+ADDED: id276 with priority 0
+ROOT: id276 with priority 0
+ADDED: id277 with priority 4
+ROOT: id276 with priority 0
+ADDED: id278 with priority 7
+ROOT: id276 with priority 0
+id276
+DELETED: id276 with priority 0
+ROOT: id277 with priority 4
+ADDED: id279 with priority 1
+ROOT: id279 with priority 1
+id279
+DELETED: id279 with priority 1
+ROOT: id277 with priority 4
+id277
+DELETED: id277 with priority 4
+ROOT: id265 with priority 7
+id265
+DELETED: id265 with priority 7
+ROOT: id236 with priority 7
+ADDED: id280 with priority 1
+ROOT: id280 with priority 1
+ADDED: id281 with priority 10
+ROOT: id280 with priority 1
+ADDED: id282 with priority 9
+ROOT: id280 with priority 1
+id280
+DELETED: id280 with priority 1
+ROOT: id236 with priority 7
+id236
+DELETED: id236 with priority 7
+ROOT: id242 with priority 7
+ADDED: id283 with priority 0
+ROOT: id283 with priority 0
 ADDED: id284 with priority 10
-ROOT: id277 with priority 0
-ADDED: id285 with priority 10
-ROOT: id277 with priority 0
-ADDED: id286 with priority 0
-ROOT: id286 with priority 0
-ADDED: id287 with priority 3
-ROOT: id286 with priority 0
+ROOT: id283 with priority 0
+ADDED: id285 with priority 7
+ROOT: id283 with priority 0
+id283
+DELETED: id283 with priority 0
+ROOT: id242 with priority 7
+id242
+DELETED: id242 with priority 7
+ROOT: id285 with priority 7
+ADDED: id286 with priority 2
+ROOT: id286 with priority 2
+id286
+DELETED: id286 with priority 2
+ROOT: id285 with priority 7
+ADDED: id287 with priority 9
+ROOT: id285 with priority 7
 ADDED: id288 with priority 7
-ROOT: id286 with priority 0
-ADDED: id289 with priority 7
-ROOT: id286 with priority 0
-ADDED: id290 with priority 9
-ROOT: id286 with priority 0
-ADDED: id291 with priority 9
-ROOT: id286 with priority 0
-ADDED: id292 with priority 7
-ROOT: id286 with priority 0
-ADDED: id293 with priority 9
-ROOT: id286 with priority 0
-ADDED: id294 with priority 0
-ROOT: id294 with priority 0
-ADDED: id295 with priority 4
-ROOT: id294 with priority 0
-ADDED: id296 with priority 8
-ROOT: id294 with priority 0
-ADDED: id297 with priority 10
-ROOT: id294 with priority 0
-ADDED: id298 with priority 0
-ROOT: id298 with priority 0
-ADDED: id299 with priority 8
-ROOT: id298 with priority 0
-ADDED: id300 with priority 4
-ROOT: id298 with priority 0
-ADDED: id301 with priority 4
-ROOT: id298 with priority 0
-ADDED: id302 with priority 0
-ROOT: id302 with priority 0
-ADDED: id303 with priority 10
-ROOT: id302 with priority 0
-ADDED: id304 with priority 4
-ROOT: id302 with priority 0
-ADDED: id305 with priority 7
-ROOT: id302 with priority 0
-ADDED: id306 with priority 2
-ROOT: id302 with priority 0
-ADDED: id307 with priority 6
-ROOT: id302 with priority 0
-ADDED: id308 with priority 7
-ROOT: id302 with priority 0
-ADDED: id309 with priority 8
-ROOT: id302 with priority 0
-ADDED: id310 with priority 3
-ROOT: id302 with priority 0
-ADDED: id311 with priority 8
-ROOT: id302 with priority 0
-ADDED: id312 with priority 0
-ROOT: id312 with priority 0
-ADDED: id313 with priority 4
-ROOT: id312 with priority 0
-ADDED: id314 with priority 10
-ROOT: id312 with priority 0
-ADDED: id315 with priority 1
-ROOT: id312 with priority 0
-ADDED: id316 with priority 10
-ROOT: id312 with priority 0
-ADDED: id317 with priority 5
-ROOT: id312 with priority 0
-ADDED: id318 with priority 7
-ROOT: id312 with priority 0
-ADDED: id319 with priority 4
-ROOT: id312 with priority 0
-ADDED: id320 with priority 9
-ROOT: id312 with priority 0
-ADDED: id321 with priority 2
-ROOT: id312 with priority 0
-ADDED: id322 with priority 6
-ROOT: id312 with priority 0
+ROOT: id288 with priority 7
+ADDED: id289 with priority 1
+ROOT: id289 with priority 1
+id289
+DELETED: id289 with priority 1
+ROOT: id288 with priority 7
+id288
+DELETED: id288 with priority 7
+ROOT: id285 with priority 7
+ADDED: id290 with priority 4
+ROOT: id290 with priority 4
+id290
+DELETED: id290 with priority 4
+ROOT: id285 with priority 7
+id285
+DELETED: id285 with priority 7
+ROOT: id278 with priority 7
+id278
+DELETED: id278 with priority 7
+ROOT: id223 with priority 7
+ADDED: id291 with priority 5
+ROOT: id291 with priority 5
+ADDED: id292 with priority 5
+ROOT: id292 with priority 5
+ADDED: id293 with priority 8
+ROOT: id292 with priority 5
+id292
+DELETED: id292 with priority 5
+ROOT: id291 with priority 5
+ADDED: id294 with priority 9
+ROOT: id291 with priority 5
+ADDED: id295 with priority 3
+ROOT: id295 with priority 3
+ADDED: id296 with priority 4
+ROOT: id295 with priority 3
+id295
+DELETED: id295 with priority 3
+ROOT: id296 with priority 4
+ADDED: id297 with priority 8
+ROOT: id296 with priority 4
+ADDED: id298 with priority 6
+ROOT: id296 with priority 4
+ADDED: id299 with priority 7
+ROOT: id296 with priority 4
+id296
+DELETED: id296 with priority 4
+ROOT: id291 with priority 5
+ADDED: id300 with priority 2
+ROOT: id300 with priority 2
+ADDED: id301 with priority 1
+ROOT: id301 with priority 1
+ADDED: id302 with priority 3
+ROOT: id301 with priority 1
+id301
+DELETED: id301 with priority 1
+ROOT: id300 with priority 2
+ADDED: id303 with priority 1
+ROOT: id303 with priority 1
+ADDED: id304 with priority 0
+ROOT: id304 with priority 0
+ADDED: id305 with priority 1
+ROOT: id304 with priority 0
+id304
+DELETED: id304 with priority 0
+ROOT: id305 with priority 1
+ADDED: id306 with priority 9
+ROOT: id305 with priority 1
+ADDED: id307 with priority 8
+ROOT: id305 with priority 1
+ADDED: id308 with priority 0
+ROOT: id308 with priority 0
+id308
+DELETED: id308 with priority 0
+ROOT: id305 with priority 1
+id305
+DELETED: id305 with priority 1
+ROOT: id303 with priority 1
+ADDED: id309 with priority 0
+ROOT: id309 with priority 0
+ADDED: id310 with priority 2
+ROOT: id309 with priority 0
+ADDED: id311 with priority 9
+ROOT: id309 with priority 0
+id309
+DELETED: id309 with priority 0
+ROOT: id303 with priority 1
+ADDED: id312 with priority 10
+ROOT: id303 with priority 1
+id303
+DELETED: id303 with priority 1
+ROOT: id310 with priority 2
+ADDED: id313 with priority 0
+ROOT: id313 with priority 0
+id313
+DELETED: id313 with priority 0
+ROOT: id310 with priority 2
+id310
+DELETED: id310 with priority 2
+ROOT: id300 with priority 2
+ADDED: id314 with priority 6
+ROOT: id300 with priority 2
+ADDED: id315 with priority 9
+ROOT: id300 with priority 2
+ADDED: id316 with priority 7
+ROOT: id300 with priority 2
+ADDED: id317 with priority 6
+ROOT: id300 with priority 2
+ADDED: id318 with priority 3
+ROOT: id300 with priority 2
+id300
+DELETED: id300 with priority 2
+ROOT: id302 with priority 3
+ADDED: id319 with priority 6
+ROOT: id302 with priority 3
+id302
+DELETED: id302 with priority 3
+ROOT: id318 with priority 3
+ADDED: id320 with priority 2
+ROOT: id320 with priority 2
+id320
+DELETED: id320 with priority 2
+ROOT: id318 with priority 3
+ADDED: id321 with priority 9
+ROOT: id318 with priority 3
+id318
+DELETED: id318 with priority 3
+ROOT: id291 with priority 5
+ADDED: id322 with priority 5
+ROOT: id322 with priority 5
+id322
+DELETED: id322 with priority 5
+ROOT: id291 with priority 5
+id291
+DELETED: id291 with priority 5
+ROOT: id85 with priority 5
 ADDED: id323 with priority 8
-ROOT: id312 with priority 0
-ADDED: id324 with priority 3
-ROOT: id312 with priority 0
-ADDED: id325 with priority 8
-ROOT: id312 with priority 0
-ADDED: id326 with priority 7
-ROOT: id312 with priority 0
-ADDED: id327 with priority 9
-ROOT: id312 with priority 0
-ADDED: id328 with priority 2
-ROOT: id312 with priority 0
-ADDED: id329 with priority 2
-ROOT: id312 with priority 0
-ADDED: id330 with priority 7
-ROOT: id312 with priority 0
-ADDED: id331 with priority 6
-ROOT: id312 with priority 0
-ADDED: id332 with priority 1
-ROOT: id312 with priority 0
-ADDED: id333 with priority 6
-ROOT: id312 with priority 0
-ADDED: id334 with priority 0
-ROOT: id334 with priority 0
-ADDED: id335 with priority 1
-ROOT: id334 with priority 0
-ADDED: id336 with priority 10
-ROOT: id334 with priority 0
-ADDED: id337 with priority 10
-ROOT: id334 with priority 0
-ADDED: id338 with priority 4
-ROOT: id334 with priority 0
-ADDED: id339 with priority 2
-ROOT: id334 with priority 0
-ADDED: id340 with priority 4
-ROOT: id334 with priority 0
-ADDED: id341 with priority 6
-ROOT: id334 with priority 0
-ADDED: id342 with priority 10
-ROOT: id334 with priority 0
-ADDED: id343 with priority 8
-ROOT: id334 with priority 0
+ROOT: id85 with priority 5
+id85
+DELETED: id85 with priority 5
+ROOT: id317 with priority 6
+id317
+DELETED: id317 with priority 6
+ROOT: id314 with priority 6
+id314
+DELETED: id314 with priority 6
+ROOT: id319 with priority 6
+ADDED: id324 with priority 10
+ROOT: id319 with priority 6
+id319
+DELETED: id319 with priority 6
+ROOT: id298 with priority 6
+id298
+DELETED: id298 with priority 6
+ROOT: id316 with priority 7
+ADDED: id325 with priority 1
+ROOT: id325 with priority 1
+id325
+DELETED: id325 with priority 1
+ROOT: id316 with priority 7
+ADDED: id326 with priority 5
+ROOT: id326 with priority 5
+id326
+DELETED: id326 with priority 5
+ROOT: id316 with priority 7
+ADDED: id327 with priority 8
+ROOT: id316 with priority 7
+ADDED: id328 with priority 10
+ROOT: id316 with priority 7
+id316
+DELETED: id316 with priority 7
+ROOT: id299 with priority 7
+id299
+DELETED: id299 with priority 7
+ROOT: id223 with priority 7
+id223
+DELETED: id223 with priority 7
+ROOT: id214 with priority 7
+id214
+DELETED: id214 with priority 7
+ROOT: id253 with priority 8
+ADDED: id329 with priority 8
+ROOT: id329 with priority 8
+id329
+DELETED: id329 with priority 8
+ROOT: id253 with priority 8
+id253
+DELETED: id253 with priority 8
+ROOT: id189 with priority 8
+ADDED: id330 with priority 9
+ROOT: id189 with priority 8
+ADDED: id331 with priority 4
+ROOT: id331 with priority 4
+id331
+DELETED: id331 with priority 4
+ROOT: id189 with priority 8
+ADDED: id332 with priority 4
+ROOT: id332 with priority 4
+id332
+DELETED: id332 with priority 4
+ROOT: id189 with priority 8
+ADDED: id333 with priority 0
+ROOT: id333 with priority 0
+ADDED: id334 with priority 4
+ROOT: id333 with priority 0
+id333
+DELETED: id333 with priority 0
+ROOT: id334 with priority 4
+id334
+DELETED: id334 with priority 4
+ROOT: id189 with priority 8
+id189
+DELETED: id189 with priority 8
+ROOT: id179 with priority 8
+id179
+DELETED: id179 with priority 8
+ROOT: id250 with priority 8
+ADDED: id335 with priority 5
+ROOT: id335 with priority 5
+ADDED: id336 with priority 9
+ROOT: id335 with priority 5
+ADDED: id337 with priority 9
+ROOT: id335 with priority 5
+ADDED: id338 with priority 8
+ROOT: id335 with priority 5
+id335
+DELETED: id335 with priority 5
+ROOT: id338 with priority 8
+id338
+DELETED: id338 with priority 8
+ROOT: id250 with priority 8
+id250
+DELETED: id250 with priority 8
+ROOT: id297 with priority 8
+ADDED: id339 with priority 7
+ROOT: id339 with priority 7
+id339
+DELETED: id339 with priority 7
+ROOT: id297 with priority 8
+ADDED: id340 with priority 5
+ROOT: id340 with priority 5
+ADDED: id341 with priority 3
+ROOT: id341 with priority 3
+ADDED: id342 with priority 7
+ROOT: id341 with priority 3
+id341
+DELETED: id341 with priority 3
+ROOT: id340 with priority 5
+ADDED: id343 with priority 2
+ROOT: id343 with priority 2
 ADDED: id344 with priority 0
 ROOT: id344 with priority 0
-ADDED: id345 with priority 10
+ADDED: id345 with priority 6
 ROOT: id344 with priority 0
-ADDED: id346 with priority 8
+ADDED: id346 with priority 3
 ROOT: id344 with priority 0
-ADDED: id347 with priority 2
+ADDED: id347 with priority 9
 ROOT: id344 with priority 0
-ADDED: id348 with priority 0
-ROOT: id348 with priority 0
-ADDED: id349 with priority 0
-ROOT: id349 with priority 0
-ADDED: id350 with priority 1
-ROOT: id349 with priority 0
-ADDED: id351 with priority 1
-ROOT: id349 with priority 0
+ADDED: id348 with priority 3
+ROOT: id344 with priority 0
+id344
+DELETED: id344 with priority 0
+ROOT: id343 with priority 2
+ADDED: id349 with priority 2
+ROOT: id349 with priority 2
+ADDED: id350 with priority 0
+ROOT: id350 with priority 0
+id350
+DELETED: id350 with priority 0
+ROOT: id349 with priority 2
+id349
+DELETED: id349 with priority 2
+ROOT: id343 with priority 2
+ADDED: id351 with priority 9
+ROOT: id343 with priority 2
+id343
+DELETED: id343 with priority 2
+ROOT: id346 with priority 3
 ADDED: id352 with priority 5
-ROOT: id349 with priority 0
-ADDED: id353 with priority 6
-ROOT: id349 with priority 0
-ADDED: id354 with priority 5
-ROOT: id349 with priority 0
-ADDED: id355 with priority 5
-ROOT: id349 with priority 0
-ADDED: id356 with priority 8
-ROOT: id349 with priority 0
-ADDED: id357 with priority 7
-ROOT: id349 with priority 0
-ADDED: id358 with priority 4
-ROOT: id349 with priority 0
-ADDED: id359 with priority 5
-ROOT: id349 with priority 0
-ADDED: id360 with priority 9
-ROOT: id349 with priority 0
-ADDED: id361 with priority 1
-ROOT: id349 with priority 0
-ADDED: id362 with priority 6
-ROOT: id349 with priority 0
-ADDED: id363 with priority 10
-ROOT: id349 with priority 0
-ADDED: id364 with priority 0
-ROOT: id364 with priority 0
-ADDED: id365 with priority 2
-ROOT: id364 with priority 0
-ADDED: id366 with priority 10
-ROOT: id364 with priority 0
-ADDED: id367 with priority 8
-ROOT: id364 with priority 0
-ADDED: id368 with priority 5
-ROOT: id364 with priority 0
-ADDED: id369 with priority 1
-ROOT: id364 with priority 0
-ADDED: id370 with priority 8
-ROOT: id364 with priority 0
-ADDED: id371 with priority 4
-ROOT: id364 with priority 0
-ADDED: id372 with priority 0
-ROOT: id372 with priority 0
-ADDED: id373 with priority 2
-ROOT: id372 with priority 0
-ADDED: id374 with priority 6
-ROOT: id372 with priority 0
-ADDED: id375 with priority 3
-ROOT: id372 with priority 0
-ADDED: id376 with priority 5
-ROOT: id372 with priority 0
-ADDED: id377 with priority 10
-ROOT: id372 with priority 0
-ADDED: id378 with priority 8
-ROOT: id372 with priority 0
+ROOT: id346 with priority 3
+id346
+DELETED: id346 with priority 3
+ROOT: id348 with priority 3
+ADDED: id353 with priority 5
+ROOT: id348 with priority 3
+ADDED: id354 with priority 4
+ROOT: id348 with priority 3
+ADDED: id355 with priority 9
+ROOT: id348 with priority 3
+ADDED: id356 with priority 6
+ROOT: id348 with priority 3
+ADDED: id357 with priority 2
+ROOT: id357 with priority 2
+ADDED: id358 with priority 10
+ROOT: id357 with priority 2
+ADDED: id359 with priority 1
+ROOT: id359 with priority 1
+ADDED: id360 with priority 4
+ROOT: id359 with priority 1
+ADDED: id361 with priority 0
+ROOT: id361 with priority 0
+id361
+DELETED: id361 with priority 0
+ROOT: id359 with priority 1
+ADDED: id362 with priority 4
+ROOT: id359 with priority 1
+id359
+DELETED: id359 with priority 1
+ROOT: id357 with priority 2
+ADDED: id363 with priority 5
+ROOT: id357 with priority 2
+ADDED: id364 with priority 3
+ROOT: id357 with priority 2
+ADDED: id365 with priority 3
+ROOT: id357 with priority 2
+id357
+DELETED: id357 with priority 2
+ROOT: id348 with priority 3
+id348
+DELETED: id348 with priority 3
+ROOT: id365 with priority 3
+ADDED: id366 with priority 7
+ROOT: id365 with priority 3
+id365
+DELETED: id365 with priority 3
+ROOT: id364 with priority 3
+id364
+DELETED: id364 with priority 3
+ROOT: id362 with priority 4
+id362
+DELETED: id362 with priority 4
+ROOT: id360 with priority 4
+id360
+DELETED: id360 with priority 4
+ROOT: id354 with priority 4
+ADDED: id367 with priority 2
+ROOT: id367 with priority 2
+ADDED: id368 with priority 7
+ROOT: id367 with priority 2
+ADDED: id369 with priority 4
+ROOT: id367 with priority 2
+ADDED: id370 with priority 3
+ROOT: id367 with priority 2
+ADDED: id371 with priority 9
+ROOT: id367 with priority 2
+ADDED: id372 with priority 6
+ROOT: id367 with priority 2
+ADDED: id373 with priority 4
+ROOT: id106 with priority 1
+ADDED: id374 with priority 10
+ROOT: id106 with priority 1
+id106
+DELETED: id106 with priority 1
+ROOT: id367 with priority 2
+id367
+DELETED: id367 with priority 2
+ROOT: id370 with priority 3
+ADDED: id375 with priority 8
+ROOT: id370 with priority 3
+ADDED: id376 with priority 2
+ROOT: id376 with priority 2
+id376
+DELETED: id376 with priority 2
+ROOT: id370 with priority 3
+ADDED: id377 with priority 3
+ROOT: id377 with priority 3
+id377
+DELETED: id377 with priority 3
+ROOT: id370 with priority 3
+ADDED: id378 with priority 7
+ROOT: id370 with priority 3
 ADDED: id379 with priority 10
-ROOT: id372 with priority 0
-ADDED: id380 with priority 2
-ROOT: id372 with priority 0
-ADDED: id381 with priority 3
-ROOT: id372 with priority 0
-ADDED: id382 with priority 6
-ROOT: id372 with priority 0
-ADDED: id383 with priority 2
-ROOT: id372 with priority 0
-ADDED: id384 with priority 4
-ROOT: id372 with priority 0
+ROOT: id370 with priority 3
+ADDED: id380 with priority 9
+ROOT: id370 with priority 3
+id370
+DELETED: id370 with priority 3
+ROOT: id369 with priority 4
+id369
+DELETED: id369 with priority 4
+ROOT: id373 with priority 4
+ADDED: id381 with priority 6
+ROOT: id373 with priority 4
+id373
+DELETED: id373 with priority 4
+ROOT: id354 with priority 4
+ADDED: id382 with priority 0
+ROOT: id382 with priority 0
+id382
+DELETED: id382 with priority 0
+ROOT: id354 with priority 4
+id354
+DELETED: id354 with priority 4
+ROOT: id363 with priority 5
+id363
+DELETED: id363 with priority 5
+ROOT: id352 with priority 5
+id352
+DELETED: id352 with priority 5
+ROOT: id353 with priority 5
+ADDED: id383 with priority 6
+ROOT: id353 with priority 5
+id353
+DELETED: id353 with priority 5
+ROOT: id340 with priority 5
+id340
+DELETED: id340 with priority 5
+ROOT: id345 with priority 6
+ADDED: id384 with priority 2
+ROOT: id384 with priority 2
+id384
+DELETED: id384 with priority 2
+ROOT: id345 with priority 6
+id345
+DELETED: id345 with priority 6
+ROOT: id381 with priority 6
 ADDED: id385 with priority 3
-ROOT: id372 with priority 0
-ADDED: id386 with priority 5
-ROOT: id372 with priority 0
-ADDED: id387 with priority 5
-ROOT: id372 with priority 0
-ADDED: id388 with priority 6
-ROOT: id372 with priority 0
-ADDED: id389 with priority 9
-ROOT: id372 with priority 0
-ADDED: id390 with priority 2
-ROOT: id372 with priority 0
-ADDED: id391 with priority 10
-ROOT: id372 with priority 0
-ADDED: id392 with priority 3
-ROOT: id372 with priority 0
-ADDED: id393 with priority 8
-ROOT: id372 with priority 0
-ADDED: id394 with priority 9
-ROOT: id372 with priority 0
-ADDED: id395 with priority 8
-ROOT: id372 with priority 0
-ADDED: id396 with priority 6
-ROOT: id372 with priority 0
-ADDED: id397 with priority 10
-ROOT: id372 with priority 0
-ADDED: id398 with priority 4
-ROOT: id372 with priority 0
-ADDED: id399 with priority 9
-ROOT: id372 with priority 0
-ADDED: id400 with priority 4
-ROOT: id372 with priority 0
-ADDED: id401 with priority 9
-ROOT: id372 with priority 0
-ADDED: id402 with priority 4
-ROOT: id372 with priority 0
-ADDED: id403 with priority 6
-ROOT: id372 with priority 0
-ADDED: id404 with priority 2
-ROOT: id372 with priority 0
-ADDED: id405 with priority 1
-ROOT: id372 with priority 0
-ADDED: id406 with priority 10
-ROOT: id372 with priority 0
-ADDED: id407 with priority 0
-ROOT: id407 with priority 0
-ADDED: id408 with priority 7
-ROOT: id407 with priority 0
+ROOT: id385 with priority 3
+ADDED: id386 with priority 7
+ROOT: id385 with priority 3
+ADDED: id387 with priority 7
+ROOT: id385 with priority 3
+ADDED: id388 with priority 9
+ROOT: id385 with priority 3
+ADDED: id389 with priority 2
+ROOT: id389 with priority 2
+ADDED: id390 with priority 6
+ROOT: id389 with priority 2
+ADDED: id391 with priority 7
+ROOT: id389 with priority 2
+id389
+DELETED: id389 with priority 2
+ROOT: id385 with priority 3
+id385
+DELETED: id385 with priority 3
+ROOT: id381 with priority 6
+ADDED: id392 with priority 0
+ROOT: id392 with priority 0
+ADDED: id393 with priority 3
+ROOT: id392 with priority 0
+ADDED: id394 with priority 1
+ROOT: id392 with priority 0
+id392
+DELETED: id392 with priority 0
+ROOT: id394 with priority 1
+ADDED: id395 with priority 0
+ROOT: id395 with priority 0
+ADDED: id396 with priority 0
+ROOT: id396 with priority 0
+ADDED: id397 with priority 2
+ROOT: id396 with priority 0
+ADDED: id398 with priority 2
+ROOT: id396 with priority 0
+id396
+DELETED: id396 with priority 0
+ROOT: id395 with priority 0
+id395
+DELETED: id395 with priority 0
+ROOT: id394 with priority 1
+id394
+DELETED: id394 with priority 1
+ROOT: id398 with priority 2
+id398
+DELETED: id398 with priority 2
+ROOT: id397 with priority 2
+ADDED: id399 with priority 4
+ROOT: id397 with priority 2
+ADDED: id400 with priority 1
+ROOT: id400 with priority 1
+ADDED: id401 with priority 8
+ROOT: id400 with priority 1
+ADDED: id402 with priority 0
+ROOT: id402 with priority 0
+ADDED: id403 with priority 3
+ROOT: id402 with priority 0
+id402
+DELETED: id402 with priority 0
+ROOT: id400 with priority 1
+ADDED: id404 with priority 4
+ROOT: id400 with priority 1
+ADDED: id405 with priority 6
+ROOT: id400 with priority 1
+id400
+DELETED: id400 with priority 1
+ROOT: id397 with priority 2
+ADDED: id406 with priority 6
+ROOT: id397 with priority 2
+id397
+DELETED: id397 with priority 2
+ROOT: id393 with priority 3
+id393
+DELETED: id393 with priority 3
+ROOT: id403 with priority 3
+id403
+DELETED: id403 with priority 3
+ROOT: id404 with priority 4
+ADDED: id407 with priority 8
+ROOT: id404 with priority 4
+id404
+DELETED: id404 with priority 4
+ROOT: id399 with priority 4
+ADDED: id408 with priority 3
+ROOT: id408 with priority 3
 ADDED: id409 with priority 6
-ROOT: id407 with priority 0
-ADDED: id410 with priority 3
-ROOT: id407 with priority 0
-ADDED: id411 with priority 0
-ROOT: id411 with priority 0
-ADDED: id412 with priority 5
-ROOT: id411 with priority 0
-ADDED: id413 with priority 8
-ROOT: id411 with priority 0
-ADDED: id414 with priority 3
-ROOT: id411 with priority 0
-ADDED: id415 with priority 2
-ROOT: id411 with priority 0
-ADDED: id416 with priority 8
-ROOT: id411 with priority 0
-ADDED: id417 with priority 7
-ROOT: id411 with priority 0
-ADDED: id418 with priority 4
-ROOT: id411 with priority 0
-ADDED: id419 with priority 2
-ROOT: id411 with priority 0
-ADDED: id420 with priority 10
-ROOT: id411 with priority 0
-ADDED: id421 with priority 8
-ROOT: id411 with priority 0
+ROOT: id408 with priority 3
+id408
+DELETED: id408 with priority 3
+ROOT: id399 with priority 4
+ADDED: id410 with priority 10
+ROOT: id399 with priority 4
+ADDED: id411 with priority 3
+ROOT: id411 with priority 3
+ADDED: id412 with priority 7
+ROOT: id411 with priority 3
+ADDED: id413 with priority 6
+ROOT: id411 with priority 3
+ADDED: id414 with priority 6
+ROOT: id411 with priority 3
+id411
+DELETED: id411 with priority 3
+ROOT: id399 with priority 4
+ADDED: id415 with priority 8
+ROOT: id399 with priority 4
+ADDED: id416 with priority 10
+ROOT: id399 with priority 4
+id399
+DELETED: id399 with priority 4
+ROOT: id414 with priority 6
+ADDED: id417 with priority 4
+ROOT: id417 with priority 4
+id417
+DELETED: id417 with priority 4
+ROOT: id414 with priority 6
+id414
+DELETED: id414 with priority 6
+ROOT: id409 with priority 6
+ADDED: id418 with priority 1
+ROOT: id418 with priority 1
+id418
+DELETED: id418 with priority 1
+ROOT: id409 with priority 6
+id409
+DELETED: id409 with priority 6
+ROOT: id413 with priority 6
+ADDED: id419 with priority 1
+ROOT: id419 with priority 1
+ADDED: id420 with priority 0
+ROOT: id420 with priority 0
+id420
+DELETED: id420 with priority 0
+ROOT: id419 with priority 1
+id419
+DELETED: id419 with priority 1
+ROOT: id413 with priority 6
+id413
+DELETED: id413 with priority 6
+ROOT: id405 with priority 6
+id405
+DELETED: id405 with priority 6
+ROOT: id381 with priority 6
+ADDED: id421 with priority 1
+ROOT: id421 with priority 1
 ADDED: id422 with priority 5
-ROOT: id411 with priority 0
-ADDED: id423 with priority 2
-ROOT: id411 with priority 0
+ROOT: id421 with priority 1
+ADDED: id423 with priority 7
+ROOT: id421 with priority 1
 ADDED: id424 with priority 3
-ROOT: id411 with priority 0
-ADDED: id425 with priority 8
-ROOT: id411 with priority 0
-ADDED: id426 with priority 9
-ROOT: id411 with priority 0
-ADDED: id427 with priority 2
-ROOT: id411 with priority 0
-ADDED: id428 with priority 9
-ROOT: id411 with priority 0
-ADDED: id429 with priority 0
-ROOT: id429 with priority 0
-ADDED: id430 with priority 6
-ROOT: id429 with priority 0
-ADDED: id431 with priority 5
-ROOT: id429 with priority 0
-ADDED: id432 with priority 6
-ROOT: id429 with priority 0
-ADDED: id433 with priority 8
-ROOT: id429 with priority 0
-ADDED: id434 with priority 3
-ROOT: id429 with priority 0
-ADDED: id435 with priority 8
-ROOT: id429 with priority 0
-ADDED: id436 with priority 5
-ROOT: id429 with priority 0
-ADDED: id437 with priority 0
-ROOT: id437 with priority 0
-ADDED: id438 with priority 7
-ROOT: id437 with priority 0
-ADDED: id439 with priority 9
-ROOT: id437 with priority 0
-ADDED: id440 with priority 1
-ROOT: id437 with priority 0
-ADDED: id441 with priority 8
-ROOT: id437 with priority 0
-ADDED: id442 with priority 0
-ROOT: id442 with priority 0
-ADDED: id443 with priority 2
-ROOT: id442 with priority 0
-ADDED: id444 with priority 7
-ROOT: id442 with priority 0
-ADDED: id445 with priority 3
-ROOT: id442 with priority 0
-ADDED: id446 with priority 5
-ROOT: id442 with priority 0
-ADDED: id447 with priority 0
-ROOT: id447 with priority 0
-ADDED: id448 with priority 8
-ROOT: id447 with priority 0
-ADDED: id449 with priority 3
-ROOT: id447 with priority 0
-ADDED: id450 with priority 9
-ROOT: id447 with priority 0
+ROOT: id421 with priority 1
+id421
+DELETED: id421 with priority 1
+ROOT: id424 with priority 3
+ADDED: id425 with priority 5
+ROOT: id424 with priority 3
+ADDED: id426 with priority 8
+ROOT: id424 with priority 3
+ADDED: id427 with priority 0
+ROOT: id427 with priority 0
+ADDED: id428 with priority 10
+ROOT: id427 with priority 0
+id427
+DELETED: id427 with priority 0
+ROOT: id424 with priority 3
+id424
+DELETED: id424 with priority 3
+ROOT: id425 with priority 5
+ADDED: id429 with priority 2
+ROOT: id429 with priority 2
+id429
+DELETED: id429 with priority 2
+ROOT: id425 with priority 5
+ADDED: id430 with priority 8
+ROOT: id425 with priority 5
+id425
+DELETED: id425 with priority 5
+ROOT: id422 with priority 5
+ADDED: id431 with priority 9
+ROOT: id422 with priority 5
+id422
+DELETED: id422 with priority 5
+ROOT: id381 with priority 6
+id381
+DELETED: id381 with priority 6
+ROOT: id406 with priority 6
+id406
+DELETED: id406 with priority 6
+ROOT: id390 with priority 6
+id390
+DELETED: id390 with priority 6
+ROOT: id383 with priority 6
+id383
+DELETED: id383 with priority 6
+ROOT: id372 with priority 6
+id372
+DELETED: id372 with priority 6
+ROOT: id356 with priority 6
+id356
+DELETED: id356 with priority 6
+ROOT: id387 with priority 7
+ADDED: id432 with priority 10
+ROOT: id387 with priority 7
+ADDED: id433 with priority 0
+ROOT: id433 with priority 0
+ADDED: id434 with priority 6
+ROOT: id433 with priority 0
+ADDED: id435 with priority 9
+ROOT: id433 with priority 0
+id433
+DELETED: id433 with priority 0
+ROOT: id434 with priority 6
+id434
+DELETED: id434 with priority 6
+ROOT: id387 with priority 7
+id387
+DELETED: id387 with priority 7
+ROOT: id391 with priority 7
+ADDED: id436 with priority 7
+ROOT: id436 with priority 7
+id436
+DELETED: id436 with priority 7
+ROOT: id391 with priority 7
+id391
+DELETED: id391 with priority 7
+ROOT: id386 with priority 7
+ADDED: id437 with priority 5
+ROOT: id437 with priority 5
+ADDED: id438 with priority 4
+ROOT: id438 with priority 4
+id438
+DELETED: id438 with priority 4
+ROOT: id437 with priority 5
+ADDED: id439 with priority 3
+ROOT: id439 with priority 3
+ADDED: id440 with priority 8
+ROOT: id439 with priority 3
+id439
+DELETED: id439 with priority 3
+ROOT: id437 with priority 5
+id437
+DELETED: id437 with priority 5
+ROOT: id386 with priority 7
+id386
+DELETED: id386 with priority 7
+ROOT: id412 with priority 7
+ADDED: id441 with priority 9
+ROOT: id412 with priority 7
+ADDED: id442 with priority 8
+ROOT: id412 with priority 7
+ADDED: id443 with priority 0
+ROOT: id443 with priority 0
+id443
+DELETED: id443 with priority 0
+ROOT: id412 with priority 7
+id412
+DELETED: id412 with priority 7
+ROOT: id366 with priority 7
+id366
+DELETED: id366 with priority 7
+ROOT: id378 with priority 7
+id378
+DELETED: id378 with priority 7
+ROOT: id423 with priority 7
+ADDED: id444 with priority 8
+ROOT: id423 with priority 7
+id423
+DELETED: id423 with priority 7
+ROOT: id342 with priority 7
+id342
+DELETED: id342 with priority 7
+ROOT: id368 with priority 7
+ADDED: id445 with priority 6
+ROOT: id445 with priority 6
+ADDED: id446 with priority 4
+ROOT: id446 with priority 4
+ADDED: id447 with priority 1
+ROOT: id447 with priority 1
+ADDED: id448 with priority 4
+ROOT: id447 with priority 1
+id447
+DELETED: id447 with priority 1
+ROOT: id448 with priority 4
+ADDED: id449 with priority 5
+ROOT: id448 with priority 4
+id448
+DELETED: id448 with priority 4
+ROOT: id446 with priority 4
+ADDED: id450 with priority 6
+ROOT: id446 with priority 4
 ADDED: id451 with priority 9
-ROOT: id447 with priority 0
-ADDED: id452 with priority 8
-ROOT: id447 with priority 0
-ADDED: id453 with priority 4
-ROOT: id447 with priority 0
+ROOT: id446 with priority 4
+ADDED: id452 with priority 5
+ROOT: id446 with priority 4
+ADDED: id453 with priority 5
+ROOT: id446 with priority 4
+id446
+DELETED: id446 with priority 4
+ROOT: id449 with priority 5
+id449
+DELETED: id449 with priority 5
+ROOT: id453 with priority 5
 ADDED: id454 with priority 9
-ROOT: id447 with priority 0
-ADDED: id455 with priority 9
-ROOT: id447 with priority 0
-ADDED: id456 with priority 4
-ROOT: id447 with priority 0
-ADDED: id457 with priority 1
-ROOT: id447 with priority 0
-ADDED: id458 with priority 10
-ROOT: id447 with priority 0
-ADDED: id459 with priority 5
-ROOT: id447 with priority 0
-ADDED: id460 with priority 3
-ROOT: id447 with priority 0
-ADDED: id461 with priority 9
-ROOT: id447 with priority 0
-ADDED: id462 with priority 3
-ROOT: id447 with priority 0
-ADDED: id463 with priority 7
-ROOT: id447 with priority 0
-ADDED: id464 with priority 9
-ROOT: id447 with priority 0
-ADDED: id465 with priority 2
-ROOT: id447 with priority 0
-ADDED: id466 with priority 6
-ROOT: id447 with priority 0
-ADDED: id467 with priority 1
-ROOT: id447 with priority 0
-ADDED: id468 with priority 10
-ROOT: id447 with priority 0
-ADDED: id469 with priority 10
-ROOT: id447 with priority 0
+ROOT: id453 with priority 5
+ADDED: id455 with priority 5
+ROOT: id455 with priority 5
+ADDED: id456 with priority 5
+ROOT: id456 with priority 5
+id456
+DELETED: id456 with priority 5
+ROOT: id455 with priority 5
+ADDED: id457 with priority 2
+ROOT: id457 with priority 2
+ADDED: id458 with priority 9
+ROOT: id457 with priority 2
+id457
+DELETED: id457 with priority 2
+ROOT: id455 with priority 5
+id455
+DELETED: id455 with priority 5
+ROOT: id453 with priority 5
+id453
+DELETED: id453 with priority 5
+ROOT: id452 with priority 5
+ADDED: id459 with priority 4
+ROOT: id459 with priority 4
+ADDED: id460 with priority 5
+ROOT: id459 with priority 4
+ADDED: id461 with priority 7
+ROOT: id459 with priority 4
+ADDED: id462 with priority 2
+ROOT: id462 with priority 2
+id462
+DELETED: id462 with priority 2
+ROOT: id459 with priority 4
+ADDED: id463 with priority 5
+ROOT: id459 with priority 4
+ADDED: id464 with priority 10
+ROOT: id459 with priority 4
+ADDED: id465 with priority 6
+ROOT: id459 with priority 4
+id459
+DELETED: id459 with priority 4
+ROOT: id460 with priority 5
+ADDED: id466 with priority 8
+ROOT: id460 with priority 5
+id460
+DELETED: id460 with priority 5
+ROOT: id452 with priority 5
+ADDED: id467 with priority 5
+ROOT: id467 with priority 5
+id467
+DELETED: id467 with priority 5
+ROOT: id452 with priority 5
+ADDED: id468 with priority 8
+ROOT: id452 with priority 5
+id452
+DELETED: id452 with priority 5
+ROOT: id463 with priority 5
+id463
+DELETED: id463 with priority 5
+ROOT: id465 with priority 6
+id465
+DELETED: id465 with priority 6
+ROOT: id445 with priority 6
+id445
+DELETED: id445 with priority 6
+ROOT: id450 with priority 6
+ADDED: id469 with priority 6
+ROOT: id469 with priority 6
 ADDED: id470 with priority 8
-ROOT: id447 with priority 0
-ADDED: id471 with priority 9
-ROOT: id447 with priority 0
-ADDED: id472 with priority 5
-ROOT: id447 with priority 0
-ADDED: id473 with priority 0
-ROOT: id473 with priority 0
-ADDED: id474 with priority 2
-ROOT: id473 with priority 0
-ADDED: id475 with priority 3
-ROOT: id473 with priority 0
-ADDED: id476 with priority 5
-ROOT: id473 with priority 0
-ADDED: id477 with priority 5
-ROOT: id473 with priority 0
-ADDED: id478 with priority 9
-ROOT: id473 with priority 0
-ADDED: id479 with priority 4
-ROOT: id473 with priority 0
-ADDED: id480 with priority 2
-ROOT: id473 with priority 0
-ADDED: id481 with priority 6
-ROOT: id473 with priority 0
-ADDED: id482 with priority 0
-ROOT: id482 with priority 0
-ADDED: id483 with priority 10
-ROOT: id482 with priority 0
-ADDED: id484 with priority 5
-ROOT: id482 with priority 0
-ADDED: id485 with priority 7
-ROOT: id482 with priority 0
-ADDED: id486 with priority 6
-ROOT: id482 with priority 0
-ADDED: id487 with priority 10
-ROOT: id482 with priority 0
-ADDED: id488 with priority 0
-ROOT: id488 with priority 0
-ADDED: id489 with priority 9
-ROOT: id488 with priority 0
-ADDED: id490 with priority 5
-ROOT: id488 with priority 0
-ADDED: id491 with priority 5
-ROOT: id488 with priority 0
-ADDED: id492 with priority 3
-ROOT: id488 with priority 0
-ADDED: id493 with priority 1
-ROOT: id488 with priority 0
-ADDED: id494 with priority 10
-ROOT: id488 with priority 0
-ADDED: id495 with priority 4
-ROOT: id488 with priority 0
+ROOT: id469 with priority 6
+ADDED: id471 with priority 10
+ROOT: id469 with priority 6
+ADDED: id472 with priority 1
+ROOT: id472 with priority 1
+ADDED: id473 with priority 5
+ROOT: id472 with priority 1
+id472
+DELETED: id472 with priority 1
+ROOT: id473 with priority 5
+ADDED: id474 with priority 0
+ROOT: id474 with priority 0
+ADDED: id475 with priority 10
+ROOT: id474 with priority 0
+ADDED: id476 with priority 4
+ROOT: id474 with priority 0
+ADDED: id477 with priority 6
+ROOT: id474 with priority 0
+ADDED: id478 with priority 6
+ROOT: id474 with priority 0
+ADDED: id479 with priority 9
+ROOT: id474 with priority 0
+ADDED: id480 with priority 4
+ROOT: id474 with priority 0
+id474
+DELETED: id474 with priority 0
+ROOT: id480 with priority 4
+id480
+DELETED: id480 with priority 4
+ROOT: id476 with priority 4
+ADDED: id481 with priority 4
+ROOT: id481 with priority 4
+id481
+DELETED: id481 with priority 4
+ROOT: id476 with priority 4
+ADDED: id482 with priority 10
+ROOT: id476 with priority 4
+id476
+DELETED: id476 with priority 4
+ROOT: id473 with priority 5
+id473
+DELETED: id473 with priority 5
+ROOT: id469 with priority 6
+ADDED: id483 with priority 2
+ROOT: id483 with priority 2
+ADDED: id484 with priority 0
+ROOT: id484 with priority 0
+ADDED: id485 with priority 10
+ROOT: id484 with priority 0
+id484
+DELETED: id484 with priority 0
+ROOT: id483 with priority 2
+ADDED: id486 with priority 7
+ROOT: id483 with priority 2
+ADDED: id487 with priority 7
+ROOT: id483 with priority 2
+ADDED: id488 with priority 1
+ROOT: id488 with priority 1
+id488
+DELETED: id488 with priority 1
+ROOT: id483 with priority 2
+id483
+DELETED: id483 with priority 2
+ROOT: id469 with priority 6
+ADDED: id489 with priority 3
+ROOT: id489 with priority 3
+ADDED: id490 with priority 8
+ROOT: id489 with priority 3
+id489
+DELETED: id489 with priority 3
+ROOT: id469 with priority 6
+ADDED: id491 with priority 6
+ROOT: id491 with priority 6
+ADDED: id492 with priority 10
+ROOT: id491 with priority 6
+ADDED: id493 with priority 6
+ROOT: id493 with priority 6
+ADDED: id494 with priority 1
+ROOT: id494 with priority 1
+id494
+DELETED: id494 with priority 1
+ROOT: id493 with priority 6
+ADDED: id495 with priority 2
+ROOT: id495 with priority 2
 ADDED: id496 with priority 4
-ROOT: id488 with priority 0
-ADDED: id497 with priority 9
-ROOT: id488 with priority 0
-ADDED: id498 with priority 5
-ROOT: id488 with priority 0
-ADDED: id499 with priority 3
-ROOT: id488 with priority 0
-ADDED: id500 with priority 3
-ROOT: id488 with priority 0
-ADDED: id501 with priority 4
-ROOT: id488 with priority 0
-ADDED: id502 with priority 1
-ROOT: id488 with priority 0
-ADDED: id503 with priority 1
-ROOT: id488 with priority 0
+ROOT: id495 with priority 2
+ADDED: id497 with priority 6
+ROOT: id495 with priority 2
+id495
+DELETED: id495 with priority 2
+ROOT: id496 with priority 4
+id496
+DELETED: id496 with priority 4
+ROOT: id493 with priority 6
+id493
+DELETED: id493 with priority 6
+ROOT: id497 with priority 6
+id497
+DELETED: id497 with priority 6
+ROOT: id491 with priority 6
+ADDED: id498 with priority 9
+ROOT: id491 with priority 6
+id491
+DELETED: id491 with priority 6
+ROOT: id469 with priority 6
+id469
+DELETED: id469 with priority 6
+ROOT: id478 with priority 6
+ADDED: id499 with priority 9
+ROOT: id478 with priority 6
+id478
+DELETED: id478 with priority 6
+ROOT: id477 with priority 6
+id477
+DELETED: id477 with priority 6
+ROOT: id450 with priority 6
+ADDED: id500 with priority 10
+ROOT: id450 with priority 6
+ADDED: id501 with priority 0
+ROOT: id501 with priority 0
+ADDED: id502 with priority 7
+ROOT: id501 with priority 0
+ADDED: id503 with priority 2
+ROOT: id501 with priority 0
+id501
+DELETED: id501 with priority 0
+ROOT: id503 with priority 2
 ADDED: id504 with priority 6
-ROOT: id488 with priority 0
-ADDED: id505 with priority 10
-ROOT: id488 with priority 0
-ADDED: id506 with priority 1
-ROOT: id488 with priority 0
-ADDED: id507 with priority 4
-ROOT: id488 with priority 0
-ADDED: id508 with priority 3
-ROOT: id488 with priority 0
-ADDED: id509 with priority 5
-ROOT: id488 with priority 0
-ADDED: id510 with priority 1
-ROOT: id488 with priority 0
-ADDED: id511 with priority 2
-ROOT: id488 with priority 0
-ADDED: id512 with priority 4
-ROOT: id488 with priority 0
-ADDED: id513 with priority 9
-ROOT: id488 with priority 0
-ADDED: id514 with priority 0
-ROOT: id514 with priority 0
-ADDED: id515 with priority 9
-ROOT: id514 with priority 0
-ADDED: id516 with priority 2
-ROOT: id514 with priority 0
-ADDED: id517 with priority 5
-ROOT: id514 with priority 0
-ADDED: id518 with priority 4
-ROOT: id514 with priority 0
-ADDED: id519 with priority 0
-ROOT: id519 with priority 0
-ADDED: id520 with priority 7
-ROOT: id519 with priority 0
-ADDED: id521 with priority 7
-ROOT: id519 with priority 0
-ADDED: id522 with priority 5
-ROOT: id519 with priority 0
-ADDED: id523 with priority 6
-ROOT: id519 with priority 0
-ADDED: id524 with priority 0
-ROOT: id524 with priority 0
-ADDED: id525 with priority 0
-ROOT: id525 with priority 0
-ADDED: id526 with priority 4
-ROOT: id525 with priority 0
-ADDED: id527 with priority 2
-ROOT: id525 with priority 0
-ADDED: id528 with priority 8
-ROOT: id525 with priority 0
-ADDED: id529 with priority 6
-ROOT: id525 with priority 0
-ADDED: id530 with priority 2
-ROOT: id525 with priority 0
-ADDED: id531 with priority 2
-ROOT: id525 with priority 0
-ADDED: id532 with priority 2
-ROOT: id525 with priority 0
+ROOT: id503 with priority 2
+id503
+DELETED: id503 with priority 2
+ROOT: id504 with priority 6
+id504
+DELETED: id504 with priority 6
+ROOT: id450 with priority 6
+id450
+DELETED: id450 with priority 6
+ROOT: id368 with priority 7
+id368
+DELETED: id368 with priority 7
+ROOT: id502 with priority 7
+ADDED: id505 with priority 6
+ROOT: id505 with priority 6
+ADDED: id506 with priority 6
+ROOT: id506 with priority 6
+ADDED: id507 with priority 5
+ROOT: id507 with priority 5
+ADDED: id508 with priority 2
+ROOT: id508 with priority 2
+ADDED: id509 with priority 2
+ROOT: id509 with priority 2
+id509
+DELETED: id509 with priority 2
+ROOT: id508 with priority 2
+id508
+DELETED: id508 with priority 2
+ROOT: id507 with priority 5
+ADDED: id510 with priority 2
+ROOT: id510 with priority 2
+id510
+DELETED: id510 with priority 2
+ROOT: id507 with priority 5
+id507
+DELETED: id507 with priority 5
+ROOT: id506 with priority 6
+ADDED: id511 with priority 8
+ROOT: id506 with priority 6
+ADDED: id512 with priority 10
+ROOT: id506 with priority 6
+ADDED: id513 with priority 3
+ROOT: id513 with priority 3
+id513
+DELETED: id513 with priority 3
+ROOT: id506 with priority 6
+id506
+DELETED: id506 with priority 6
+ROOT: id505 with priority 6
+ADDED: id514 with priority 6
+ROOT: id514 with priority 6
+id514
+DELETED: id514 with priority 6
+ROOT: id505 with priority 6
+ADDED: id515 with priority 8
+ROOT: id505 with priority 6
+id505
+DELETED: id505 with priority 6
+ROOT: id502 with priority 7
+id502
+DELETED: id502 with priority 7
+ROOT: id461 with priority 7
+ADDED: id516 with priority 6
+ROOT: id516 with priority 6
+ADDED: id517 with priority 10
+ROOT: id516 with priority 6
+id516
+DELETED: id516 with priority 6
+ROOT: id461 with priority 7
+ADDED: id518 with priority 5
+ROOT: id518 with priority 5
+id518
+DELETED: id518 with priority 5
+ROOT: id461 with priority 7
+ADDED: id519 with priority 8
+ROOT: id461 with priority 7
+ADDED: id520 with priority 0
+ROOT: id520 with priority 0
+id520
+DELETED: id520 with priority 0
+ROOT: id461 with priority 7
+ADDED: id521 with priority 3
+ROOT: id521 with priority 3
+ADDED: id522 with priority 3
+ROOT: id522 with priority 3
+id522
+DELETED: id522 with priority 3
+ROOT: id521 with priority 3
+ADDED: id523 with priority 4
+ROOT: id521 with priority 3
+id521
+DELETED: id521 with priority 3
+ROOT: id523 with priority 4
+ADDED: id524 with priority 6
+ROOT: id523 with priority 4
+id523
+DELETED: id523 with priority 4
+ROOT: id524 with priority 6
+ADDED: id525 with priority 7
+ROOT: id524 with priority 6
+id524
+DELETED: id524 with priority 6
+ROOT: id525 with priority 7
+id525
+DELETED: id525 with priority 7
+ROOT: id461 with priority 7
+id461
+DELETED: id461 with priority 7
+ROOT: id487 with priority 7
+ADDED: id526 with priority 1
+ROOT: id526 with priority 1
+ADDED: id527 with priority 4
+ROOT: id526 with priority 1
+ADDED: id528 with priority 6
+ROOT: id526 with priority 1
+ADDED: id529 with priority 3
+ROOT: id526 with priority 1
+ADDED: id530 with priority 6
+ROOT: id526 with priority 1
+id526
+DELETED: id526 with priority 1
+ROOT: id529 with priority 3
+ADDED: id531 with priority 3
+ROOT: id531 with priority 3
+ADDED: id532 with priority 0
+ROOT: id532 with priority 0
+id532
+DELETED: id532 with priority 0
+ROOT: id531 with priority 3
+id531
+DELETED: id531 with priority 3
+ROOT: id529 with priority 3
 ADDED: id533 with priority 7
-ROOT: id525 with priority 0
-ADDED: id534 with priority 10
-ROOT: id525 with priority 0
-ADDED: id535 with priority 8
-ROOT: id525 with priority 0
-ADDED: id536 with priority 0
-ROOT: id536 with priority 0
+ROOT: id529 with priority 3
+id529
+DELETED: id529 with priority 3
+ROOT: id527 with priority 4
+ADDED: id534 with priority 2
+ROOT: id534 with priority 2
+id534
+DELETED: id534 with priority 2
+ROOT: id527 with priority 4
+ADDED: id535 with priority 5
+ROOT: id527 with priority 4
+ADDED: id536 with priority 10
+ROOT: id527 with priority 4
 ADDED: id537 with priority 8
-ROOT: id536 with priority 0
-ADDED: id538 with priority 10
-ROOT: id536 with priority 0
-ADDED: id539 with priority 9
-ROOT: id536 with priority 0
-ADDED: id540 with priority 5
-ROOT: id536 with priority 0
-ADDED: id541 with priority 2
-ROOT: id536 with priority 0
-ADDED: id542 with priority 3
-ROOT: id536 with priority 0
-ADDED: id543 with priority 4
-ROOT: id536 with priority 0
-ADDED: id544 with priority 6
-ROOT: id536 with priority 0
-ADDED: id545 with priority 6
-ROOT: id536 with priority 0
-ADDED: id546 with priority 9
-ROOT: id536 with priority 0
-ADDED: id547 with priority 3
-ROOT: id536 with priority 0
-ADDED: id548 with priority 4
-ROOT: id536 with priority 0
+ROOT: id527 with priority 4
+id527
+DELETED: id527 with priority 4
+ROOT: id535 with priority 5
+ADDED: id538 with priority 2
+ROOT: id538 with priority 2
+id538
+DELETED: id538 with priority 2
+ROOT: id535 with priority 5
+ADDED: id539 with priority 8
+ROOT: id535 with priority 5
+id535
+DELETED: id535 with priority 5
+ROOT: id528 with priority 6
+ADDED: id540 with priority 0
+ROOT: id540 with priority 0
+ADDED: id541 with priority 3
+ROOT: id540 with priority 0
+ADDED: id542 with priority 6
+ROOT: id540 with priority 0
+id540
+DELETED: id540 with priority 0
+ROOT: id541 with priority 3
+id541
+DELETED: id541 with priority 3
+ROOT: id528 with priority 6
+id528
+DELETED: id528 with priority 6
+ROOT: id542 with priority 6
+id542
+DELETED: id542 with priority 6
+ROOT: id530 with priority 6
+id530
+DELETED: id530 with priority 6
+ROOT: id487 with priority 7
+id487
+DELETED: id487 with priority 7
+ROOT: id486 with priority 7
+id486
+DELETED: id486 with priority 7
+ROOT: id533 with priority 7
+ADDED: id543 with priority 6
+ROOT: id543 with priority 6
+id543
+DELETED: id543 with priority 6
+ROOT: id533 with priority 7
+ADDED: id544 with priority 7
+ROOT: id544 with priority 7
+id544
+DELETED: id544 with priority 7
+ROOT: id533 with priority 7
+ADDED: id545 with priority 10
+ROOT: id533 with priority 7
+id533
+DELETED: id533 with priority 7
+ROOT: id539 with priority 8
+ADDED: id546 with priority 3
+ROOT: id546 with priority 3
+id546
+DELETED: id546 with priority 3
+ROOT: id539 with priority 8
+ADDED: id547 with priority 0
+ROOT: id547 with priority 0
+id547
+DELETED: id547 with priority 0
+ROOT: id539 with priority 8
+ADDED: id548 with priority 8
+ROOT: id548 with priority 8
+id548
+DELETED: id548 with priority 8
+ROOT: id539 with priority 8
 ADDED: id549 with priority 7
-ROOT: id536 with priority 0
-ADDED: id550 with priority 1
-ROOT: id536 with priority 0
-ADDED: id551 with priority 0
-ROOT: id551 with priority 0
-ADDED: id552 with priority 7
-ROOT: id247 with priority 0
-ADDED: id553 with priority 5
-ROOT: id247 with priority 0
-ADDED: id554 with priority 2
-ROOT: id247 with priority 0
-ADDED: id555 with priority 7
-ROOT: id247 with priority 0
-ADDED: id556 with priority 6
-ROOT: id247 with priority 0
-ADDED: id557 with priority 7
-ROOT: id247 with priority 0
-ADDED: id558 with priority 8
-ROOT: id247 with priority 0
-ADDED: id559 with priority 0
-ROOT: id559 with priority 0
-ADDED: id560 with priority 1
-ROOT: id559 with priority 0
-ADDED: id561 with priority 3
-ROOT: id559 with priority 0
-ADDED: id562 with priority 6
-ROOT: id559 with priority 0
-ADDED: id563 with priority 9
-ROOT: id559 with priority 0
-ADDED: id564 with priority 5
-ROOT: id559 with priority 0
-ADDED: id565 with priority 6
-ROOT: id559 with priority 0
-ADDED: id566 with priority 8
-ROOT: id559 with priority 0
-ADDED: id567 with priority 0
-ROOT: id567 with priority 0
-ADDED: id568 with priority 5
-ROOT: id567 with priority 0
-ADDED: id569 with priority 3
-ROOT: id567 with priority 0
-ADDED: id570 with priority 7
-ROOT: id567 with priority 0
-ADDED: id571 with priority 1
-ROOT: id567 with priority 0
-ADDED: id572 with priority 4
-ROOT: id567 with priority 0
-ADDED: id573 with priority 0
-ROOT: id573 with priority 0
-ADDED: id574 with priority 9
-ROOT: id573 with priority 0
-ADDED: id575 with priority 6
-ROOT: id573 with priority 0
-ADDED: id576 with priority 6
-ROOT: id573 with priority 0
-ADDED: id577 with priority 6
-ROOT: id573 with priority 0
-ADDED: id578 with priority 1
-ROOT: id573 with priority 0
-ADDED: id579 with priority 1
-ROOT: id573 with priority 0
+ROOT: id549 with priority 7
+ADDED: id550 with priority 9
+ROOT: id549 with priority 7
+id549
+DELETED: id549 with priority 7
+ROOT: id539 with priority 8
+ADDED: id551 with priority 8
+ROOT: id551 with priority 8
+ADDED: id552 with priority 2
+ROOT: id552 with priority 2
+id552
+DELETED: id552 with priority 2
+ROOT: id551 with priority 8
+ADDED: id553 with priority 1
+ROOT: id553 with priority 1
+id553
+DELETED: id553 with priority 1
+ROOT: id551 with priority 8
+id551
+DELETED: id551 with priority 8
+ROOT: id539 with priority 8
+ADDED: id554 with priority 4
+ROOT: id554 with priority 4
+id554
+DELETED: id554 with priority 4
+ROOT: id539 with priority 8
+id539
+DELETED: id539 with priority 8
+ROOT: id490 with priority 8
+id490
+DELETED: id490 with priority 8
+ROOT: id468 with priority 8
+ADDED: id555 with priority 2
+ROOT: id555 with priority 2
+id555
+DELETED: id555 with priority 2
+ROOT: id468 with priority 8
+ADDED: id556 with priority 9
+ROOT: id468 with priority 8
+ADDED: id557 with priority 1
+ROOT: id557 with priority 1
+id557
+DELETED: id557 with priority 1
+ROOT: id287 with priority 6
+ADDED: id558 with priority 6
+ROOT: id558 with priority 6
+id558
+DELETED: id558 with priority 6
+ROOT: id287 with priority 6
+ADDED: id559 with priority 2
+ROOT: id559 with priority 2
+id559
+DELETED: id559 with priority 2
+ROOT: id287 with priority 6
+ADDED: id560 with priority 7
+ROOT: id287 with priority 6
+id287
+DELETED: id287 with priority 6
+ROOT: id560 with priority 7
+ADDED: id561 with priority 7
+ROOT: id561 with priority 7
+id561
+DELETED: id561 with priority 7
+ROOT: id560 with priority 7
+ADDED: id562 with priority 1
+ROOT: id562 with priority 1
+ADDED: id563 with priority 6
+ROOT: id562 with priority 1
+ADDED: id564 with priority 4
+ROOT: id562 with priority 1
+ADDED: id565 with priority 10
+ROOT: id562 with priority 1
+id562
+DELETED: id562 with priority 1
+ROOT: id564 with priority 4
+ADDED: id566 with priority 5
+ROOT: id564 with priority 4
+ADDED: id567 with priority 2
+ROOT: id567 with priority 2
+ADDED: id568 with priority 4
+ROOT: id567 with priority 2
+ADDED: id569 with priority 1
+ROOT: id569 with priority 1
+ADDED: id570 with priority 4
+ROOT: id569 with priority 1
+ADDED: id571 with priority 5
+ROOT: id569 with priority 1
+id569
+DELETED: id569 with priority 1
+ROOT: id567 with priority 2
