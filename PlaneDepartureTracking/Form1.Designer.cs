@@ -57,6 +57,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Notify Arrival";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -149,6 +150,7 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "Show All Planes";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -225,6 +227,7 @@
             this.button11.TabIndex = 16;
             this.button11.Text = "Announce Track Allocation";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // Form1
             // 

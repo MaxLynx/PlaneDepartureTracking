@@ -28,8 +28,9 @@ namespace PlaneDepartureTracking
             }
             else
             {
-                new NotifyPlaneArrivalForm(model);
+                new NotifyPlaneArrivalForm(model, textBox4.Text).Show();
             }
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -142,6 +142,7 @@
             this.Controls.Add(this.label2);
             this.Name = "NotifyPlaneArrivalForm";
             this.Text = "New Plane Manager";
+            this.Load += new System.EventHandler(this.NotifyPlaneArrivalForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

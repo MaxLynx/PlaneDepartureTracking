@@ -20,6 +20,9 @@ namespace PlaneDepartureTracking.Model
         public TrackType(double length)
         {
             Length = length;
+            Tracks = new SplayTree<Track>();
+            WaitingPlanes = new PairingHeap<Plane, int>();
+            WaitingPlanesForSearch = new SplayTree<Plane>();
         }
 
         public int CompareTo(TrackType other)

@@ -22,7 +22,7 @@ namespace PlaneDepartureTracking
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (model.NotifyTrackRequirement(textBox4.Text))
+            if (model.NotifyTrackRequirement(textBox4.Text, Int32.Parse(textBox1.Text)))
             {
                 MessageBox.Show("Successfull notification!");
             }

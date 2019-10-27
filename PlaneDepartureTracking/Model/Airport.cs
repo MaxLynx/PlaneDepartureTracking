@@ -23,6 +23,25 @@ namespace PlaneDepartureTracking.Model
         SplayTree<Plane> WaitingPlanes { get; set; }
 
         /*
+         * Constructor substitution as for now
+         */
+        public Airport()
+        {
+            Planes = new SplayTree<Plane>();
+            TrackAllocations = new SplayTree<String>();
+            ArrivedPlanes = new SplayTree<Plane>();
+            PlaneArrivals = new SplayTree<String>();
+            PlaneDepartures = new SplayTree<Plane>();
+            TrackTypes = new SplayTree<TrackType>();
+            WaitingPlanes = new SplayTree<Plane>();
+
+            TrackTypes.Add(new TrackType(1500));
+            TrackTypes.Add(new TrackType(2000));
+            TrackTypes.Add(new TrackType(2500));
+        }
+
+
+        /*
          * Returns true if plane id is already in system database
          */
         public bool NotifyArrival(String internationalID)
@@ -49,7 +68,7 @@ namespace PlaneDepartureTracking.Model
             PlaneArrivals.Add("plane " + plane.GetInternationalID() + " arrived " + plane.GetArrivalTime());
         }
 
-        public bool NotifyTrackRequirement(String internationalID)
+        public bool NotifyTrackRequirement(String internationalID, int priority)
         {
             Plane planeToSearch = new Plane(internationalID);
             TreeNode<Plane> planeFound = ArrivedPlanes.Find(planeToSearch);
@@ -57,11 +76,12 @@ namespace PlaneDepartureTracking.Model
             {
                 planeFound.Data.SetTrackRequirementTime(DateTime.Now);
                 ArrivedPlanes.Delete(planeFound.Data);
+                planeFound.Data.SetPriority(priority);
                 WaitingPlanes.Add(planeFound.Data);
 
                 TrackType typeToSearch = new TrackType(planeFound.Data.GetMinimalTrackLength());
                 TreeNode<TrackType> typeFound = TrackTypes.Find(typeToSearch);
-                if(typeToSearch == null)
+                if(typeFound == null)
                 {
                     return false;
                 }
