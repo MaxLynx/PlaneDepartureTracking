@@ -14,6 +14,11 @@ namespace PlaneDepartureTracking.Model
 
         public Track() { }
 
+        public Track(String name)
+        {
+            this.name = name;
+        }
+
         public Track(String name, TrackType lengthType)
         {
             this.name = name;

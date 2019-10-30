@@ -37,7 +37,14 @@ namespace PlaneDepartureTracking
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new ListAllWaitingPlanesByID(model, null).Show();
+            if (listBox1.SelectedIndex > 0)
+            {
+                new ListAllWaitingPlanesByID(model, null, listBox1.SelectedItem.ToString()).Show();
+            }
+            else
+            {
+                new ListAllWaitingPlanesByID(model, null, null).Show();
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -52,7 +59,38 @@ namespace PlaneDepartureTracking
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new ListAllWaitingPlanesByID(model, textBox1.Text).Show();
+            if (listBox1.SelectedIndex > 0)
+            {
+                new ListAllWaitingPlanesByID(model, textBox1.Text, listBox1.SelectedItem.ToString()).Show();
+            }
+            else
+            {
+                new ListAllWaitingPlanesByID(model, textBox1.Text, null).Show();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new HistoryForm(model.PlaneArrivals).Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add("All");
+            listBox1.SelectedIndex = 0;
+            foreach (String name in model.TrackNames) {
+                listBox1.Items.Add(name);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new HistoryForm(model.TrackAllocations).Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new HistoryForm(model.PlaneDepartures).Show();
         }
     }
 }

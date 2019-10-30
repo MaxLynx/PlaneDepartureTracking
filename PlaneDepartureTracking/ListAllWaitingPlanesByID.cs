@@ -15,10 +15,12 @@ namespace PlaneDepartureTracking
     {
         Airport model;
         String id;
-        public ListAllWaitingPlanesByID(Airport model, String id)
+        String track;
+        public ListAllWaitingPlanesByID(Airport model, String id, String track)
         {
             this.model = model;
             this.id = id;
+            this.track = track;
             InitializeComponent();
         }
 
@@ -35,21 +37,43 @@ namespace PlaneDepartureTracking
             dataGridView1.Columns[6].Name = "PRIORITY";
             dataGridView1.Columns[7].Name = "TRACK";
 
-            if (id == null)
+            if (track == null)
             {
-                List<String> output = model.OutputWaitingPlanes();
-
-                
-                foreach (String line in output)
+                if (id == null)
                 {
-                    String[] row = line.Split(',');
+                    List<String> output = model.OutputWaitingPlanes();
 
-                    dataGridView1.Rows.Add(row);
+
+                    foreach (String line in output)
+                    {
+                        String[] row = line.Split(',');
+
+                        dataGridView1.Rows.Add(row);
+                    }
+                }
+                else
+                {
+                    dataGridView1.Rows.Add(model.FindWaitingPlane(id));
                 }
             }
             else
             {
-                dataGridView1.Rows.Add(model.FindWaitingPlane(id));
+                if (id == null)
+                {
+                    List<String> output = model.OutputWaitingPlanes(track);
+
+
+                    foreach (String line in output)
+                    {
+                        String[] row = line.Split(',');
+
+                        dataGridView1.Rows.Add(row);
+                    }
+                }
+                else
+                {
+                    dataGridView1.Rows.Add(model.FindWaitingPlane(id, track));
+                }
             }
         }
 

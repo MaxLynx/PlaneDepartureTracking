@@ -95,11 +95,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(964, 268);
+            this.label3.Location = new System.Drawing.Point(1051, 272);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 28);
+            this.label3.Size = new System.Drawing.Size(187, 28);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Departure Track Number:";
+            this.label3.Text = "Departure Track:";
             // 
             // textBox1
             // 
@@ -184,6 +184,7 @@
             this.button8.TabIndex = 13;
             this.button8.Text = "Show Arrivals";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -195,6 +196,7 @@
             this.button9.TabIndex = 14;
             this.button9.Text = "Show Track Allocations";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -206,6 +208,7 @@
             this.button10.TabIndex = 15;
             this.button10.Text = "Show Departures";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -258,6 +261,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Plane Departure Tracking";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
