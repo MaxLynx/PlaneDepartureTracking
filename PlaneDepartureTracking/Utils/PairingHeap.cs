@@ -10,7 +10,7 @@ namespace PlaneDepartureTracking.Utils
      * T - key (priority), V - data 
      **/
     public class PairingHeap<V, T>
-          where V : IPriority<T>, IComparable<V>
+          where V : IPriority<T, V>, IComparable<V>
           where T : IComparable<T>
     {
         public TreeNode<V> Root { set; get; }
@@ -80,7 +80,7 @@ namespace PlaneDepartureTracking.Utils
 
             
             
-            TreeNode<V> currentNode = Find(el);
+            TreeNode<V> currentNode = el.GetHeapNode();
             if (currentNode != null)
             {
                 if (el.GetPriority().CompareTo(newPriority) == 0)
@@ -172,17 +172,16 @@ namespace PlaneDepartureTracking.Utils
         {
             TreeNode<V> newNode = new TreeNode<V>();
             newNode.Data = el;
+            el.SetHeapNode(newNode);
             Root = Pair(newNode, Root);
             return true;
 
         }
 
-       /*
-        * Too slow
-        */
+       
         public bool Contains(V el)
         {
-            if(Find(el) != null)
+            if(el.GetHeapNode() != null)
             {
                 return true;
             }
@@ -208,6 +207,7 @@ namespace PlaneDepartureTracking.Utils
                 return default;  // default for V if V could not be null
             }
             V rootData = Root.Data;
+            rootData.SetHeapNode(null);
             Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
             TreeNode<V> currentNode = Pair(Root.Left, Root.Right);
             if (currentNode != null)
@@ -234,56 +234,10 @@ namespace PlaneDepartureTracking.Utils
             return rootData;
         }
 
-        /*
-         * Very slow method
-         */
+        
         public TreeNode<V> Find(V el)
         {
-            if (Root != null)
-            {
-                Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
-                TreeNode<V> currentNode = Root;
-
-                int currentLevelNodesCount = 1;
-                int nextLevelNodesCount = 0;
-
-                queue.Enqueue(Root);
-                while (queue.Count > 0)
-                {
-                    for (int i = 0; i < currentLevelNodesCount; i++)
-                    {
-                        currentNode = queue.Dequeue();
-                        if (currentNode.Data.Equals(el))
-                        {
-                            return currentNode;
-                        }
-                        if (currentNode.Left != null && currentNode.Right != null)
-                        {
-                            nextLevelNodesCount += 2;
-                            queue.Enqueue(currentNode.Left);
-                            queue.Enqueue(currentNode.Right);
-                        }
-                        else
-                            if (currentNode.Left != null)
-                        {
-                            nextLevelNodesCount += 1;
-                            queue.Enqueue(currentNode.Left);
-                        }
-                        else
-                            if (currentNode.Right != null)
-                        {
-                            nextLevelNodesCount += 1;
-                            queue.Enqueue(currentNode.Right);
-                        }
-
-
-                    }
-
-                    currentLevelNodesCount = nextLevelNodesCount;
-                    nextLevelNodesCount = 0;
-                }
-            }
-            return null;
+            return el.GetHeapNode();
         }
 
         public String TraverseInOrder()

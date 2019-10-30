@@ -12,7 +12,7 @@ namespace PlaneDepartureTrackingMSTest
         [TestMethod]
         public void TestAllOperationsOnRandomNumbers()
         {
-            int count = 1000; //MIN IS 100
+            int count = 10000; //MIN IS 100
             int idCounter = 1;
             List<Plane> planes = new List<Plane>(count);
             List<Plane> removed = new List<Plane>(count);

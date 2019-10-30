@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model 
 {
-    public class Plane : IComparable<Plane>, Utils.IPriority<int>
+    public class Plane : IComparable<Plane>, Utils.IPriority<int, Plane>
     {
         private String producerName;
         private String planeType;
@@ -17,7 +17,19 @@ namespace PlaneDepartureTracking.Model
         private DateTime departureTime;
         private int priority;
 
+        private Utils.TreeNode<Plane> heapNode;
+
         public Track Track { set; get; }
+
+        public Utils.TreeNode<Plane> GetHeapNode() 
+        {
+            return heapNode;
+        }
+
+        public void SetHeapNode(Utils.TreeNode<Plane> treeNode)
+        {
+            this.heapNode = treeNode;
+        }
 
         public Plane() { }
         public Plane(String internationalID)
