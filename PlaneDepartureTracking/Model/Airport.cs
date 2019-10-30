@@ -68,6 +68,7 @@ namespace PlaneDepartureTracking.Model
             {
                 planeFound.Data.SetArrivalTime(DateTime.Now);
                 ArrivedPlanes.Add(planeFound.Data);
+                PlaneArrivals.Add("plane " + planeFound.Data.GetInternationalID() + " arrived " + planeFound.Data.GetArrivalTime());
                 return true;
             }
         }
@@ -125,5 +126,34 @@ namespace PlaneDepartureTracking.Model
             return WaitingPlanes.TraverseInOrderAsStringList();
         }
 
+        public String[] FindWaitingPlane(String code)
+        {
+            String[] result = new string[8];
+            TreeNode<Plane> plane = WaitingPlanes.Find(new Plane(code));
+            if (plane == null)
+            {
+                result[0] = result[1] = result[3] = result[4] = result[5] = result[6] = result[7] = "";
+                result[2] = "NOT FOUND";
+            }
+            else
+            {
+                result[0] = plane.Data.GetProducerName();
+                result[1] = plane.Data.GetPlaneType();
+                result[2] = code;
+                result[3] = "" + plane.Data.GetMinimalTrackLength();
+                result[4] = plane.Data.GetArrivalTime().ToString();
+                result[5] = plane.Data.GetTrackRequirementTime().ToString();
+                result[6] = "" + plane.Data.GetPriority();
+                if (plane.Data.Track != null)
+                {
+                    result[7] = plane.Data.Track.GetName();
+                }
+                else
+                {
+                    result[7] = "";
+                }
+            }
+            return result;
+        }
     }
 }

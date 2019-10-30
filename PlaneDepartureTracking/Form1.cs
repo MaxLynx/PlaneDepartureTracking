@@ -37,12 +37,22 @@ namespace PlaneDepartureTracking
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new ListAllWaitingPlanesByID(model).Show();
+            new ListAllWaitingPlanesByID(model, null).Show();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             new TimeMachineForm(model).Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new ListAllWaitingPlanesByID(model, textBox1.Text).Show();
         }
     }
 }
