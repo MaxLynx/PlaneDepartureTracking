@@ -134,9 +134,11 @@ namespace PlaneDepartureTracking.Model
                             break;
                         }
                     }
-                    
+                    if (planeFound.Data.Track == null)
+                    {
                         typeFound.Data.WaitingPlanes.Add(planeFound.Data);
                         typeFound.Data.WaitingPlanesForSearch.Add(planeFound.Data);
+                    }
                     
                 }
                 return true;
@@ -258,9 +260,20 @@ namespace PlaneDepartureTracking.Model
             return result;
         }
 
-        public String ChangePlanePriority(String id, String priority)
+        public bool ChangePlanePriority(String id, int priority)
         {
-            throw new NotImplementedException();
+            TreeNode<Plane> plane = WaitingPlanes.Find(new Plane(id));
+            if (plane != null)
+            {
+                TrackType typeToSearch = new TrackType(plane.Data.GetMinimalTrackLength());
+                TreeNode<TrackType> type = TrackTypes.Find(typeToSearch);
+                type.Data.WaitingPlanes.ChangePriority(plane.Data, priority);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool RemovePlaneFromWaiting(String id)
@@ -271,17 +284,21 @@ namespace PlaneDepartureTracking.Model
                 ArrivedPlanes.Add(plane.Data);
                 plane.Data.SetPriority(0);
                 WaitingPlanes.Delete(plane.Data);
-                if(plane.Data.Track != null)
+                if (plane.Data.Track != null)
                 {
-
-                    plane.Data.Track.GetLengthType().WaitingPlanes.Delete(plane.Data);
-                    plane.Data.Track.GetLengthType().WaitingPlanesForSearch.Delete(plane.Data);
 
                     plane.Data.Track.SetPlane(null);
                     plane.Data.Track = null;
-                    TrackAllocations.Add("plane ID" + plane.Data.GetInternationalID() + " removed from waiting queue");
-                                
+
                 }
+                else
+                {
+                    TrackType typeToSearch = new TrackType(plane.Data.GetMinimalTrackLength());
+                    TreeNode<TrackType> type = TrackTypes.Find(typeToSearch);
+                    type.Data.WaitingPlanes.Delete(plane.Data);
+                    type.Data.WaitingPlanesForSearch.Delete(plane.Data);
+                }
+                TrackAllocations.Add("plane ID" + plane.Data.GetInternationalID() + " removed from waiting queue");
                 return true;
             }
             else

@@ -104,5 +104,17 @@ namespace PlaneDepartureTracking
                 MessageBox.Show("Plane with id " + textBox1.Text + " was not found in the waiting queue");
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (model.ChangePlanePriority(textBox1.Text, Int32.Parse(textBox2.Text)))
+            {
+                MessageBox.Show("Priority of plane with id " + textBox1.Text + " was changed");
+            }
+            else
+            {
+                MessageBox.Show("Plane with id " + textBox1.Text + " was not found in the waiting queue");
+            }
+        }
     }
 }
