@@ -258,6 +258,38 @@ namespace PlaneDepartureTracking.Model
             return result;
         }
 
+        public String ChangePlanePriority(String id, String priority)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemovePlaneFromWaiting(String id)
+        {
+            TreeNode<Plane> plane = WaitingPlanes.Find(new Plane(id));
+            if (plane != null)
+            {
+                ArrivedPlanes.Add(plane.Data);
+                plane.Data.SetPriority(0);
+                WaitingPlanes.Delete(plane.Data);
+                if(plane.Data.Track != null)
+                {
+
+                    plane.Data.Track.GetLengthType().WaitingPlanes.Delete(plane.Data);
+                    plane.Data.Track.GetLengthType().WaitingPlanesForSearch.Delete(plane.Data);
+
+                    plane.Data.Track.SetPlane(null);
+                    plane.Data.Track = null;
+                    TrackAllocations.Add("plane ID" + plane.Data.GetInternationalID() + " removed from waiting queue");
+                                
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public List<String> OutputWaitingPlanes(String track)
         {
             Track trackFound = Tracks.Find(new Track(track)).Data;

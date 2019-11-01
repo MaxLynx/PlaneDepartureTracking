@@ -92,5 +92,17 @@ namespace PlaneDepartureTracking
         {
             new HistoryForm(model.PlaneDepartures).Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (model.RemovePlaneFromWaiting(textBox1.Text))
+            {
+                MessageBox.Show("Plane with id " + textBox1.Text + " was removed from the waiting queue");
+            }
+            else
+            {
+                MessageBox.Show("Plane with id " + textBox1.Text + " was not found in the waiting queue");
+            }
+        }
     }
 }
