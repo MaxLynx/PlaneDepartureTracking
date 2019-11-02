@@ -14,3 +14,4 @@ D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDe
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.TimeMachineForm.resources
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.HistoryForm.resources
 D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.NotifyPlaneDepartureForm.resources
+D:\.NET Projects\PlaneDepartureTracking\PlaneDepartureTracking\obj\Debug\PlaneDepartureTracking.OutputDepartureHistoryByTracksForm.resources

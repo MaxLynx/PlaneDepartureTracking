@@ -78,7 +78,7 @@ namespace PlaneDepartureTracking
         {
             listBox1.Items.Add("All");
             listBox1.SelectedIndex = 0;
-            foreach (String name in model.TrackNames) {
+            foreach (String name in model.GetTrackNames()) {
                 listBox1.Items.Add(name);
             }
         }
@@ -120,6 +120,11 @@ namespace PlaneDepartureTracking
         private void button4_Click(object sender, EventArgs e)
         {
             new NotifyPlaneDepartureForm(model).Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new OutputDepartureHistoryByTracksForm(model).Show();
         }
     }
 }

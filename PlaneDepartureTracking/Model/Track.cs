@@ -12,15 +12,21 @@ namespace PlaneDepartureTracking.Model
         private TrackType lengthType;
         private Plane plane;
 
-        public Track() { }
+        public List<PlaneShortInfo> DepartureHistory { get; set; }
+
+        public Track() {
+            DepartureHistory = new List<PlaneShortInfo>();
+        }
 
         public Track(String name)
         {
+            DepartureHistory = new List<PlaneShortInfo>();
             this.name = name;
         }
 
         public Track(String name, TrackType lengthType)
         {
+            DepartureHistory = new List<PlaneShortInfo>();
             this.name = name;
             this.lengthType = lengthType;
         }

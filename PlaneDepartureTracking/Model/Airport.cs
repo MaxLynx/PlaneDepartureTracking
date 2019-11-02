@@ -21,7 +21,7 @@ namespace PlaneDepartureTracking.Model
 
         SplayTree<TrackType> TrackTypes { get; set; }
         SplayTree<Track> Tracks { get; set; }
-        public List<String> TrackNames { get; set; }
+        public List<Track> TrackList { get; set; }
         SplayTree<Plane> WaitingPlanes { get; set; }
 
         
@@ -36,7 +36,7 @@ namespace PlaneDepartureTracking.Model
             TrackTypes = new SplayTree<TrackType>();
             WaitingPlanes = new SplayTree<Plane>();
             Tracks = new SplayTree<Track>();
-            TrackNames = new List<String>();
+            TrackList = new List<Track>();
 
             TrackType type1 = GenerateTrackType(1500);
             AddTrack("track 1", type1);        
@@ -73,7 +73,17 @@ namespace PlaneDepartureTracking.Model
             Track track = new Track(name, trackType);
             trackType.Tracks.Add(track);
             Tracks.Add(track);
-            TrackNames.Add(name);
+            TrackList.Add(track);
+        }
+
+        public String[] GetTrackNames()
+        {
+            String[] names = new string[TrackList.Count];
+            for(int i = 0; i < names.Length; i++)
+            {
+                names[i] = TrackList[i].GetName();
+            }
+            return names;
         }
 
 
@@ -158,6 +168,8 @@ namespace PlaneDepartureTracking.Model
                 PlaneDepartures.Add("plane ID" + planeFound.Data.GetInternationalID() + " arrived from the track " 
                     + planeFound.Data.Track.GetName());
                 TrackType type = planeFound.Data.Track.GetLengthType();
+                planeFound.Data.Track.DepartureHistory.Add(new PlaneShortInfo(planeFound.Data.GetInternationalID(),
+                    planeFound.Data.GetDepartureTime()));
                 planeFound.Data.Track.SetPlane(null);
                 planeFound.Data.Track = null;
 
@@ -313,6 +325,36 @@ namespace PlaneDepartureTracking.Model
             {
                 return trackFound.GetLengthType().WaitingPlanesForSearch.TraverseInOrderAsStringList();
             }
+        }
+
+        public List<String[]> OutputTrackDepartureHistories()
+        {
+            List<String[]> result = new List<String[]>();
+            foreach(Track track  in TrackList)
+            {
+                result.Add(new string[5]
+                    {
+                    track.GetName(),
+                                        
+                    "---",
+                    "---",
+                    "---",
+                    "---"
+                    });
+                foreach (PlaneShortInfo plane in track.DepartureHistory)
+                {
+                    Plane planeFullInfo = Planes.Find(new Plane(plane.ID)).Data;
+                    result.Add(new string[5]
+                    {
+                    track.GetName(),
+                    plane.ID,
+                    planeFullInfo.GetProducerName(),
+                    planeFullInfo.GetPlaneType(),
+                    plane.DepartureTime.ToString()
+                    });
+                }
+            }
+            return result;
         }
 
     }
