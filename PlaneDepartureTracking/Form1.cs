@@ -116,5 +116,10 @@ namespace PlaneDepartureTracking
                 MessageBox.Show("Plane with id " + textBox1.Text + " was not found in the waiting queue");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new NotifyPlaneDepartureForm(model).Show();
+        }
     }
 }

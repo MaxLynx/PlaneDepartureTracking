@@ -79,6 +79,12 @@
     <Compile Include="NotifyPlaneArrivalIDForm.Designer.cs">
       <DependentUpon>NotifyPlaneArrivalIDForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotifyPlaneDepartureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyPlaneDepartureForm.Designer.cs">
+      <DependentUpon>NotifyPlaneDepartureForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotifyTrackRequirementIDForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotifyPlaneArrivalIDForm.resx">
       <DependentUpon>NotifyPlaneArrivalIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyPlaneDepartureForm.resx">
+      <DependentUpon>NotifyPlaneDepartureForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotifyTrackRequirementIDForm.resx">
       <DependentUpon>NotifyTrackRequirementIDForm.cs</DependentUpon>

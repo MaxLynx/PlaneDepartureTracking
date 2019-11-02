@@ -150,38 +150,32 @@ namespace PlaneDepartureTracking.Model
         {
             Plane planeToSearch = new Plane(internationalID);
             TreeNode<Plane> planeFound = WaitingPlanes.Find(planeToSearch);
-            if (planeFound != null)
+            if (planeFound != null && planeFound.Data.Track != null)
             {
-                /*
+                
                 planeFound.Data.SetDepartureTime(SystemTime);
                 WaitingPlanes.Delete(planeFound.Data);
+                PlaneDepartures.Add("plane ID" + planeFound.Data.GetInternationalID() + " arrived from the track " 
+                    + planeFound.Data.Track.GetName());
+                TrackType type = planeFound.Data.Track.GetLengthType();
+                planeFound.Data.Track.SetPlane(null);
+                planeFound.Data.Track = null;
 
-                TrackType typeToSearch = new TrackType(planeFound.Data.GetMinimalTrackLength());
-                TreeNode<TrackType> typeFound = TrackTypes.Find(typeToSearch);
-                if (typeFound == null)
+                
+                foreach (Track track in type.Tracks)
                 {
-                    return false;
-                }
-                else
-                {
-                    foreach (Track track in typeFound.Data.Tracks)
+                    if (track.GetPlane() == null && type.WaitingPlanes.Root != null)
                     {
-                        if (track.GetPlane() == null)
-                        {
-                            planeFound.Data.Track = track;
-                            track.SetPlane(planeFound.Data);
-                            TrackAllocations.Add("plane ID" + planeFound.Data.GetInternationalID() + " to the track " + track.GetName());
-                            break;
-                        }
-                    }
-                    if (planeFound.Data.Track == null)
-                    {
-                        typeFound.Data.WaitingPlanes.Add(planeFound.Data);
-                        typeFound.Data.WaitingPlanesForSearch.Add(planeFound.Data);
+                        Plane plane = type.WaitingPlanes.DeleteMin();
+                        plane.Track = track;
+                        track.SetPlane(plane);
+                        TrackAllocations.Add("plane ID" + plane.GetInternationalID() + " to the track " + track.GetName());
+                        type.WaitingPlanesForSearch.Delete(plane);
                     }
                 }
+                    
                 return true;
-                */
+                
             }
             return false;
         }
