@@ -96,6 +96,7 @@
             this.Controls.Add(this.textBox4);
             this.Name = "NotifyTrackRequirementIDForm";
             this.Text = "Track Allocation Manager";
+            this.Load += new System.EventHandler(this.NotifyTrackRequirementIDForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

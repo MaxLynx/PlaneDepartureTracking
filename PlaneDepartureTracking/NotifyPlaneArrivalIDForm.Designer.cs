@@ -76,6 +76,7 @@
             this.Controls.Add(this.textBox4);
             this.Name = "NotifyPlaneArrivalIDForm";
             this.Text = "Arrival Manager";
+            this.Load += new System.EventHandler(this.NotifyPlaneArrivalIDForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

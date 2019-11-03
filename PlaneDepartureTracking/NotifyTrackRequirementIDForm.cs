@@ -22,7 +22,7 @@ namespace PlaneDepartureTracking
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (model.NotifyTrackRequirement(textBox4.Text, Int32.Parse(textBox1.Text)))
+            if (model.NotifyTrackRequirement(textBox4.Text, Double.Parse(textBox1.Text)))
             {
                 MessageBox.Show("Successfull notification!");
             }
@@ -30,6 +30,11 @@ namespace PlaneDepartureTracking
             {
                 MessageBox.Show("Plane with this ID has not arrived yet");
             }
+        }
+
+        private void NotifyTrackRequirementIDForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -104,6 +104,7 @@
     <Compile Include="TimeMachineForm.Designer.cs">
       <DependentUpon>TimeMachineForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\IIDRetrieval.cs" />
     <Compile Include="Utils\IPriority.cs" />
     <Compile Include="Utils\PairingHeap.cs" />
     <Compile Include="Utils\SplayTree.cs" />

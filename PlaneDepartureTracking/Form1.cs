@@ -126,5 +126,20 @@ namespace PlaneDepartureTracking
         {
             new OutputDepartureHistoryByTracksForm(model).Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            model.GenerateActiveState(Int32.Parse(textBox3.Text));
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            model.ReadFromFile();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            model.SaveToFile();
+        }
     }
 }

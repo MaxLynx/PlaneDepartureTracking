@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PlaneDepartureTracking.Utils
 {
     public class SplayTree<T> : ITree<T>
-          where T : IComparable<T>
+          where T : IComparable<T>, IIDRetrieval
     {
         private TreeNode<T> Root { set; get; }
 
@@ -392,7 +392,53 @@ namespace PlaneDepartureTracking.Utils
                 for (int i = 0; i < currentLevelNodesCount; i++)
                 {
                     currentNode = queue.Dequeue();
-                    result += currentNode.Data + " ";
+                    result += currentNode.Data + "\r\n";
+                    if (currentNode.Left != null && currentNode.Right != null)
+                    {
+                        nextLevelNodesCount += 2;
+                        queue.Enqueue(currentNode.Left);
+                        queue.Enqueue(currentNode.Right);
+                    }
+                    else
+                        if (currentNode.Left != null)
+                    {
+                        nextLevelNodesCount += 1;
+                        queue.Enqueue(currentNode.Left);
+                    }
+                    else
+                        if (currentNode.Right != null)
+                    {
+                        nextLevelNodesCount += 1;
+                        queue.Enqueue(currentNode.Right);
+                    }
+
+
+                }
+
+                result += "\r\n";
+                currentLevelNodesCount = nextLevelNodesCount;
+                nextLevelNodesCount = 0;
+            }
+
+            return result;
+        }
+
+        public String TraverseIDsLevelOrder()
+        {
+            String result = "";
+            Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
+            TreeNode<T> currentNode = Root;
+
+            int currentLevelNodesCount = 1;
+            int nextLevelNodesCount = 0;
+
+            queue.Enqueue(Root);
+            while (queue.Count > 0)
+            {
+                for (int i = 0; i < currentLevelNodesCount; i++)
+                {
+                    currentNode = queue.Dequeue();
+                    result += currentNode.Data.GetInternationalID() + "\r\n";
                     if (currentNode.Left != null && currentNode.Right != null)
                     {
                         nextLevelNodesCount += 2;

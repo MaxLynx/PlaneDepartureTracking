@@ -42,5 +42,10 @@ namespace PlaneDepartureTracking
         {
 
         }
+
+        private void NotifyPlaneArrivalIDForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,5 +31,10 @@ namespace PlaneDepartureTracking
                 MessageBox.Show("Plane with id " + textBox4.Text + " was not found on any track");
             }
         }
+
+        private void NotifyPlaneDepartureForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

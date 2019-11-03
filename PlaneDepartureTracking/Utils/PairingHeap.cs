@@ -10,7 +10,7 @@ namespace PlaneDepartureTracking.Utils
      * T - key (priority), V - data 
      **/
     public class PairingHeap<V, T>
-          where V : IPriority<T, V>, IComparable<V>
+          where V : IPriority<T, V>, IComparable<V>, IIDRetrieval
           where T : IComparable<T>
     {
         public TreeNode<V> Root { set; get; }
@@ -281,7 +281,56 @@ namespace PlaneDepartureTracking.Utils
                     for (int i = 0; i < currentLevelNodesCount; i++)
                     {
                         currentNode = queue.Dequeue();
-                        result += currentNode.Data.GetPriority() + " ";
+                        result += currentNode.Data.GetPriority() + "\r\n";
+                        if (currentNode.Left != null && currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 2;
+                            queue.Enqueue(currentNode.Left);
+                            queue.Enqueue(currentNode.Right);
+                        }
+                        else
+                            if (currentNode.Left != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Left);
+                        }
+                        else
+                            if (currentNode.Right != null)
+                        {
+                            nextLevelNodesCount += 1;
+                            queue.Enqueue(currentNode.Right);
+                        }
+
+
+                    }
+
+                    result += "\r\n";
+                    currentLevelNodesCount = nextLevelNodesCount;
+                    nextLevelNodesCount = 0;
+                }
+            }
+            return result;
+        }
+
+
+        public String TraverseIDsLevelOrder()
+        {
+            String result = "";
+            if (Root != null)
+            {
+                Queue<TreeNode<V>> queue = new Queue<TreeNode<V>>();
+                TreeNode<V> currentNode = Root;
+
+                int currentLevelNodesCount = 1;
+                int nextLevelNodesCount = 0;
+
+                queue.Enqueue(Root);
+                while (queue.Count > 0)
+                {
+                    for (int i = 0; i < currentLevelNodesCount; i++)
+                    {
+                        currentNode = queue.Dequeue();
+                        result += currentNode.Data.GetInternationalID() + "\r\n";
                         if (currentNode.Left != null && currentNode.Right != null)
                         {
                             nextLevelNodesCount += 2;

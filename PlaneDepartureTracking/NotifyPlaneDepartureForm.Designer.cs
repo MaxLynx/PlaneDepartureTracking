@@ -74,6 +74,7 @@
             this.Controls.Add(this.textBox4);
             this.Name = "NotifyPlaneDepartureForm";
             this.Text = "Departure Manager";
+            this.Load += new System.EventHandler(this.NotifyPlaneDepartureForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

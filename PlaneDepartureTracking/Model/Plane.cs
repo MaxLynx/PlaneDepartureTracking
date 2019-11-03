@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model 
 {
-    public class Plane : IComparable<Plane>, Utils.IPriority<int, Plane>
+    public class Plane : IComparable<Plane>, Utils.IPriority<double, Plane>, Utils.IIDRetrieval
     {
         private String producerName;
         private String planeType;
@@ -15,7 +15,7 @@ namespace PlaneDepartureTracking.Model
         private DateTime arrivalTime;
         private DateTime trackRequirementTime;
         private DateTime departureTime;
-        private int priority;
+        private double priority;
 
         private Utils.TreeNode<Plane> heapNode;
 
@@ -38,7 +38,7 @@ namespace PlaneDepartureTracking.Model
         }
 
         public Plane(String producerName, String type, String internationalID, double minimalTrackLength,
-                     DateTime arrivalTime, int priority)
+                     DateTime arrivalTime, double priority)
         {
             this.producerName = producerName;
             this.planeType = type;
@@ -118,19 +118,19 @@ namespace PlaneDepartureTracking.Model
             this.departureTime = departureTime;
         }
 
-        public int GetPriority()
+        public double GetPriority()
         {
             return priority;
         }
 
-        public void SetPriority(int priority)
+        public void SetPriority(double priority)
         {
             this.priority = priority;
         }
 
-        public int GetMaxPriority()
+        public double GetMaxPriority()
         {
-            return Int32.MinValue;
+            return -1;
         }
 
         public int CompareTo(Plane other)
@@ -143,12 +143,12 @@ namespace PlaneDepartureTracking.Model
             if (Track == null)
             {
                 return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
-                    "," + trackRequirementTime + "," + priority + ",";
+                    "," + trackRequirementTime + "," + priority.ToString().Replace(',', '.') + ",";
             }
             else
             {
                 return producerName + "," + planeType + "," + internationalID + "," + minimalTrackLength + "," + arrivalTime +
-                    "," + trackRequirementTime + "," + priority + "," + Track.GetName();
+                    "," + trackRequirementTime + "," + priority.ToString().Replace(',', '.') + "," + Track.GetName();
             }
         }
     }

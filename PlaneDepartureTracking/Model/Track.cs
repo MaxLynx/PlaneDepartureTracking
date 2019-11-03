@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlaneDepartureTracking.Model
 {
-    public class Track : IComparable<Track>
+    public class Track : IComparable<Track>, Utils.IIDRetrieval
     {
         private String name;
         private TrackType lengthType;
@@ -64,6 +64,11 @@ namespace PlaneDepartureTracking.Model
         public int CompareTo(Track other)
         {            
             return this.GetName().CompareTo(other.GetName());
+        }
+
+        public string GetInternationalID()
+        {
+            throw new NotImplementedException();
         }
     }
 }
